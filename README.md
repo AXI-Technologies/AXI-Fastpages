@@ -31,56 +31,57 @@ Please use the [nbdev & blogging channel](https://forums.fast.ai/c/fastai-users/
 ## GUIDE - Step by step:
 
 1. **Login to GitHub:** If you don't have a GitHub account, register for one, then login to it.
-2. 
-3. **Click this link:** [https://github.com/fastai/fastpages/generate](https://github.com/fastai/fastpages/generate)
-4. 
-5. **Wait a minute or so.** Then reload your repository page. This will review a new automatically created pull request. You can see it here:
-6. 
-7. ![](images/guide/section3.png "")
 
-1. **Choice Intitial Setup.** This will show you some instructions.
-2. 
+2. **Click this link:** [https://github.com/fastai/fastpages/generate](https://github.com/fastai/fastpages/generate)
+
+3. **Wait a minute or so.** Then reload your repository page. This will review a new automatically created pull request. You can see it here: 
+![](images/guide/section3.png "")
+
+4.**Choice Intitial Setup.** This will show you some instructions.
 ![](images/guide/section4.png "")
 
-1. **Follow instructions** and MERGE PULL REQUEST.
-![]({{ site.baseurl }}/images/guide/section5.png "")
-1. **Wait for a few minutes.** GitHub Pages will automatically create your website, but it takes some time. This will happen every time you push new content to the master branch of your repository (more on that below). 
-1. **Check status.** If u see your README is like this image -> It’s oke now and we can click this link below for accessing your blog.
-![]({{ site.baseurl }}/images/guide/section6.png "")
-1. **Create blog with fastpages.**
+5. **Follow instructions** and MERGE PULL REQUEST.
+![](images/guide/section5.png "")
+
+6. **Wait for a few minutes.** GitHub Pages will automatically create your website, but it takes some time. This will happen every time you push new content to the master branch of your repository (more on that below). 
+
+7. **Check status.** If u see your README is like this image -> It’s oke now and we can click this link below for accessing your blog.
+![](images/guide/section6.png "")
+
+8. **Create blog with fastpages.**
 Blog a été sauvegardé comme ce nom.
-![]({{ site.baseurl }}/images/guide/section8-1.png "")
+![](images/guide/section8-1.png "")
 On peut créer un blog par 3 types: 
 - Jupyter Notebook (.ipynb) sauvegarder dans **_notebooks.**
-Link: [links](https://fastpages.fast.ai/jupyter/2020/02/20/test.html)
+Link: [https://fastpages.fast.ai/jupyter/2020/02/20/test.html](https://fastpages.fast.ai/jupyter/2020/02/20/test.html)
 - Markdown (.md) sauvegarder dans **_post.**
-Link: [links](https://fastpages.fast.ai/markdown/2020/01/14/test-markdown-post.html)
+Link: [https://fastpages.fast.ai/markdown/2020/01/14/test-markdown-post.html](https://fastpages.fast.ai/markdown/2020/01/14/test-markdown-post.html)
 - Microsoft Word (.docx) sauvegarder dans **_word.**
-Link: [links](https://fastpages.fast.ai/2020/01/01/Microsoft-Word-Example-Post.html)
-![]({{ site.baseurl }}/images/guide/section8-2.png "")
+Link: [https://fastpages.fast.ai/2020/01/01/Microsoft-Word-Example-Post.html](https://fastpages.fast.ai/2020/01/01/Microsoft-Word-Example-Post.html)
+![](images/guide/section8-2.png "")
 
-1. **Syntax ‘Kramdown’**
-What's important to remember is that GitHub pages uses a type of Markdown called 'Kramdown'. There is a guide to using Kramdown here: [links](https://kramdown.gettalong.org/quickref.html)
+9. **Syntax ‘Kramdown’**
+What's important to remember is that GitHub pages uses a type of Markdown called 'Kramdown'. There is a guide to using Kramdown here: [https://kramdown.gettalong.org/quickref.html](https://kramdown.gettalong.org/quickref.html)
 
-1. **The Page Generation Process.**
+10. **The Page Generation Process.**
 We need to talk a bit about what happens when your website pages are generated from your repository. Recall this diagram from the previous post of this series:
-![]({{ site.baseurl }}/images/guide/section10.png "")
+![](images/guide/section10.png "")
 Here it is again, with a bit of elaboration. Your repository is on the left. It feeds through a program called [Jekyll](https://jekyllrb.com/) running in GitHub Actions, and the output if your website on the right. All of this happens automatically (but it takes a few minutes, which is why you have to wait).
 If you look at the [GitHub Actions webpage](https://github.com/marketplace?type=actions) you can see that there are many choice. What Fastpages does for us is to select and configure GitHub Actions in Jekyll.
 This gives us more options in our Markdown pages. We can use the 'comments and processing instructions' section of the page to give Jekyll some instructions when it processes our page.
 1. **Some note for le type in the section titled 'Front-Matter related options'.**
-![]({{ site.baseurl }}/images/guide/section11-1.png "")
-![]({{ site.baseurl }}/images/guide/section11-2.png "")
+![](images/guide/section11-1.png "")
+![](images/guide/section11-2.png "")
 1. **Main page.**
-![]({{ site.baseurl }}/images/guide/section12-1.png "")
-![]({{ site.baseurl }}/images/guide/section12-2.png "")
-![]({{ site.baseurl }}/images/guide/section12-3.png "")
+![](images/guide/section12-1.png "")
+![](images/guide/section12-2.png "")
+![](images/guide/section12-3.png "")
 1. **Others pages.**
-![]({{ site.baseurl }}/images/guide/section13-1.png "")
-![]({{ site.baseurl }}/images/guide/section13-2.png "")
+![](images/guide/section13-1.png "")
+![](images/guide/section13-2.png "")
 1. **Name lien le domaine du site-web.**
-![]({{ site.baseurl }}/images/guide/section14.png "")
+![](images/guide/section14.png "")
 1. **Add custome layout default**
-![]({{ site.baseurl }}/images/guide/section15.png "")
+![](images/guide/section15.png "")
 1. **Others sources**
 [https://fastpages.fast.ai/](https://fastpages.fast.ai/)
