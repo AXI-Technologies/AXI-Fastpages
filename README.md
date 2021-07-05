@@ -33,7 +33,7 @@ Please use the [nbdev & blogging channel](https://forums.fast.ai/c/fastai-users/
 1. **Login to GitHub:** If you don't have a GitHub account, register for one, then login to it.
 
 
-2. **Click this link:** [https://github.com/fastai/fastpages/generate](https://github.com/fastai/fastpages/generate){:target="_blank"}
+2. **Click this link:** [https://github.com/fastai/fastpages/generate](https://github.com/fastai/fastpages/generate)
 
 
 3. **Wait a minute or so.** Then reload your repository page. This will review a new automatically created pull request. You can see it here: 
