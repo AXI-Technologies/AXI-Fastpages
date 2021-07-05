@@ -31,11 +31,17 @@ Please use the [nbdev & blogging channel](https://forums.fast.ai/c/fastai-users/
 ## GUIDE - Step by step:
 
 1. **Login to GitHub:** If you don't have a GitHub account, register for one, then login to it.
-1. **Click this link:** [links](https://github.com/fastai/fastpages/generate)
-1. **Wait a minute or so.** Then reload your repository page. This will review a new automatically created pull request. You can see it here:
-![]({{ site.baseurl }}/images/guide/section3.png "")
+2. 
+3. **Click this link:** [https://github.com/fastai/fastpages/generate](https://github.com/fastai/fastpages/generate)
+4. 
+5. **Wait a minute or so.** Then reload your repository page. This will review a new automatically created pull request. You can see it here:
+6. 
+7. ![](images/guide/section3.png "")
+
 1. **Choice Intitial Setup.** This will show you some instructions.
-![]({{ site.baseurl }}/images/guide/section4.png "")
+2. 
+![](images/guide/section4.png "")
+
 1. **Follow instructions** and MERGE PULL REQUEST.
 ![]({{ site.baseurl }}/images/guide/section5.png "")
 1. **Wait for a few minutes.** GitHub Pages will automatically create your website, but it takes some time. This will happen every time you push new content to the master branch of your repository (more on that below). 
