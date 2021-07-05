@@ -93,12 +93,18 @@ This gives us more options in our Markdown pages. We can use the 'comments and p
 12. **Main page.**
 
 ![](images/guide/section12-1.png "")
+
+
 ![](images/guide/section12-2.png "")
+
+
 ![](images/guide/section12-3.png "")
 
 13. **Others pages.**
 
 ![](images/guide/section13-1.png "")
+
+
 ![](images/guide/section13-2.png "")
 
 14. **Name lien le domaine du site-web.**
