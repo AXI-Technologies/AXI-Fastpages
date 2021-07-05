@@ -61,15 +61,23 @@ Please use the [nbdev & blogging channel](https://forums.fast.ai/c/fastai-users/
 
 
 8. **Create blog with fastpages.**
+
+
 Blog a été sauvegardé comme ce nom.
+
 ![](images/guide/section8-1.png "")
+
 On peut créer un blog par 3 types: 
+
 - Jupyter Notebook (.ipynb) sauvegarder dans **_notebooks.**
 Link: [https://fastpages.fast.ai/jupyter/2020/02/20/test.html](https://fastpages.fast.ai/jupyter/2020/02/20/test.html)
+
 - Markdown (.md) sauvegarder dans **_post.**
 Link: [https://fastpages.fast.ai/markdown/2020/01/14/test-markdown-post.html](https://fastpages.fast.ai/markdown/2020/01/14/test-markdown-post.html)
+
 - Microsoft Word (.docx) sauvegarder dans **_word.**
 Link: [https://fastpages.fast.ai/2020/01/01/Microsoft-Word-Example-Post.html](https://fastpages.fast.ai/2020/01/01/Microsoft-Word-Example-Post.html)
+
 ![](images/guide/section8-2.png "")
 
 
