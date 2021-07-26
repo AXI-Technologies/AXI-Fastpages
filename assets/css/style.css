@@ -423,8 +423,6 @@ table th { text-align: center !important; }
 
 pre code { font-size: 15px !important; }
 
-#barre-progression { background-color: #00b0f0; height: 3px; width: 0; position: absolute; top: 0; left: 0; z-index: 9999; }
-
 /*-----------------------------------*/
 /*----- ADD YOUR STYLES BELOW -------*/
 .language-python + .language-plaintext { border-left: 1px solid grey; margin-left: 1rem !important; }
