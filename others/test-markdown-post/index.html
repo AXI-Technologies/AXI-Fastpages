@@ -54,6 +54,7 @@ window.onload = wrap_img;
 </head>
 <body>
     <YOUR HEADER IMG HERE>
+    <div id="barre-progression"></div>
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
@@ -206,5 +207,26 @@ wget https://example.com/cat_photo1.png
 </article>
       </div>
     </main>
+    <script> 
+      window.onload = () => {
+        // Ecouteur d'évènement sur scroll
+        window.addEventListener("scroll", () => {
+          // Calcul de la hauteur "utile" du document
+          let hauteur = document.documentElement.scrollHeight - window.innerHeight;
+
+          // Récupération de la position verticale
+          let position = window.scrollY;
+
+          // Récupération de la largeur de la fenêtre
+          let largeur = document.documentElement.clientWidth;
+
+          // Calcul de la largeur de la barre
+          let barre = position / hauteur * largeur;
+
+          // Modification du CSS de la barre
+          document.getElementById("barre-progression").style.width = barre+"px";
+        })
+      }
+    </script>
   </body>
 </html>
