@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <base target="_blank">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Introduction 2 : Syntaxe | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Introduction 2 : Syntaxe" />
+<meta name="author" content="AXI Academy" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Python : Chapitre 1 - Lesson 2" />
+<meta property="og:description" content="Python : Chapitre 1 - Lesson 2" />
+<link rel="canonical" href="https://axi-technologies.github.io/AXI-Fastpages/python-intro-gen/chapter/1/lesson/2/" />
+<meta property="og:url" content="https://axi-technologies.github.io/AXI-Fastpages/python-intro-gen/chapter/1/lesson/2/" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-01-02T00:00:00-06:00" />
+<script type="application/ld+json">
+{"url":"https://axi-technologies.github.io/AXI-Fastpages/python-intro-gen/chapter/1/lesson/2/","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://axi-technologies.github.io/AXI-Fastpages/python-intro-gen/chapter/1/lesson/2/"},"headline":"Introduction 2 : Syntaxe","dateModified":"2022-01-02T00:00:00-06:00","datePublished":"2022-01-02T00:00:00-06:00","author":{"@type":"Person","name":"AXI Academy"},"description":"Python : Chapitre 1 - Lesson 2","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/AXI-Fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://axi-technologies.github.io/AXI-Fastpages/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/AXI-Fastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body>
+    <div id="barre-progression" 
+      style="
+        background: #00b0f0;
+        height: 5px;
+        width: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+      "
+    ></div>
+    <YOUR HEADER IMG HERE>
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Introduction 2 : Syntaxe</h1><p class="page-description">Python : Chapitre 1 - Lesson 2</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-01-02T00:00:00-06:00" itemprop="datePublished">
+        Jan 2, 2022
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">AXI Academy</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      10 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          
+          
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/AXI-Technologies/AXI-Fastpages/blob/master/_notebooks/2022-01-02-python-intro-gen-1-2-syntaxe.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/AXI-Fastpages/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-01-02-python-intro-gen-1-2-syntaxe.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="1.-Les-mot-cl&#233;s">1. Les mot cl&#233;s<a class="anchor-link" href="#1.-Les-mot-cl&#233;s"> </a></h2><p>L'interprétation d'un programme Python passe par l'utilisation de mots clé.
+Les mots clés ont été conservés à des fins spécifiques et ne peuvent être utilisés à d'autres fins dans le programme.
+En voici certains :</p>
+
+<pre><code>False      class      finally    is         return
+None       continue   for        lambda     try
+True       def        from       nonlocal   while
+and        del        global     not        with
+as         elif       if         or         yield
+assert     else       import     pass
+break      except     in         raise</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2.-Les-variables">2. Les variables<a class="anchor-link" href="#2.-Les-variables"> </a></h2><p>Lorsque nous écrivons un programme Python, nous allons créer des variables qui stockent des valeurs telles que des nombres ou des chaînes de caractères, ainsi que des fonctions et des classes. Ces variables doivent avoir un nom unique qui respecte les règles suivantes :</p>
+<ul>
+<li>Il ne peut contenir que des lettres (majuscules ou minuscules), des chiffres ou le caractère de soulignement (_) (pas d'espaces !).</li>
+<li>Il ne peut pas commencer par un chiffre.</li>
+<li>Ce n'est pas un mot-clé.</li>
+</ul>
+<p>Il est fortement recommandé de suivre les bonnes pratiques de nommage des variables pour garder une bonne compréhension du code :</p>
+<table>
+<thead><tr>
+<th>Syntax error</th>
+<th>Bad practice</th>
+<th>Good practice</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Person Record</td>
+<td>PRcrd</td>
+<td>PersonRecord</td>
+</tr>
+<tr>
+<td>DEFAULT-HEIGHT</td>
+<td>Default_Ht</td>
+<td>DEFAULT_HEIGHT</td>
+</tr>
+<tr>
+<td>class</td>
+<td>Class</td>
+<td>AlgebraCourse</td>
+</tr>
+<tr>
+<td>2totalweight</td>
+<td>num2</td>
+<td>total_weight</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercice-1-:">Exercice 1 :<a class="anchor-link" href="#Exercice-1-:"> </a></h2><ul>
+<li>Expliquez pourquoi les noms de variables dans la colonne <code>Syntax error</code> ne sont pas valident.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="3.-L'indentation">3. L'indentation<a class="anchor-link" href="#3.-L'indentation"> </a></h2><p>De nombreux langages organisent le code en blocs à l'aide d'accolades (<code>{</code> et <code>}</code>) ou d'instructions <code>BEGIN</code> et <code>END</code>, ces langages nous encouragent à indenter les blocs pour faciliter la lecture du code, mais l'indentation n'est pas obligatoire. Python utilise l'indentation uniquement pour délimiter les blocs, nous devons donc indenter notre code :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Examples :</span>
+
+<span class="c1"># Functions</span>
+<span class="k">def</span> <span class="nf">my_fuction</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World in &#39;function&#39;&quot;</span><span class="p">)</span>
+<span class="c1"># function execution is outside function block</span>
+<span class="n">my_fuction</span><span class="p">()</span>
+
+<span class="c1"># If statements</span>
+<span class="k">if</span> <span class="s2">&quot;Hello&quot;</span> <span class="o">!=</span> <span class="s2">&quot;World&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World in &#39;if&#39;&quot;</span><span class="p">)</span>
+    
+<span class="c1"># Loops</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello World in &#39;loop </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercice-2-:">Exercice 2 :<a class="anchor-link" href="#Exercice-2-:"> </a></h2><p>Ré-écrivez le code suivant avec la bonne indentation :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">happy_day</span><span class="p">(</span><span class="n">day</span><span class="p">):</span>
+<span class="k">if</span> <span class="n">day</span> <span class="o">==</span> <span class="s2">&quot;monday&quot;</span><span class="p">:</span>
+<span class="k">return</span> <span class="s2">&quot;:(&quot;</span>
+<span class="k">if</span> <span class="n">day</span> <span class="o">!=</span> <span class="s2">&quot;monday&quot;</span><span class="p">:</span>
+<span class="k">return</span> <span class="s2">&quot;:D&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">happy_day</span><span class="p">(</span><span class="s2">&quot;sunday&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">happy_day</span><span class="p">(</span><span class="s2">&quot;monday&quot;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="4.-La-sensibilit&#233;-&#224;-la-casse">4. La sensibilit&#233; &#224; la casse<a class="anchor-link" href="#4.-La-sensibilit&#233;-&#224;-la-casse"> </a></h2><p>Python est senbible à la casse, ce qui signifie que l'expression <code>def main()</code> n'est pas la même que <code>DEF MAIN()</code></p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">var_a</span> <span class="o">=</span> <span class="s2">&quot;lowercase&quot;</span>
+<span class="n">var_A</span> <span class="o">=</span> <span class="s2">&quot;UPPERCASE&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">var_a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">var_A</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="5.-Les-commentaires">5. Les commentaires<a class="anchor-link" href="#5.-Les-commentaires"> </a></h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># print(&#39;hello&#39;)</span>
+<span class="c1"># the code above is not executed</span>
+<span class="c1"># But the code below will be</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;World&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="6.--Ecrire-des-informations-(print)">6.  Ecrire des informations (print)<a class="anchor-link" href="#6.--Ecrire-des-informations-(print)"> </a></h2><p>Le moyen le plus simple de générer des informations consiste à afficher une chaîne de caractères (string) à l'aide de la fonction `print. La chaîne de caractères est contenu dans des guillemets. Nous pouvons utiliser des guillemets simples (') ou des guillemets doubles ("). Le guillemet de début et le guillemet de fin doivent correspondre.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello world !&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="7.-Saisir-des-informations-(input)">7. Saisir des informations (input)<a class="anchor-link" href="#7.-Saisir-des-informations-(input)"> </a></h2><p>La saisie d'information de l'utilisateur se fait avec la fonction <code>input</code> :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">first_number</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter the first number: &#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="8.-Les-types">8. Les types<a class="anchor-link" href="#8.-Les-types"> </a></h2><p>Il existe de nombreux types d'informations qu'un ordinateur peut traiter, comme les chiffres et les caractères. En Python (et d'autres langages de programmation), les types d'informations que le langage est capable de gérer sont appelés types. De nombreux types courants sont intégrés à Python, par exemple des entiers, des nombres à virgule flottante et des chaînes de caractères. Les utilisateurs peuvent également définir leurs propres types à l'aide de classes.</p>
+<p>Dans de nombreux langages, une distinction est faite entre les types intégrés (qui sont souvent appelés « types primitifs » pour cette raison) et les classes, mais en Python, ils sont indiscernables. Tout en Python est un objet (c'est-à-dire une instance d'une classe) - qui inclut même des listes et des fonctions.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="9.-Les-entiers-(int)">9. Les entiers (int)<a class="anchor-link" href="#9.-Les-entiers-(int)"> </a></h2><p>Un entier (de type <code>int</code>) est un nombre entier tel que 1, 5, 1350 ou -34. Les nombres avec des points décimaux sont des nombres à virgule flottante (float). 2.3, 12.34, 1.0 ne sont pas des entiers mais des <code>float</code>.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># We can also do operations on integers</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Les-op&#233;rations">Les op&#233;rations<a class="anchor-link" href="#Les-op&#233;rations"> </a></h3><p>Nous pouvons effectuer des opérations suivantes sur les entiers :</p>
+<table>
+<thead><tr>
+<th>Operation</th>
+<th>Symbol</th>
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Addition</td>
+<td>+</td>
+<td>28 + 10</td>
+<td>38</td>
+</tr>
+<tr>
+<td>Subtraction</td>
+<td>-</td>
+<td>28 - 10</td>
+<td>18</td>
+</tr>
+<tr>
+<td>Multiplication</td>
+<td>*</td>
+<td>28 * 10</td>
+<td>280</td>
+</tr>
+<tr>
+<td>Division</td>
+<td>//</td>
+<td>28 // 10</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Modulus (remainder)</td>
+<td>%</td>
+<td>28 % 10</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Exponent (power)</td>
+<td>**</td>
+<td>28**10</td>
+<td>296196766695424</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Priorit&#233;-de-l'op&#233;rateur">Priorit&#233; de l'op&#233;rateur<a class="anchor-link" href="#Priorit&#233;-de-l'op&#233;rateur"> </a></h3><p>Une autre chose importante à garder à l'esprit est la priorité des opérateurs.<br />
+Par exemple, 1 + 2 // 3 signifie-t-il (1 + 2) // 3 ou 1 + (2 // 3) ?
+Python dispose d'un moyen spécifique et prévisible pour déterminer l'ordre dans lequel il effectue les opérations. Pour les opérations sur des nombres entiers, le système traitera les opérateurs dans l'ordre suivant : <code>()</code>, <code>**</code>, <code>*</code>, <code>//</code>, <code>%</code>, et enfin <code>+</code> et <code>-</code>.</p>
+<table>
+<thead><tr>
+<th>Expression</th>
+<th>How Python evaluates</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>20 + 10 // 2</td>
+<td>20 + (10 // 2)</td>
+<td>25</td>
+</tr>
+<tr>
+<td>20 + 10 - 2</td>
+<td>(20 + 10) - 2</td>
+<td>28</td>
+</tr>
+<tr>
+<td>20 - 10 + 2</td>
+<td>(20 - 10) + 2</td>
+<td>12</td>
+</tr>
+<tr>
+<td>20 - 10 * 2</td>
+<td>20 - (10 * 2)</td>
+<td>0</td>
+</tr>
+<tr>
+<td>20 // 10 * 2</td>
+<td>(20 // 10) * 2</td>
+<td>4</td>
+</tr>
+<tr>
+<td>20 * 10 // 2</td>
+<td>(20 * 10) // 2</td>
+<td>100</td>
+</tr>
+<tr>
+<td>20 * 10 ** 2</td>
+<td>20 * (10 ** 2)</td>
+<td>2000</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">2</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">4</span>
+<span class="c1"># is evaluated left to right:</span>
+<span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span> <span class="o">/</span> <span class="mi">4</span>
+
+<span class="c1"># ** is right-associative, so</span>
+<span class="mi">2</span> <span class="o">**</span> <span class="mi">3</span> <span class="o">**</span> <span class="mi">4</span>
+<span class="c1"># is evaluated right to left:</span>
+<span class="mi">2</span> <span class="o">**</span> <span class="p">(</span><span class="mi">3</span> <span class="o">**</span> <span class="mi">4</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercice-3-:">Exercice 3 :<a class="anchor-link" href="#Exercice-3-:"> </a></h2><ul>
+<li>1) Lesquels des nombres suivants sont des entiers Python valides ? <code>110</code>, <code>1.0</code>, <code>17.5</code>, <code>-39</code>, <code>-2.3</code></li>
+<li>2) Que se passe-t-il lorsque vous executez <code>1 // 0</code> dans la console Python ? Pourquoi cela arrive-t-il ?</li>
+<li>3) Quels sont les résultats des opérations suivantes et expliquez pourquoi : </li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">15</span> <span class="o">+</span> <span class="mi">20</span> <span class="o">*</span> <span class="mi">3</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">13</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mi">31</span> <span class="o">+</span> <span class="mi">10</span> <span class="o">//</span> <span class="mi">3</span>
+<span class="n">d</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">%</span> <span class="mi">7</span> <span class="o">//</span> <span class="mi">3</span>
+<span class="n">e</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">**</span> <span class="mi">3</span> <span class="o">**</span> <span class="mi">2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="10.-Les-nombres-&#224;-virgules-flottante-(float)">10. Les nombres &#224; virgules flottante (float)<a class="anchor-link" href="#10.-Les-nombres-&#224;-virgules-flottante-(float)"> </a></h2><p>Les nombres à virgule flottante (de type <code>float</code>) sont des nombres avec une virgule décimale ou un exposant (ou les deux). Les exemples sont <code>5.0</code>, <code>10.24</code>, <code>0.0</code>, <code>12.</code> et <code>0.3</code>.
+Nous pouvons utiliser la notation scientifique pour désigner des nombres à virgule flottante très grands ou très petits, par exemple 3,8 x 10^15 s'écrira <code>3.8e15</code> ou <code>3.8e+15</code>.</p>
+<p>La fonction <code>print</code> affichera une notation optimisée des objets de type <code>float</code> :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mf">3213.</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="o">.</span><span class="mi">3213</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mf">0.3000</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mf">1e10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mf">1e100</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mf">0.0000000001</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="La-division">La division<a class="anchor-link" href="#La-division"> </a></h3><p>Les opérateurs arithmétiques pour les <code>float</code> sont les mêmes que pour les entiers. A l'exception de la division - l'opérateur de division à virgule flottante est <code>/</code>. Les opérations en <code>float</code> produisent toujours une solution en virgule flottante. L'ordre de priorité de ces opérateurs est le même que celui des opérateurs entiers.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercice-4-:">Exercice 4 :<a class="anchor-link" href="#Exercice-4-:"> </a></h2><ul>
+<li>1) Parmi les éléments suivants, lesquels sont des nombres à virgule flottante Python ? <code>1</code>, <code>1.0</code>, <code>1.12e4</code>, <code>-3.141759</code>, <code>735</code>, <code>0.57721566</code>, <code>7.5e-3</code></li>
+<li>2) Quelle est la différence entre une division entière et une division à virgule flottante ? Quel est l'opérateur utilisé pour la division entière ? Quel est l'opérateur utilisé pour la division en virgule flottante ?</li>
+<li>3) Quels sont les résultats des opérations suivantes ? Expliquer pourquoi: </li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">1.5</span> <span class="o">+</span> <span class="mi">2</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mf">1.5</span> <span class="o">//</span> <span class="mf">2.0</span> 
+<span class="n">c</span> <span class="o">=</span> <span class="mf">1.5</span> <span class="o">/</span> <span class="mf">2.0</span> 
+<span class="n">d</span> <span class="o">=</span> <span class="mf">1.5</span> <span class="o">**</span> <span class="mi">2</span> 
+<span class="n">e</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="n">f</span> <span class="o">=</span> <span class="o">-</span><span class="mi">3</span> <span class="o">//</span> <span class="mi">2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>5) Que se passe-t-il lorsque vous évaluez <code>1/0</code> dans la console Python ?</li>
+<li>6) Que se passe-t-il lorsque vous évaluez <code>1e1000</code> ? Et <code>-1e1000</code> ? Et <code>type(1e1000)</code> ?</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="11.-Les-cha&#238;nes-de-caract&#232;res-(str)">11. Les cha&#238;nes de caract&#232;res (str)<a class="anchor-link" href="#11.-Les-cha&#238;nes-de-caract&#232;res-(str)"> </a></h2><p>Les objet de type <code>str</code> (appelé <code>string</code>) sont des chaînes de caractères.  À bien des égards, les chaînes se comportent de manière similaire aux listes (type <code>list</code>), dont nous parlerons dans un chapitre ultérieur, mais elles ont également certaines fonctionnalités spécifiques au texte.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_string_1</span> <span class="o">=</span> <span class="s2">&quot;Hello World !&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_string_1</span><span class="p">)</span>
+
+<span class="c1"># This is the same string</span>
+<span class="n">my_string_2</span> <span class="o">=</span> <span class="s1">&#39;Hello World !&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Formatage">Formatage<a class="anchor-link" href="#Formatage"> </a></h3><p>Nous aurons souvent besoin d'afficher un message qui n'est pas une <code>string</code> fixe, peut-être que nous voulons inclure des nombres ou d'autres valeurs qui sont stockées dans des variables. La méthode recommandée pour inclure ces variables dans notre message est d'utiliser les <code>fstring</code>. Il s'agit d'une chaine de caractère (précédé de la lettre <code>f</code>) qui va inteprété des variables ou du code à l'intérieur de balises : les crochets <code>{}</code>). Exemple :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;John&#39;</span>
+<span class="n">age</span> <span class="o">=</span> <span class="s1">&#39;72&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Hello! My name is </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello! My name is </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">, and I am </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2"> years old.&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Les-s&#233;quences-d'&#233;chappement-(\n)">Les s&#233;quences d'&#233;chappement (\n)<a class="anchor-link" href="#Les-s&#233;quences-d'&#233;chappement-(\n)"> </a></h3><p>Une séquence d'échappement (de caractères) peut être utilisée pour désigner un caractère spécial qui ne peut pas être tapé facilement sur un clavier ou qui a été réservé à d'autres fins. Par exemple, nous pouvons vouloir insérer une nouvelle ligne dans notre chaîne :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This is one line.</span><span class="se">\n</span><span class="s1">This is another line.&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Si notre chaîne est entourée de guillemets simples, nous devrons échapper aux apostrophes et nous devons faire de même pour les guillemets doubles dans une chaîne entourée de guillemets doubles. Une séquence d'échappement commence par une barre oblique inverse (<code>\</code>) :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;He said : &quot;Hi! I</span><span class="se">\&#39;</span><span class="s1">m John&quot;.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;He said : </span><span class="se">\&quot;</span><span class="s2">Hi! I&#39;m John</span><span class="se">\&quot;</span><span class="s2">.&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Les séquences d'échappement de base :</p>
+<table>
+<thead><tr>
+<th>Sequence</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\</td>
+<td>literal backslash</td>
+</tr>
+<tr>
+<td>\'</td>
+<td>single quote</td>
+</tr>
+<tr>
+<td>\"</td>
+<td>double quote</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>newline</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>tab</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Les-op&#233;rations">Les op&#233;rations<a class="anchor-link" href="#Les-op&#233;rations"> </a></h3><p>Nous pouvons modifier, fusionner et diviser des <code>string</code> de bien des manière.</p>
+<p>Tout d'abord, nous pouvons concaténer des <code>string</code> avec l'opérateur <code>+</code></p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">prefix</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
+<span class="n">suffix</span> <span class="o">=</span> <span class="s1">&#39;World&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">prefix</span> <span class="o">+</span> <span class="n">suffix</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">prefix</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">suffix</span> <span class="o">+</span> <span class="s2">&quot; !&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Nous pouvons mesurer la taille d'une <code>string</code> avec la fonction <code>built-in</code> : <code>len</code>.
+Il existe aussi de nombreuses fonctions attachées aux <code>string</code>, en voici quelques exemple :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Jane Smith&quot;</span>
+
+<span class="c1"># Find the length of a string with the built-in len function</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+
+<span class="c1"># Print the string converted to lowercase</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+<span class="c1"># Print the string converted to uppercase</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+<span class="c1"># Split string into a list</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">))</span>
+
+
+<span class="c1"># Print the original string</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercice-5-:">Exercice 5 :<a class="anchor-link" href="#Exercice-5-:"> </a></h2><ul>
+<li>1) Étant donné les variables <code>x</code> et <code>y</code>, utilisez le formatage de chaîne pour afficher les valeurs de <code>x</code> et <code>y</code> et leur somme. Par exemple, si <code>x = 5</code> et <code>y = 3</code>, votre relevé doit afficher <code>5 + 3 = 8</code>.</li>
+<li>2) Réécrivez les chaînes suivantes en utilisant des guillemets simples au lieu de guillemets doubles. Utilisez les séquences d'échappement selon vos besoins : </li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;Hi! I&#39;m Eli.&quot;</span>
+<span class="s2">&quot;The title of the book was </span><span class="se">\&quot;</span><span class="s2">Good Omens</span><span class="se">\&quot;</span><span class="s2">.&quot;</span>
+<span class="s2">&quot;Hi! I</span><span class="se">\&#39;</span><span class="s2">m Sebastien.&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><p>3) Utilisez des séquences d'échappement pour écrire une chaîne qui représente les lettres <code>a</code>, <code>b</code> et <code>c</code> séparées par des tabulations.</p>
+</li>
+<li><p>4) Utilisez des séquences d'échappement pour écrire une chaîne contenant le texte ci-dessous (avec les sauts de ligne) à l'intérieur de guillemets simples ou doubles :</p>
+</li>
+</ul>
+
+<pre><code>Title : Hello World !
+Year : 2021</code></pre>
+<ul>
+<li><p>5) Étant donné un nom de variable contenant une chaîne, écrivez une instruction <code>print</code> qui affiche le nom et le nombre de caractères qu'il contient. Par exemple, si <code>name = "John"</code>, votre relevé doit afficher : <code>John's name has 4 letters.</code>.</p>
+</li>
+<li><p>6) Que génère la séquence d'instructions suivante :</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;John Smith&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Pourquoi la sortie de la deuxième ligne n'est-elle pas en minuscule ?</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/AXI-Fastpages/python-intro-gen/chapter/1/lesson/2/" hidden></a>
+</article>
+      </div>
+    </main>
+    <script> 
+      window.onload = () => {
+        // Ecouteur d'évènement sur scroll
+        window.addEventListener("scroll", () => {
+          // Calcul de la hauteur "utile" du document
+          let hauteur = document.documentElement.scrollHeight - window.innerHeight;
+
+          // Récupération de la position verticale
+          let position = window.scrollY;
+
+          // Récupération de la largeur de la fenêtre
+          let largeur = document.documentElement.clientWidth;
+
+          // Calcul de la largeur de la barre
+          let barre = position / hauteur * largeur;
+
+          // Modification du CSS de la barre
+          document.getElementById("barre-progression").style.width = barre+"px";
+        })
+      }
+    </script>
+  </body>
+</html>
