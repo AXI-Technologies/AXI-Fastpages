@@ -4,8 +4,8 @@ title: About Me
 permalink: /about/
 ---
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
+Ce site est la propriété d'**[AXI Technologies SAS](https://axitechnologies.fr)** [^1].
 
 
 
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
+[^1]: AXI Technologies : Notre ambition, révolutionner l'éducation en proposant un plateforme, un assistant boosté à l'intelligence artificielle et une pédagogie innovante !
