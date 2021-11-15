@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <base target="_blank">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Chapitre 4 : Les exceptions | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Chapitre 4 : Les exceptions" />
+<meta name="author" content="AXI Academy" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Python : Chapitre 4 - Lesson 1" />
+<meta property="og:description" content="Python : Chapitre 4 - Lesson 1" />
+<link rel="canonical" href="https://axi-technologies.github.io/AXI-Fastpages/python-intro-gen/chapter/4/lesson/1/" />
+<meta property="og:url" content="https://axi-technologies.github.io/AXI-Fastpages/python-intro-gen/chapter/4/lesson/1/" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-01-02T00:00:00-06:00" />
+<script type="application/ld+json">
+{"url":"https://axi-technologies.github.io/AXI-Fastpages/python-intro-gen/chapter/4/lesson/1/","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://axi-technologies.github.io/AXI-Fastpages/python-intro-gen/chapter/4/lesson/1/"},"headline":"Chapitre 4 : Les exceptions","dateModified":"2022-01-02T00:00:00-06:00","datePublished":"2022-01-02T00:00:00-06:00","author":{"@type":"Person","name":"AXI Academy"},"description":"Python : Chapitre 4 - Lesson 1","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/AXI-Fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://axi-technologies.github.io/AXI-Fastpages/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/AXI-Fastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body>
+    <div id="barre-progression" 
+      style="
+        background: #00b0f0;
+        height: 5px;
+        width: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+      "
+    ></div>
+    <YOUR HEADER IMG HERE>
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Chapitre 4 : Les exceptions</h1><p class="page-description">Python : Chapitre 4 - Lesson 1</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-01-02T00:00:00-06:00" itemprop="datePublished">
+        Jan 2, 2022
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">AXI Academy</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      24 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          
+          
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/AXI-Technologies/AXI-Fastpages/blob/master/_notebooks/2022-01-02-python-intro-gen-4-1-exceptions.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/AXI-Fastpages/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-01-02-python-intro-gen-4-1-exceptions.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="1.-Les-types-des-erreurs">1. Les types des erreurs<a class="anchor-link" href="#1.-Les-types-des-erreurs"> </a></h2><p>Les erreurs ou les exceptions dans un programme sont souvent appelées bugs. Ils sont presque toujours la faute du programmeur. Le processus de recherche et d'élimination des erreurs est appelé débuggage. Les erreurs peuvent être classées en trois grands groupes :</p>
+<ul>
+<li>Erreurs de syntaxe</li>
+<li>Erreurs d'exécution</li>
+<li>Erreurs logiques</li>
+</ul>
+<h3 id="Les-erreurs-de-syntaxe-(SyntaxError)">Les erreurs de syntaxe (<code>SyntaxError</code>)<a class="anchor-link" href="#Les-erreurs-de-syntaxe-(SyntaxError)"> </a></h3><p>Python trouvera ce genre d'erreurs lorsqu'il essaiera d'analyser votre programme et se terminera avec un message d'erreur sans rien exécuter. Les erreurs de syntaxe sont des erreurs dans l'utilisation du langage Python, et sont analogues aux fautes d'orthographe ou de grammaire dans une langue comme le français : par exemple, la phrase <code>Vous du thé ?</code>, n'a pas de sens, il manque un verbe.</p>
+<p>Les erreurs de syntaxe Python courantes incluent :</p>
+<ul>
+<li>omettre un mot-clé</li>
+<li>mettre un mot-clé au mauvais endroit</li>
+<li>omettre un symbole, comme un deux-points, une virgule ou des crochets</li>
+<li>faute d'orthographe d'un mot-clé</li>
+<li>indentation incorrecte</li>
+<li>bloc vide<blockquote><p>il est interdit pour tout bloc (comme un corps <code>if</code>, ou le corps d'une fonction) d'être laissé complètement vide. Si vous voulez qu'un bloc ne fasse rien, vous pouvez utiliser l'instruction pass à l'intérieur du bloc.</p>
+</blockquote>
+</li>
+</ul>
+<p>Python fera de son mieux pour vous dire où se trouve l'erreur, mais parfois ses messages peuvent être trompeurs :par exemple, si vous oubliez d'échapper un guillemet à l'intérieur d'une chaîne, vous pouvez obtenir une erreur de syntaxe faisant référence à un endroit plus loin dans votre code, même si ce n'est pas la vraie source du problème. Si vous ne voyez rien de mal sur la ligne spécifiée dans le message d'erreur, essayez de revenir en arrière sur les quelques lignes précédentes. Au fur et à mesure que vous programmez, vous vous améliorerez dans l'identification et la correction des erreurs.
+Voici quelques erreurs de syntaxe :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">myfunction</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">mark</span> <span class="o">&gt;=</span> <span class="mi">50</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You passed!&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">arriving</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hi!&quot;</span><span class="p">)</span>
+<span class="n">esle</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bye!&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">flag</span><span class="p">:</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Flag is set!&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;/tmp/ipykernel_11215/2942671249.py&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">1</span>
+<span class="ansi-red-fg">    myfunction(x, y):</span>
+                     ^
+<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Les-erreurs-d'ex&#233;cution">Les erreurs d'ex&#233;cution<a class="anchor-link" href="#Les-erreurs-d'ex&#233;cution"> </a></h3><p>Si un programme est syntaxiquement correct, c'est-à-dire exempt d'erreurs de syntaxe, il sera exécuté par l'interpréteur Python. Cependant, le programme peut se fermer de manière inattendue pendant l'exécution s'il rencontre une erreur d'exécution, un problème qui n'a pas été détecté lors de l'analyse du programme, mais qui n'est révélé que lorsqu'une ligne particulière est exécutée. Lorsqu'un programme s'arrête à cause d'une erreur d'exécution, nous disons qu'il a planté.</p>
+<p>Considérez les instructions en français : <code>battez les bras et envolez-vous pour l'Australie</code>. Bien que l'instruction soit structurellement correcte et que vous puissiez parfaitement comprendre sa signification, il vous est impossible de la suivre.</p>
+<p>Quelques exemples d'erreurs d'exécution Python :</p>
+<ul>
+<li>division par zéro</li>
+<li>effectuer une opération sur des types incompatibles</li>
+<li>utilisant un identifiant qui n'a pas été défini</li>
+<li>accéder à un élément de liste, une valeur de dictionnaire ou un attribut d'objet qui n'existe pas</li>
+<li>essayer d'accéder à un fichier qui n'existe pas</li>
+</ul>
+<p>Des erreurs d'exécution se glissent souvent si vous ne prenez pas en compte toutes les valeurs possibles qu'une variable pourrait contenir, en particulier lorsque vous traitez une entrée utilisateur. Vous devriez toujours essayer d'ajouter des vérifications à votre code pour vous assurer qu'il peut traiter les mauvaises entrées et les cas extrêmes avec élégance. Nous verrons cela plus en détail dans le chapitre sur la gestion des exceptions.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Les-erreurs-logiques">Les erreurs logiques<a class="anchor-link" href="#Les-erreurs-logiques"> </a></h3><p>Les erreurs logiques sont les plus difficiles à corriger. Elles se produisent lorsque le programme s'exécute sans plantage, mais produit un résultat incorrect. L'erreur est causée par une erreur dans la logique du programme. Vous ne recevrez pas de message d'erreur, car aucune erreur de syntaxe ou d'exécution ne s'est produite. Vous devrez trouver le problème par vous-même en examinant toutes les parties pertinentes de votre code - bien que certains outils puissent signaler un code suspect qui pourrait provoquer un comportement inattendu.</p>
+<p>Parfois, il ne peut y avoir absolument rien de mal avec votre implémentation Python d'un algorithme, l'algorithme lui-même peut être incorrect. Cependant, le plus souvent, ces types d'erreurs sont causés par la négligence du programmeur. Voici quelques exemples d'erreurs qui conduisent à des erreurs logiques :</p>
+<ul>
+<li>utiliser le mauvais nom de variable</li>
+<li>indentation d'un bloc au mauvais niveau</li>
+<li>utiliser la division entière au lieu de la division à virgule flottante</li>
+<li>se tromper de priorité d'opérateur</li>
+<li>se tromper dans une expression booléenne</li>
+</ul>
+<p>Si vous orthographiez mal un nom d'identifiant, vous pouvez obtenir une erreur d'exécution ou une erreur logique, selon que le nom mal orthographié soit défini ou non.</p>
+<p>Une source courante de confusion de noms de variables et d'indentation incorrecte est la copie et le collage fréquents de gros blocs de code. Si vous avez de nombreuses lignes en double avec des différences mineures, il est très facile de rater une modification nécessaire lorsque vous modifiez vos lignes collées. Vous devriez toujours essayer d'éliminer les doublons excessifs à l'aide de fonctions et de boucles.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercice-1">Exercice 1<a class="anchor-link" href="#Exercice-1"> </a></h2><ul>
+<li>1) Trouvez toutes les erreurs de syntaxe dans l'extrait de code ci-dessus (dans la partie erreurs de syntaxe) et expliquez pourquoi ce sont des erreurs.</li>
+<li>2) Trouvez des sources potentielles d'erreurs d'exécution dans cet extrait de code :</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dividend</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter the dividend: &quot;</span><span class="p">))</span>
+<span class="n">divisor</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter the divisor: &quot;</span><span class="p">))</span>
+<span class="n">quotient</span> <span class="o">=</span> <span class="n">dividend</span> <span class="o">/</span> <span class="n">divisor</span>
+<span class="n">quotient_rounded</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">quotient</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>3) Trouvez des sources potentielles d'erreurs d'exécution dans cet extrait de code :</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;(</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">d</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>4) Trouvez des sources potentielles d'erreurs logiques dans cet extrait de code :</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">product</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">product</span> <span class="o">*=</span> <span class="n">i</span>
+
+<span class="n">sum_squares</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">i_sq</span> <span class="o">=</span> <span class="n">i</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">sum_squares</span> <span class="o">+=</span> <span class="n">i_sq</span>
+
+<span class="n">nums</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">num</span> <span class="o">+=</span> <span class="n">num</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2.-La-gestion-des-exceptions">2. La gestion des exceptions<a class="anchor-link" href="#2.-La-gestion-des-exceptions"> </a></h2><p>Jusqu'à présent, les programmes que nous avons écrits ont généralement ignoré le fait que les choses peuvent mal tourner. Nous avons essayé d'éviter les erreurs d'exécution en vérifiant les données qui peuvent être incorrectes avant de les utiliser, mais nous n'avons pas encore vu comment nous pouvons gérer les erreurs lorsqu'elles se produisent. Jusqu'à présent, nos programmes ont crashé soudainement chaque fois qu'ils en ont rencontré une.</p>
+<p>Dans certaines situations, des erreurs d'exécution sont susceptibles de se produire. Chaque fois que nous essayons de lire un fichier ou d'obtenir des informations d'un utilisateur, il est possible que quelque chose d'inattendu se produise : le fichier peut avoir été déplacé ou supprimé, ou l'utilisateur peut saisir des données qui ne sont pas au bon format. Les bons programmeurs devraient ajouter des garde-fous à leurs programmes afin que des situations courantes comme celle-ci puissent être gérées avec élégance. Un programme qui plante chaque fois qu'il rencontre un problème facilement prévisible n'est pas très agréable à utiliser. La plupart des utilisateurs s'attendent à ce que les programmes soient suffisamment robustes pour se remettre de ce genre de revers.</p>
+<p>Si nous savons qu'une section particulière de notre programme est susceptible de provoquer une erreur, nous pouvons dire à Python quoi faire si cela se produit. Au lieu de laisser l'erreur planter notre programme, nous pouvons l'intercepter, faire quelque chose et permettre au programme de continuer.</p>
+<p>Toutes les erreurs d'exécution (et de syntaxe) que nous avons rencontrées sont appelées <code>exception</code> en Python. Python les utilise pour indiquer que quelque chose d'exceptionnel s'est produit et que votre programme ne peut pas continuer à moins qu'il ne soit géré. Toutes les exceptions sont des sous-classes de la classe <code>Exception</code>, nous en apprendrons plus sur les classes et sur la façon d'écrire vos propres types d'exceptions dans les chapitres suivants.</p>
+<h3 id="Les-instructions-:-try/except">Les instructions : <code>try</code>/<code>except</code><a class="anchor-link" href="#Les-instructions-:-try/except"> </a></h3><p>Pour gérer les exceptions possibles, nous utilisons un bloc <code>try</code>/<code>except</code> :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter your age: &quot;</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I see that you are </span><span class="si">%d</span><span class="s2"> years old.&quot;</span> <span class="o">%</span> <span class="n">age</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hey, that wasn&#39;t a number!&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Python essaiera de traiter toutes les instructions à l'intérieur du bloc <code>try</code>. Si une <code>ValueError</code> se produit à tout moment pendant son exécution, le flux de contrôle passera immédiatement au bloc <code>except</code> et toutes les instructions restantes dans le bloc <code>try</code> seront ignorées.</p>
+<p>Dans cet exemple, nous savons que l'erreur est susceptible de se produire lorsque nous essayons de convertir l'entrée de l'utilisateur en un entier. Si la chaîne d'entrée n'est pas un nombre, cette ligne déclenchera une <code>ValueError</code> : c'est pourquoi nous l'avons spécifié comme le type d'erreur que nous allons gérer.</p>
+<p>Nous aurions pu spécifier un type d'erreur plus général ou même laisser le type complètement de côté, ce qui aurait fait que la clause except correspondrait à n'importe quel type d'exception, mais cela aurait été une mauvaise idée. Et si nous obtenions une erreur complètement différente que nous n'avions pas prévue ? Cela serait également traité, et nous ne remarquerions même pas que quelque chose d'inhabituel allait mal. Nous pouvons également vouloir réagir de différentes manières à différents types d'erreurs. Nous devrions toujours essayer de choisir des types d'erreur spécifiques plutôt que généraux pour nos clauses except.</p>
+<p>Il est possible pour une clause <code>except</code> de gérer plus d'un type d'erreur : nous pouvons fournir un tuple de types d'exception au lieu d'un seul type :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">dividend</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter the dividend: &quot;</span><span class="p">))</span>
+    <span class="n">divisor</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter the divisor: &quot;</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">dividend</span><span class="si">}</span><span class="s2"> / </span><span class="si">{</span><span class="n">divisor</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">dividend</span><span class="o">/</span><span class="n">divisor</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">except</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">ZeroDivisionError</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Oops, something went wrong!&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Un bloc <code>try</code>/<code>except</code> peut également avoir plusieurs clauses <code>except</code>. Si une exception se produit, Python vérifiera chaque clause <code>except</code> de haut en bas pour voir si le type d'exception correspond. Si aucune des clauses <code>except</code> ne correspond, l'exception sera considérée comme non gérée et votre programme plantera :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">dividend</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter the dividend: &quot;</span><span class="p">))</span>
+    <span class="n">divisor</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter the divisor: &quot;</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2"> / </span><span class="si">%d</span><span class="s2"> = </span><span class="si">%f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">dividend</span><span class="p">,</span> <span class="n">divisor</span><span class="p">,</span> <span class="n">dividend</span><span class="o">/</span><span class="n">divisor</span><span class="p">))</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The divisor and dividend have to be numbers!&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The dividend may not be zero!&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Notez que dans l'exemple ci-dessus, si une <code>ValueError</code> se produit, nous ne saurons pas si cela a été causé par le dividende ou le diviseur (qui n'est pas un entier), l'une ou l'autre des lignes d'entrée pourrait provoquer cette erreur. Si nous voulons donner à l'utilisateur un retour plus précis sur l'entrée erronée, nous devrons envelopper chaque ligne d'entrée dans un bloc try-except séparé :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">dividend</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter the dividend: &quot;</span><span class="p">))</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The dividend has to be a number!&quot;</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">divisor</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter the divisor: &quot;</span><span class="p">))</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The divisor has to be a number!&quot;</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2"> / </span><span class="si">%d</span><span class="s2"> = </span><span class="si">%f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">dividend</span><span class="p">,</span> <span class="n">divisor</span><span class="p">,</span> <span class="n">dividend</span><span class="o">/</span><span class="n">divisor</span><span class="p">))</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The dividend may not be zero!&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Comment-une-exception-est-g&#233;r&#233;e">Comment une exception est g&#233;r&#233;e<a class="anchor-link" href="#Comment-une-exception-est-g&#233;r&#233;e"> </a></h3><p>Lorsqu'une exception se produit, le flux normal d'exécution est interrompu. Python vérifie si la ligne de code qui a causé l'exception se trouve à l'intérieur d'un bloc <code>try</code>/<code>except</code>. Si c'est le cas, il vérifie si l'un des blocs <code>except</code> associés au bloc <code>try</code> peut gérer ce type d'exception. Si un gestionnaire approprié est trouvé, l'exception est gérée et le programme continue à partir de l'instruction suivante après la fin de ce <code>try</code>/<code>except</code>.</p>
+<p>S'il n'y a pas de tel gestionnaire, ou si la ligne de code n'était pas dans un bloc <code>try</code>, Python montera d'un niveau de portée : si la ligne de code qui a causé l'exception était à l'intérieur d'une fonction, cette fonction se terminera immédiatement, et la ligne qui a appelé la fonction sera traitée comme si elle avait levé l'exception. Python vérifiera si cette ligne est à l'intérieur d'un bloc <code>try</code>, et ainsi de suite. Lorsqu'une fonction est appelée, elle est placée sur la pile de Python, dont nous parlerons dans le chapitre sur les fonctions. Python parcourt cette pile lorsqu'il essaie de gérer une exception.</p>
+<p>Si une exception est levée par une ligne qui se trouve dans le corps principal de votre programme, pas à l'intérieur d'une fonction, le programme se terminera. Lorsque le message d'exception est affiché, vous devriez également voir une trace : une liste qui montre le chemin emprunté par l'exception, jusqu'à la ligne d'origine qui a causé l'erreur.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>La gestion des exceptions nous offre un autre moyen de gérer les situations sujettes aux erreurs dans notre code. Au lieu d'effectuer plus de vérifications avant de faire quelque chose pour nous assurer qu'une erreur ne se produira pas, nous essayons simplement de le faire et si une erreur se produit, nous la traitons. Cela peut nous permettre d'écrire du code plus simple et plus lisible. Regardons un exemple d'entrée plus compliqué : un dans lequel nous voulons continuer à demander à l'utilisateur d'entrer jusqu'à ce que l'entrée soit correcte. Nous allons essayer d'écrire cet exemple en utilisant les deux approches différentes :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="k">while</span> <span class="n">n</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter an integer: &quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">s</span><span class="o">.</span><span class="n">lstrip</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">isdigit</span><span class="p">():</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> is not an integer.&quot;</span> <span class="o">%</span> <span class="n">s</span><span class="p">)</span>
+
+<span class="c1"># with exception handling</span>
+<span class="n">n</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="k">while</span> <span class="n">n</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter an integer: &quot;</span><span class="p">)</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> is not an integer.&quot;</span> <span class="o">%</span> <span class="n">s</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Les-avantages-de-la-gestion-des-exceptions">Les avantages de la gestion des exceptions<a class="anchor-link" href="#Les-avantages-de-la-gestion-des-exceptions"> </a></h3><ul>
+<li>Il sépare le code normal du code qui gère les erreurs.</li>
+<li>Les exceptions peuvent facilement être transmises aux fonctions de la pile jusqu'à ce qu'elles atteignent une fonction qui sache comment les gérer. Les fonctions intermédiaires n'ont pas besoin d'avoir de code de gestion des erreurs.</li>
+<li>Les exceptions sont livrées avec de nombreuses informations d'erreur utiles intégrées - par exemple, elles peuvent imprimer un retraçage qui nous aide à voir exactement où l'erreur s'est produite.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Les-instructions-else-et-finally">Les instructions <code>else</code> et <code>finally</code><a class="anchor-link" href="#Les-instructions-else-et-finally"> </a></h3><p>Il y a deux autres clauses que nous pouvons ajouter à un bloc <code>try</code>/<code>except</code> : <code>else</code> et <code>finally</code>. <code>else</code> ne sera exécuté que si la clause <code>try</code> ne lève pas d'exception :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter your age: &quot;</span><span class="p">))</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hey, that wasn&#39;t a number!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I see that you are </span><span class="si">%d</span><span class="s2"> years old.&quot;</span> <span class="o">%</span> <span class="n">age</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Nous voulons afficher un message sur l'âge de l'utilisateur uniquement si la conversion d'entier réussit. Dans le premier exemple de gestionnaire d'exceptions, nous plaçons cette instruction <code>print</code> directement après la conversion à l'intérieur du bloc <code>try</code>. Dans les deux cas, l'instruction ne sera exécutée que si l'instruction de conversion ne lève pas d'exception, mais la placer dans le bloc <code>else</code> est une meilleure pratique : cela signifie que le seul code à l'intérieur du bloc <code>try</code> est la seule ligne qui est le potentiel source de l'erreur que nous voulons traiter.</p>
+<p>La clause <code>finally</code> sera exécutée à la fin du bloc <code>try</code>/<code>except</code> quoi qu'il arrive :</p>
+<ul>
+<li>s'il n'y a pas d'exception</li>
+<li>si une exception est levée et gérée,</li>
+<li>si une exception est levée et non gérée
+Nous pouvons utiliser la clause <code>finally</code> pour le code de nettoyage que nous voulons toujours exécuter :</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter your age: &quot;</span><span class="p">))</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hey, that wasn&#39;t a number!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I see that you are </span><span class="si">%d</span><span class="s2"> years old.&quot;</span> <span class="o">%</span> <span class="n">age</span><span class="p">)</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;It was really nice talking to you.  Goodbye!&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercice-2">Exercice 2<a class="anchor-link" href="#Exercice-2"> </a></h2><ul>
+<li>1) Étendez le programme de l'exercice 7 du chapitre sur les boucles pour y inclure la gestion des exceptions. Chaque fois que l'utilisateur entre une entrée de type incorrect, continuez à demander à l'utilisateur la même valeur jusqu'à ce qu'elle soit entrée correctement.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="L'instruction-as">L'instruction <code>as</code><a class="anchor-link" href="#L'instruction-as"> </a></h2><p>Les objets d'exception de Python contiennent plus d'informations que le type d'erreur. Ils sont également accompagnés d'une sorte de message, nous avons déjà vu certains de ces messages s'afficher lorsque nos programmes se sont écrasés. Souvent, ces messages ne sont pas très conviviaux : si nous voulons signaler une erreur à l'utilisateur, nous devons généralement écrire un message plus descriptif qui explique comment l'erreur est liée à ce que l'utilisateur a fait. Par exemple, si l'erreur a été causée par une entrée incorrecte, il est utile d'indiquer à l'utilisateur laquelle des valeurs d'entrée est incorrecte.</p>
+<p>Parfois, le message d'exception contient des informations utiles que nous souhaitons afficher à l'utilisateur. Pour accéder au message, nous devons pouvoir accéder à l'objet exception. Nous pouvons affecter l'objet à une variable que nous pouvons utiliser dans la clause <code>except</code> comme ceci :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter your age: &quot;</span><span class="p">))</span>
+<span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>err</code> n'est pas une <code>string</code>, mais Python sait comment la convertir. La représentation sous forme de <code>string</code> d'une exception est le message, ce qui est exactement ce que nous voulons. Nous pouvons également combiner le message d'exception avec notre propre message :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter your age: &quot;</span><span class="p">))</span>
+<span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;You entered incorrect age input: </span><span class="se">\&quot;</span><span class="si">{</span><span class="n">err</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Lever-des-exceptions">Lever des exceptions<a class="anchor-link" href="#Lever-des-exceptions"> </a></h2><p>Nous pouvons lever des exceptions nous-mêmes en utilisant l'instruction <code>raise</code> :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter your age: &quot;</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2"> is not a valid age. Age must be positive or zero.&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You entered incorrect age input: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">err</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I see that you are </span><span class="si">%d</span><span class="s2"> years old.&quot;</span> <span class="o">%</span> <span class="n">age</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Nous pouvons lever notre propre <code>ValueError</code> si l'entrée age est un entier valide, mais elle est négative. Lorsque nous faisons cela, cela a exactement le même effet que toute autre exception, le flux de contrôle quittera immédiatement la clause <code>try</code> à ce stade et passera à la clause <code>except</code>. Cette clause <code>except</code> peut également correspondre à notre exception, car il s'agit également d'une <code>ValueError</code>.</p>
+<p>Nous avons choisi <code>ValueError</code> comme type d'exception car c'est le plus approprié pour ce type d'erreur. Rien ne nous empêche d'utiliser une classe d'exception complètement inappropriée ici, mais nous devons essayer d'être cohérents. Voici quelques types d'exceptions courants que nous sommes susceptibles de générer dans notre propre code :</p>
+<ul>
+<li>1) <code>TypeError</code>: c'est une erreur qui indique qu'une variable a le mauvais type pour une opération. Nous pouvons l'augmenter dans une fonction si un paramètre n'est pas d'un type que nous savons gérer.</li>
+<li>2) <code>ValueError</code>: cette erreur est utilisée pour indiquer qu'une variable a le bon type mais la mauvaise valeur. Par exemple, nous l'avons utilisé lorsque l'âge était un entier, mais le mauvais type d'entier.</li>
+<li>3) <code>NotImplementedError</code>: nous verrons dans le chapitre suivant comment nous utilisons cette exception pour indiquer qu'une méthode de classe doit être implémentée dans une classe enfant.</li>
+</ul>
+<p>Nous pouvons également écrire nos propres classes d'exceptions personnalisées basées sur des classes d'exceptions existantes.</p>
+<p>Quelque chose que nous pouvons vouloir faire est de lever une exception que nous venons d'intercepter, peut-être parce que nous voulons la gérer partiellement dans la fonction actuelle, mais aussi pour y répondre dans le code qui a appelé la fonction :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter your age: &quot;</span><span class="p">))</span>
+<span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You entered incorrect age input: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">err</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="n">err</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercice-3">Exercice 3<a class="anchor-link" href="#Exercice-3"> </a></h2><ul>
+<li>1) Réécrivez le programme de la première question de l'exercice 2 afin qu'il affiche le texte de l'exception originale de Python à l'intérieur de la clause <code>except</code> au lieu d'un message personnalisé.</li>
+<li>2) Réécrivez le programme à partir de la deuxième question de l'exercice 2 de sorte que l'exception qui est interceptée dans la clause <code>except</code> soit relancée après l'impression du message d'erreur.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="3.-D&#233;bugger-le-code">3. D&#233;bugger le code<a class="anchor-link" href="#3.-D&#233;bugger-le-code"> </a></h2><p>Les erreurs de syntaxe sont généralement assez simples à débugger : le message d'erreur nous montre la ligne du fichier où se trouve l'erreur, et il devrait être facile de la trouver et de la corriger.</p>
+<p>Les erreurs d'exécution peuvent être un peu plus difficiles à débugger : le message d'erreur et le <code>traceback</code> peuvent nous dire exactement où l'erreur s'est produite, mais cela ne nous dit pas nécessairement quel est le problème. Parfois, ils sont causés par quelque chose d'évident, comme un nom d'identifiant incorrect, mais parfois ils sont déclenchés par un état particulier du programme : il n'est pas toujours clair lequel des nombreuses variables a une valeur inattendue.</p>
+<p>Les erreurs logiques sont les plus difficiles à corriger car elles ne provoquent aucune erreur pouvant être attribuée à une ligne particulière du code. Tout ce que nous savons, c'est que le code ne se comporte pas comme il devrait l'être. Parfois, la recherche de la zone du code à l'origine du comportement incorrect peut prendre beaucoup de temps.</p>
+<p>Il est important de tester votre code pour vous assurer qu'il se comporte comme vous l'attendez. Un moyen simple et rapide de tester qu'une fonction fait ce qu'il faut, par exemple, consiste à insérer une instruction <code>print</code> après chaque ligne qui renvoie les résultats intermédiaires qui ont été calculés sur cette ligne. La plupart des programmeurs le font intuitivement lorsqu'ils écrivent une fonction, ou peut-être s'ils ont besoin de comprendre pourquoi elle ne fait pas la bonne chose :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">hypotenuse</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x is </span><span class="si">%f</span><span class="s2"> and y is </span><span class="si">%f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+    <span class="n">x_2</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x_2</span><span class="p">)</span>
+    <span class="n">y_2</span> <span class="o">=</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">y_2</span><span class="p">)</span>
+    <span class="n">z_2</span> <span class="o">=</span> <span class="n">x_2</span> <span class="o">+</span> <span class="n">y_2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">z_2</span><span class="p">)</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">z_2</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">z</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>C'est une chose rapide et facile à faire, et même les programmeurs expérimentés sont coupables de le faire de temps en temps, mais cette approche présente plusieurs inconvénients :</p>
+<ul>
+<li>1) Dès que la fonction fonctionne, nous sommes susceptibles de supprimer toutes les instructions d'impression, car nous ne voulons pas que notre programme affiche toutes ces informations de débuggage tout le temps. Le problème est que le code change souvent, la prochaine fois que nous voulons tester cette fonction, nous devrons ajouter à nouveau les instructions <code>print</code>.</li>
+<li>2) Pour éviter de réécrire les instructions <code>print</code> si nous en avons à nouveau besoin, nous pouvons être tentés de les commenter au lieu de les supprimer. Les laissant encombrer notre code et éventuellement devenir tellement désynchronisés qu'ils finissent par être complètement inutiles de toute façon .</li>
+<li>3) Pour afficher toutes ces valeurs intermédiaires, nous avons dû étaler la formule à l'intérieur de la fonction sur plusieurs lignes. Parfois, il est utile de diviser un calcul en plusieurs étapes, s'il est très long et que tout mettre sur une seule ligne le rend difficile à lire, mais parfois cela rend simplement notre code inutilement verbeux. Voici à quoi ressemblerait normalement la fonction ci-dessus :</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">hypotenuse</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Comment pouvons-nous mieux faire que ça ? Si nous voulons inspecter les valeurs des variables à différentes étapes de l'exécution d'un programme, nous pouvons utiliser un outil comme <code>pdb</code> (ou plutôt son évolution : <code>ipdb</code> si le package est installé). Si nous voulons que notre programme affiche des messages informatifs, éventuellement dans un fichier, et que nous voulons pouvoir contrôler le niveau de détail au moment de l'exécution sans avoir à modifier quoi que ce soit dans le code, nous pouvons utiliser la journalisation.</p>
+<p>Plus important encore, pour vérifier que notre code fonctionne correctement maintenant et continuera à fonctionner correctement, nous devons écrire une suite permanente de tests que nous pouvons exécuter régulièrement sur notre code. Nous discuterons plus en détail des tests dans un chapitre ultérieur.</p>
+<h3 id="pdb-(ou-ipdb)">pdb (ou ipdb)<a class="anchor-link" href="#pdb-(ou-ipdb)"> </a></h3><p><code>pdb</code> est un module Python intégré que nous pouvons utiliser pour débugger un programme pendant son exécution. Nous pouvons soit importer le module et utiliser ses fonctions depuis notre code, soit l'invoquer en tant que script lors de l'exécution de notre fichier de code. Nous pouvons utiliser pdb pour parcourir notre programme, ligne par ligne ou par incréments plus importants, inspecter l'état à chaque étape et effectuer un "post-mortem" du programme s'il plante.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pdb</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">age_str</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter your age: &quot;</span><span class="p">)</span>
+    <span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">age_str</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+    <span class="n">pdb</span><span class="o">.</span><span class="n">set_trace</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Logging">Logging<a class="anchor-link" href="#Logging"> </a></h3><p>Parfois, il est utile qu'un programme envoie des messages à une console ou à un fichier pendant son exécution. Ces messages peuvent être utilisés comme enregistrement de l'exécution du programme et nous aident à trouver des erreurs. Parfois, un bug se produit par intermittence et nous ne savons pas ce qui le déclenche, si nous ajoutons une sortie de débuggage à notre programme uniquement lorsque nous voulons commencer une recherche active du bug, nous ne pourrons peut-être pas le reproduire. Si notre programme enregistre les messages dans un fichier tout le temps, nous pouvons constater que des informations utiles ont été enregistrées lorsque nous vérifions le journal (logs) après que le bug se soit produit.</p>
+<p>Certains types de messages sont plus importants que d'autres, les erreurs sont des événements notables qui doivent presque toujours être enregistrés. Les messages qui enregistrent qu'une opération s'est terminée avec succès peuvent parfois être utiles, mais ne sont pas aussi importants que les erreurs. Des messages détaillés qui débuggent chaque étape d'un calcul peuvent être intéressants si nous essayons de débugger le calcul, mais s'ils étaient affichés tout le temps, ils rempliraient la console de bruit (ou rendraient notre fichier de logs vraiment, vraiment gros).</p>
+<p>Nous pouvons utiliser le module de log de Python pour ajouter la journalisation à notre programme de manière simple et cohérente. Les instructions de log sont presque comme les instructions d'affichage, mais chaque fois que nous enregistrons un message, nous spécifions un niveau pour le message. Lorsque nous exécutons notre programme, nous définissons un niveau de log souhaité pour le programme. Seuls les messages dont le niveau est supérieur ou égal au niveau que nous avons défini apparaîtront dans le journal. Cela signifie que nous pouvons temporairement activer la journalisation détaillée et la désactiver à nouveau en modifiant simplement le niveau de log à un seul endroit.</p>
+<p>Il existe un ensemble cohérent de noms de niveau de log que la plupart des langues utilisent. Dans l'ordre, de la valeur la plus élevée (la plus sévère) à la valeur la plus basse (la moins sévère), ce sont :</p>
+<ul>
+<li>CRITICAL : pour les erreurs très graves</li>
+<li>ERROR : pour les erreurs moins graves</li>
+<li>WARNING : pour les avertissements</li>
+<li>INFO : pour les messages informatifs importants</li>
+<li>DEBUG : pour des messages de débuggage détaillés</li>
+</ul>
+<p>Ces noms sont utilisés pour les constantes entières définies dans le module de log : <code>logging</code>. Le module fournit également des méthodes que nous pouvons utiliser pour enregistrer les messages. Par défaut, ces messages sont affichés sur la console et le niveau de log par défaut est <code>WARNING</code>. Nous pouvons configurer le module pour personnaliser son comportement : par exemple, nous pouvons écrire les messages dans un fichier à la place, augmenter ou diminuer le niveau de log et modifier le format du message. Voici un exemple de journalisation simple :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="c1"># log messages to a file, ignoring anything less severe than ERROR</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;myprogram.log&#39;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">ERROR</span><span class="p">)</span>
+
+<span class="c1"># these messages should appear in our file</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;The washing machine is leaking!&quot;</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="s2">&quot;The house is on fire!&quot;</span><span class="p">)</span>
+
+<span class="c1"># but these ones won&#39;t</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;We&#39;re almost out of milk.&quot;</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;It&#39;s sunny today.&quot;</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;I had eggs for breakfast.&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/AXI-Fastpages/python-intro-gen/chapter/4/lesson/1/" hidden></a>
+</article>
+      </div>
+    </main>
+    <script> 
+      window.onload = () => {
+        // Ecouteur d'évènement sur scroll
+        window.addEventListener("scroll", () => {
+          // Calcul de la hauteur "utile" du document
+          let hauteur = document.documentElement.scrollHeight - window.innerHeight;
+
+          // Récupération de la position verticale
+          let position = window.scrollY;
+
+          // Récupération de la largeur de la fenêtre
+          let largeur = document.documentElement.clientWidth;
+
+          // Calcul de la largeur de la barre
+          let barre = position / hauteur * largeur;
+
+          // Modification du CSS de la barre
+          document.getElementById("barre-progression").style.width = barre+"px";
+        })
+      }
+    </script>
+  </body>
+</html>

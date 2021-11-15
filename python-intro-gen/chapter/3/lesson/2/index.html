@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <base target="_blank">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Chapitre 3 : Les boucles | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Chapitre 3 : Les boucles" />
+<meta name="author" content="AXI Academy" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Python : Chapitre 3 - Lesson 2" />
+<meta property="og:description" content="Python : Chapitre 3 - Lesson 2" />
+<link rel="canonical" href="https://axi-technologies.github.io/AXI-Fastpages/python-intro-gen/chapter/3/lesson/2/" />
+<meta property="og:url" content="https://axi-technologies.github.io/AXI-Fastpages/python-intro-gen/chapter/3/lesson/2/" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-01-02T00:00:00-06:00" />
+<script type="application/ld+json">
+{"url":"https://axi-technologies.github.io/AXI-Fastpages/python-intro-gen/chapter/3/lesson/2/","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://axi-technologies.github.io/AXI-Fastpages/python-intro-gen/chapter/3/lesson/2/"},"headline":"Chapitre 3 : Les boucles","dateModified":"2022-01-02T00:00:00-06:00","datePublished":"2022-01-02T00:00:00-06:00","author":{"@type":"Person","name":"AXI Academy"},"description":"Python : Chapitre 3 - Lesson 2","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/AXI-Fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://axi-technologies.github.io/AXI-Fastpages/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/AXI-Fastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body>
+    <div id="barre-progression" 
+      style="
+        background: #00b0f0;
+        height: 5px;
+        width: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+      "
+    ></div>
+    <YOUR HEADER IMG HERE>
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Chapitre 3 : Les boucles</h1><p class="page-description">Python : Chapitre 3 - Lesson 2</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-01-02T00:00:00-06:00" itemprop="datePublished">
+        Jan 2, 2022
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">AXI Academy</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      18 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          
+          
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/AXI-Technologies/AXI-Fastpages/blob/master/_notebooks/2022-01-02-python-intro-gen-3-2-loops.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/AXI-Fastpages/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-01-02-python-intro-gen-3-2-loops.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Dans ce chapitre, vous apprendrez comment faire en sorte que l'ordinateur exécute un groupe d'instructions encore et encore tant qu'un certain critère est vérifié. Le groupe d'instructions exécutées à plusieurs reprises est appelé une boucle. Il existe deux instructions de boucle en Python : <code>for</code> et <code>while</code>. Nous discuterons de la différence entre ces déclarations plus loin dans le chapitre, mais regardons d'abord un exemple de boucle dans le monde réel.</p>
+<p>Un employé d'une station service effectue les actions suivantes lorsqu'il sert un client :</p>
+<ul>
+<li>1) Saluer le client</li>
+<li>2) Demander le type d'essence requis et la quantité</li>
+<li>3) Demander si le client a besoin d'autres services</li>
+<li>4) Demander la somme d'argent requise</li>
+<li>5) Donner de l'argent au caissier</li>
+<li>6) Attendre le changement et la réception</li>
+<li>7) Remettre la monnaie et le reçu au client</li>
+<li>8) Dire merci et au revoir</li>
+</ul>
+<p>L'employé effectue ces étapes pour chaque client, mais il ne les suit pas lorsqu'il n'y a pas de client à servir. Il ne les exécute également que lorsque lors de son temps de travail. Si nous devions écrire un programme informatique pour simuler ce comportement, il ne suffirait pas de fournir les étapes et de demander à l'ordinateur de les répéter encore et encore. Nous aurions également besoin de lui dire quand arrêter de les exécuter.</p>
+<p>Il existe deux grands types de boucles de programmation : les boucles de comptage (<code>for</code>) et les boucles contrôlées par événement (<code>while</code>).</p>
+<p>Dans une boucle de comptage, l'ordinateur sait au début de l'exécution de la boucle combien de fois il doit exécuter la boucle. En Python, ce type de boucle est défini avec l'instruction <code>for</code>, qui exécute le corps de la boucle pour chaque élément d'une liste.</p>
+<p>Dans une boucle contrôlées par événement, l'ordinateur arrête l'exécution de la boucle lorsqu'une condition n'est plus vraie. En Python, vous pouvez utiliser l'instruction <code>while</code>. L'ordinateur exécute le corps de la boucle tant que la condition est vraie. L'instruction <code>while</code> vérifie la condition avant d'effectuer chaque itération de la boucle.</p>
+<p>Les boucles de comptage sont en fait un sous-ensemble de la boucle de contrôle d'événement, la boucle est répétée jusqu'à ce que le nombre requis d'itérations soit atteint.</p>
+<p>Si vous vouliez aller de Paris à Marseille, quel algorithme de boucle utiliseriez-vous ? Si vous avez commencé par mettre votre voiture sur la route de Marseille, vous pourriez :</p>
+<ul>
+<li>Rouler exactement 7h30. Après 7h30, arréter la voiture et descendre.</li>
+<li>Rouler exactement 780km. Après 780km, arréter la voiture et descendre.</li>
+<li>Roulez tant que nous ne sommes pas arrivé à Marseille. Une fois arriver, arréter la voiture et descendre.</li>
+</ul>
+<p>Les deux premiers algorithmes sont basés sur le comptage, aucun de ces algorithmes ne garantit que vous arriverez à Marseille. Dans le premier cas, vous pourriez rencontrer un trafic dense ou pas du tout, et ne pas atteindre ou dépasser la destination souhaitée. Dans le second cas, vous pourriez trouver un détour et vous retrouver loin de Camps Bay.</p>
+<p>Le troisième algorithme est contrôlé par les événements. Vous continuez à conduire tant que vous n'êtes pas à Marseille. La condition que vous continuez à vérifier est : est-ce que je suis arrivé à Marseille  ?</p>
+<h2 id="1.-La-boucle-while">1. La boucle <code>while</code><a class="anchor-link" href="#1.-La-boucle-while"> </a></h2><p>L'instruction python pour une boucle controlé par des évenements est : <code>while</code>. Vous devez l'utiliser lorsque vous ne savez pas à l'avance combien de fois vous devrez exécuter le corps de la boucle. Tant que la condition est vraie, le corps <code>while</code> continue de se répéter. Exemple :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span><span class="mi">10</span><span class="p">:</span>
+    <span class="n">total</span> <span class="o">+=</span> <span class="n">i</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">total</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>La variable utilisée dans la condition de boucle est le nombre <code>i</code>, que vous utilisez pour compter les entiers de 1 à 10. Vous initialisez d'abord ce nombre à 1. Dans la condition, vous vérifiez si <code>i</code> est inférieur ou égal à 10, et si c'est vrai, vous exécutez le corps de la boucle. Ensuite, à la fin du corps de la boucle, vous mettez à jour <code>i</code> en l'incrémentant de 1.</p>
+<p>Il est très important que vous incrémentiez <code>i</code> à la fin. Sinon, <code>i</code> serait toujours égal à 1, la condition serait toujours vraie et votre programme ne se terminerait jamais. Nous appelons cela une boucle infinie. Chaque fois que vous écrivez une boucle <code>while</code>, assurez-vous que la variable que vous utilisez dans votre condition est mise à jour à l'intérieur du corps de la boucle.</p>
+<p>Voici quelques erreurs courantes pouvant entraîner une boucle infinie :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="n">y</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># wrong variable updated</span>
+
+<span class="n">product</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="n">product</span> <span class="o">*=</span> <span class="n">count</span>
+    <span class="c1"># forgot to update count</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># update statement is indented one level too little, so it&#39;s outside the loop body</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">x</span> <span class="o">!=</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">+=</span> <span class="mi">2</span> <span class="c1"># x will never equal 5, because we are counting in even numbers!</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Dans certains exemples ci-dessus, nous comptons jusqu'à un nombre prédéterminé, il serait donc plus approprié pour nous d'utiliser une boucle <code>for</code>, c'est la structure de boucle qui est la plus couramment utilisée pour compter les boucles. Voici un exemple plus réaliste :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">23</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
+
+<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># while total &lt; 100:</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span> <span class="ow">and</span> <span class="n">total</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
+    <span class="n">total</span> <span class="o">+=</span> <span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ici, nous additionnons les nombres d'une liste jusqu'à ce que le total atteigne 100. Nous ne savons pas combien de fois nous devrons exécuter la boucle, car nous ne connaissons pas les valeurs des nombres. Notez que nous pourrions atteindre la fin de la liste des nombres avant que le total n'atteigne 100. Si nous essayons d'accéder à un élément au-delà de la fin de la liste, nous obtiendrons une erreur, nous devons donc ajouter une vérification pour nous assurer que cela ne fonctionne pas. ça n'arrive pas.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercice-1-:">Exercice 1 :<a class="anchor-link" href="#Exercice-1-:"> </a></h2><ul>
+<li>1) Écrivez un programme qui utilise une boucle <code>while</code> pour additionner les carrés d'entiers (à partir de 1) jusqu'à ce que le total dépasse 200. Affichez le total final et le dernier nombre à mettre au carré et ajouter.</li>
+<li>2) Ecrivez un programme qui demande à l'utilisateur de deviner un mot. L'utilisateur a jusqu'à dix suppositions – écrivez votre code de telle sorte que le mot secret et le nombre de suppositions autorisées soient faciles à modifier. Affichez des messages pour donner votre avis à l'utilisateur.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2.-La-boucle--for">2. La boucle  <code>for</code><a class="anchor-link" href="#2.-La-boucle--for"> </a></h2><p>L'instruction python pour une boucle de comptage est : <code>for</code>. Vous devriez l'utiliser lorsque vous devez faire quelque chose pour un nombre prédéfini d'étapes.</p>
+<p>Exemple :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Comme nous l'avons vu dans le chapitre précédent, <code>range</code> est un type de séquence immuable utilisé pour générer des entiers. Dans ce cas, le <code>range</code> compte de 1 à 8. La boucle <code>for</code> parcourra chacun des nombres tour à tour , effectuant l'action d'affichage. Lorsque la fin du <code>range</code> est atteint, la boucle <code>for</code> se termine.</p>
+<p>Vous pouvez également utiliser un <code>for</code> pour parcourir d'autres types de séquences. Vous pouvez parcourir une liste de <code>string</code> comme celle-ci :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pets</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">,</span> <span class="s2">&quot;budgie&quot;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">pet</span> <span class="ow">in</span> <span class="n">pets</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">pet</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A chaque itération de la boucle, l'élément suivant de la liste pets est affecté à la variable pet, à laquelle vous pouvez alors accéder à l'intérieur du corps de la boucle. L'exemple ci-dessus est fonctionnellement identique à celui-ci :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pets</span><span class="p">)):</span> <span class="c1"># i will iterate over 0, 1 and 2</span>
+    <span class="n">pet</span> <span class="o">=</span> <span class="n">pets</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">pet</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Vous devriez éviter de faire cela, car c'est plus difficile à lire et inutilement complexe. Si, pour une raison quelconque, vous avez besoin de l'index à l'intérieur de la boucle ainsi que de l'élément de liste lui-même, vous pouvez utiliser la fonction <code>enumerate</code> pour numéroter les éléments :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">pet</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">pets</span><span class="p">):</span>
+    <span class="n">pets</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">pet</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="c1"># rewrite the list in all caps</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercice-2-:">Exercice 2 :<a class="anchor-link" href="#Exercice-2-:"> </a></h2><ul>
+<li>1) Écrivez un programme qui additionne les nombres entiers de 1 à 10 en utilisant une boucle <code>for</code> (et affiche le total à la fin).</li>
+<li>2) Pouvez-vous penser à un moyen de le faire sans utiliser de boucle ?</li>
+<li>3) Écrire un programme qui trouve la factorielle d'un nombre donné. Par exemple. 3 factoriel, ou <code>3!</code> est égal à <code>3 x 2 x 1</code>; <code>5!</code> est égal à <code>5 ​​x 4 x 3 x 2 x 1</code>, etc. Votre programme ne doit contenir qu'une seule boucle.</li>
+<li>4) Écrivez un programme qui demande à l'utilisateur 10 nombres à virgule flottante et calcule leur somme, leur produit et leur moyenne. Votre programme ne doit contenir qu'une seule boucle.</li>
+<li>5) Réécrivez le programme précédent pour qu'il ait deux boucles, une qui collecte et stocke les nombres, et une qui les traite.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="3.-Boucles-imbriqu&#233;es">3. Boucles imbriqu&#233;es<a class="anchor-link" href="#3.-Boucles-imbriqu&#233;es"> </a></h2><p>Nous avons vu dans le chapitre précédent que nous pouvons créer des séquences multidimensionnelles, des lesquelles chaque élément est une autre séquence. Comment itérer sur toutes les valeurs d'une séquence multidimensionnelle ? Nous devons utiliser des boucles à l'intérieur d'autres boucles. Lorsque nous faisons cela, nous disons que nous imbriquons des boucles.</p>
+<p>Ré-utilisons l'exemple de l'emploi du temps du chapitre précédent, nous avons une séquence multidimensionnelle qui contient sept jours et que chaque jour contient 24 plages horaires. Chaque créneau horaire est une chaîne, qui est vide s'il n'y a rien de prévu pour ce créneau. Comment itérer sur tous les créneaux horaires et afficher tous nos événements programmés ?</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">WEEKDAYS</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Monday&#39;</span><span class="p">,</span> <span class="s1">&#39;Tuesday&#39;</span><span class="p">,</span> <span class="s1">&#39;Wednesday&#39;</span><span class="p">,</span> <span class="s1">&#39;Thursday&#39;</span><span class="p">,</span> <span class="s1">&#39;Friday&#39;</span><span class="p">,</span> <span class="s1">&#39;Saturday&#39;</span><span class="p">,</span> <span class="s1">&#39;Sunday&#39;</span><span class="p">)</span>
+
+<span class="c1"># Create &amp; fill timetable</span>
+<span class="n">timetable</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">24</span> <span class="k">for</span> <span class="n">day</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">)]</span>
+<span class="n">timetable</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">16</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Python lesson.&quot;</span>
+
+<span class="c1"># now we iterate over each day in the timetable</span>
+<span class="k">for</span> <span class="n">index_day</span><span class="p">,</span> <span class="n">day</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">timetable</span><span class="p">):</span>
+    <span class="c1"># and over each timeslot in each day</span>
+    <span class="k">for</span> <span class="n">hour</span><span class="p">,</span> <span class="n">event</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">day</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">event</span><span class="p">:</span> <span class="c1"># if the slot is not an empty string</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">WEEKDAYS</span><span class="p">[</span><span class="n">index_day</span><span class="p">]</span><span class="si">}</span><span class="s2"> at </span><span class="si">{</span><span class="n">hour</span><span class="si">}</span><span class="s2">:00 -- </span><span class="si">{</span><span class="n">event</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercice-3">Exercice 3<a class="anchor-link" href="#Exercice-3"> </a></h2><ul>
+<li>1) Ecrivez un programme qui utilise une boucle <code>for</code> imbriquée pour remplir une liste tridimensionnelle représentant un calendrier : la liste de niveau supérieur doit contenir une sous-liste pour chaque mois, et chaque mois doit contenir quatre semaines. Chaque semaine doit être une liste vide.</li>
+<li>2) Modifiez votre code pour faciliter l'accès à un mois dans le calendrier par un nom de mois lisible par l'homme. Faire de même pour les semaines par un nom qui est numéroté à partir de 1. Ajoutez un événement (sous la forme d'une chaîne de description) à la deuxième semaine de juillet.</li>
+</ul>
+<h2 id="4.-It&#233;rables,-it&#233;rateurs-et-g&#233;n&#233;rateurs">4. It&#233;rables, it&#233;rateurs et g&#233;n&#233;rateurs<a class="anchor-link" href="#4.-It&#233;rables,-it&#233;rateurs-et-g&#233;n&#233;rateurs"> </a></h2><p>En Python, tout type qui peut être itéré avec une boucle <code>for</code> est un itérable. Les listes, les tuples, les <code>string</code> et les dictionnaires sont tous des types itérables couramment utilisés. Itérer sur une liste ou un tuple signifie simplement traiter chaque valeur à son tour.</p>
+<p>Parfois, nous utilisons une séquence pour stocker une série de valeurs qui ne suivent aucun modèle particulier : chaque valeur est imprévisible et ne peut pas être calculée à la volée. Dans des cas comme celui-ci, nous n'avons pas d'autre choix que de stocker chaque valeur dans une liste ou un tuple. Si la liste est très longue, cela peut utiliser beaucoup de mémoire.</p>
+<p>Que se passe-t-il si les valeurs de notre séquence suivent un modèle et peuvent être calculées à la volée ? Nous pouvons économiser beaucoup de mémoire en ne calculant les valeurs que lorsque nous en avons besoin, au lieu de toutes les calculer à l'avance : au lieu de stocker une grande liste, nous pouvons stocker uniquement les informations dont nous avons besoin pour le calcul.</p>
+<p>Python a beaucoup de types itérables intégrés qui génèrent des valeurs à la demande - ils sont souvent appelés générateurs. Nous avons déjà vu quelques exemples, comme range et enumerate. Vous pouvez principalement traiter un générateur comme n'importe quelle autre séquence si vous n'avez besoin d'accéder qu'à ses éléments un à la fois - par exemple, si vous l'utilisez dans une boucle <code>for</code> :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Vous remarquerez peut-être une différence si vous essayez d'afficher le contenu du générateur, par défaut, tout ce que vous obtiendrez est la représentation sous forme standard de Python de l'objet, qui vous montre le type de l'objet et son identifiant unique. Pour afficher toutes les valeurs du générateur, nous devons le convertir en un type de séquence comme une liste, ce qui forcera toutes les valeurs à être générées :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+
+<span class="c1"># this will show you all the generated values</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Vous pouvez utiliser tous ces itérables de manière presque interchangeable car ils utilisent tous la même interface pour itérer sur les valeurs : chaque objet itérable a une méthode qui peut être utilisée pour renvoyer un itérateur sur cet objet. L'itérable et l'itérateur forment ensemble une interface cohérente qui peut être utilisée pour parcourir une séquence de valeurs, que ces valeurs soient toutes stockées en mémoire ou calculées selon les besoins :</p>
+<p>L'itérable a une méthode pour accéder à un élément par son index. Par exemple, une liste renvoie simplement l'élément qui est stocké dans une position particulière. Une plage, d'autre part, calcule l'entier dans la plage qui correspond à un indice particulier.</p>
+<p>L'itérateur garde l'index de lecture dans la séquence et dispose d'une méthode qui vous permet d'accéder à l'élément suivant. Il peut y avoir plusieurs itérateurs associés à un seul itérable en même temps. chacun à un endroit différent dans l'itération. Par exemple, vous pouvez parcourir la même liste dans les deux niveaux d'une boucle imbriquée - chaque boucle utilise son propre itérateur et elles n'interfèrent pas les unes avec les autres :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+
+
+<span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2"> + </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Quelques exemples de générateurs intégrés définis dans le module <code>itertools</code> de Python :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">itertools</span>
+
+<span class="c1"># unlike range, count doesn&#39;t have an upper bound, and is not restricted to integers</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="c1"># 1, 2, 3....</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="c1"># 1.0, 1.5, 2.0....</span>
+
+<span class="c1"># cycle repeats the values in another iterable over and over</span>
+<span class="k">for</span> <span class="n">animal</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">cycle</span><span class="p">([</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">]):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">animal</span><span class="p">)</span> <span class="c1"># &#39;cat&#39;, &#39;dog&#39;, &#39;cat&#39;, &#39;dog&#39;...</span>
+
+<span class="c1"># repeat repeats a single item</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span> <span class="c1"># ...forever</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="c1"># 1, 1, 1....</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">):</span> <span class="c1"># or a set number of times</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="c1"># 1, 1, 1</span>
+
+<span class="c1"># chain combines multiple iterables sequentially</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">chain</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span> <span class="n">animals</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="c1"># print all the numbers and then all the animals</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Il existe également une fonction intégrée appelée <code>zip</code> qui nous permet de combiner plusieurs itérables par paire. Il sort également un générateur :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercice-4-:">Exercice 4 :<a class="anchor-link" href="#Exercice-4-:"> </a></h2><ul>
+<li>1) Créez un tuple de noms de mois et un tuple du nombre de jours de chaque mois (supposez que février a 28 jours). En utilisant une seule boucle <code>for</code>, construisez un dictionnaire qui a les noms de mois comme clés et les numéros de jour correspondants comme valeurs.</li>
+<li>2) Faites maintenant la même chose sans utiliser de boucle <code>for</code>.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="5.-Les-compr&#233;hensions">5. Les compr&#233;hensions<a class="anchor-link" href="#5.-Les-compr&#233;hensions"> </a></h2><p>Supposons que nous ayons une liste de nombres et que nous voulions construire une nouvelle liste en doublant toutes les valeurs de la première liste. Ou que nous voulons extraire tous les nombres pairs d'une liste de nombres. Ou que nous voulons trouver et mettre en majuscule tous les noms d'animaux dans une liste de noms d'animaux qui commencent par une voyelle. Nous pouvons faire chacune de ces choses en itérant sur la liste d'origine, en effectuant une sorte de vérification sur chaque élément à tour de rôle et en ajoutant des valeurs à une nouvelle liste au fur et à mesure.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">18</span><span class="p">]</span>
+
+<span class="n">doubles</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="n">doubles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">number</span><span class="p">)</span>
+
+<span class="n">even_numbers</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">even_numbers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+
+<span class="n">animals</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;aardvark&#39;</span><span class="p">,</span> <span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;opossum&#39;</span><span class="p">]</span>
+
+<span class="n">vowel_animals</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">animal</span> <span class="ow">in</span> <span class="n">animals</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">animal</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="s1">&#39;aeiou&#39;</span><span class="p">:</span>
+        <span class="n">vowel_animals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">animal</span><span class="o">.</span><span class="n">title</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>C'est une façon assez lourde de faire quelque chose de très simple. Heureusement, nous pouvons réécrire des boucles simples comme celle-ci pour utiliser une syntaxe plus propre et plus lisible en utilisant des compréhensions.</p>
+<p>Une compréhension est une sorte de filtre que nous pouvons définir sur un itérable basé sur une certaine condition. Le résultat est un autre itérable. Voici quelques exemples de compréhensions de liste :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">doubles</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span> <span class="o">*</span> <span class="n">number</span> <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">]</span>
+<span class="n">even_numbers</span> <span class="o">=</span> <span class="p">[</span><span class="n">number</span> <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span> <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">vowel_animals</span> <span class="o">=</span> <span class="p">[</span><span class="n">animal</span><span class="o">.</span><span class="n">title</span><span class="p">()</span> <span class="k">for</span> <span class="n">animal</span> <span class="ow">in</span> <span class="n">animals</span> <span class="k">if</span> <span class="n">animal</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="s1">&#39;aeiou&#39;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>La compréhension est la partie écrite entre crochets sur chaque ligne. Chacune de ces compréhensions se traduit par la création d'un nouvel objet liste.</p>
+<h2 id="Exercice-5">Exercice 5<a class="anchor-link" href="#Exercice-5"> </a></h2><ul>
+<li>1) Créez une <code>string</code> qui contient les dix premiers entiers positifs séparés par des virgules et des espaces. N'oubliez pas que vous ne pouvez pas joindre des nombres - vous devez d'abord les convertir en <code>string</code>. Affichez la <code>string</code>.</li>
+<li>2) Réécrivez le programme calendaire de l'exercice 3 en utilisant des compréhensions imbriquées au lieu de boucles imbriquées. Essayez d'ajouter une chaîne à l'une des listes de semaines, pour vous assurer que vous n'avez pas réutilisé la même liste au lieu de créer une liste distincte pour chaque semaine.</li>
+<li>3) Faites maintenant quelque chose de similaire pour créer un calendrier qui est une liste avec 52 sous-listes vides (une pour chaque semaine de l'année entière). Astuce : comment modifieriez-vous les boucles <code>for</code> imbriquées ?</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="6.-Les-instructions-break-et-continue">6. Les instructions break et continue<a class="anchor-link" href="#6.-Les-instructions-break-et-continue"> </a></h2><h3 id="L'instruction-break">L'instruction <code>break</code><a class="anchor-link" href="#L'instruction-break"> </a></h3><p>À l'intérieur du corps de la boucle, vous pouvez utiliser l'instruction <code>break</code> pour quitter immédiatement la boucle. Vous voudrez peut-être tester un cas particulier qui entraînera une sortie immédiate de la boucle. Par exemple:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="k">while</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="k">break</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="L'instruction-continue">L'instruction <code>continue</code><a class="anchor-link" href="#L'instruction-continue"> </a></h3><p>L'instruction continue est similaire à l'instruction <code>break</code>, en ce sens qu'elle fait sortir le flux de contrôle du corps de la boucle actuelle au point de rencontre, mais la boucle elle-même n'est pas terminée. Par exemple:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span> <span class="c1"># this will count from 1 to 10</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="k">continue</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercice-6">Exercice 6<a class="anchor-link" href="#Exercice-6"> </a></h2><ul>
+<li><p>1) Ecrivez un programme qui demande à plusieurs reprises à l'utilisateur un nombre entier. Si l'entier est pair, affichez le. Si l'entier est impair, n'affichez rien. Quittez le programme si l'utilisateur entre l'entier 99.</p>
+<p>Certains programmes demandent à l'utilisateur d'entrer un nombre variable d'entrées de données, et enfin d'entrer un caractère ou une chaîne spécifique qui signifie qu'il n'y a plus d'entrées. Par exemple, vous pourriez être invité à entrer votre code PIN suivi d'un dièse (#). Le dièse indique que vous avez fini de saisir votre code PIN.</p>
+<ul>
+<li><p>2) Écrire un programme qui fait la moyenne des nombres entiers positifs. Votre programme doit inviter l'utilisateur à entrer des entiers jusqu'à ce que l'utilisateur entre un entier négatif. L'entier négatif doit être ignoré et vous devez imprimer la moyenne de tous les entiers précédemment entrés.</p>
+</li>
+<li><p>3) Implémentez une calculatrice simple avec un menu. Affichez les options suivantes à l'utilisateur, demandez une sélection et effectuez l'action demandée (par exemple, demandez deux chiffres et ajoutez-les). Après chaque opération, retournez l'utilisateur au menu. Quittez le programme lorsque l'utilisateur sélectionne 0. Si l'utilisateur entre un nombre qui n'est pas dans le menu, ignorez l'entrée et réaffichez le menu. Vous pouvez supposer que l'utilisateur entrera un entier valide :</p>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>-- Calculator Menu --
+0. Quit
+1. Add two numbers
+2. Substract two numbers
+3. Multiple two numbers
+4. Divide two numbers
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Utiliser-des-boucles-pour-simplifier-le-code">Utiliser des boucles pour simplifier le code<a class="anchor-link" href="#Utiliser-des-boucles-pour-simplifier-le-code"> </a></h3><p>Nous pouvons utiliser notre connaissance des boucles pour simplifier certains types de code redondant. Considérons cet exemple, dans lequel nous demandons à un utilisateur quelques informations personnelles :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter your name: &quot;</span><span class="p">)</span>
+<span class="n">surname</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter your surname: &quot;</span><span class="p">)</span>
+<span class="c1"># let&#39;s store these as strings for now, and convert them to numbers later</span>
+<span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter your age: &quot;</span><span class="p">)</span>
+<span class="n">height</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter your height: &quot;</span><span class="p">)</span>
+<span class="n">weight</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter your weight: &quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">person</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">prop</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;surname&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">,</span> <span class="s2">&quot;weight&quot;</span><span class="p">]:</span>
+    <span class="n">person</span><span class="p">[</span><span class="n">prop</span><span class="p">]</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter your </span><span class="si">%s</span><span class="s2">: &quot;</span> <span class="o">%</span> <span class="n">prop</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercice-7">Exercice 7<a class="anchor-link" href="#Exercice-7"> </a></h2><ul>
+<li>Modifiez l'exemple ci-dessus pour inclure la conversion de type des propriétés : l'âge doit être un nombre entier, la taille et le poids doivent être des nombres flottants, et le nom et le prénom doivent être des <code>string</code>.</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/AXI-Fastpages/python-intro-gen/chapter/3/lesson/2/" hidden></a>
+</article>
+      </div>
+    </main>
+    <script> 
+      window.onload = () => {
+        // Ecouteur d'évènement sur scroll
+        window.addEventListener("scroll", () => {
+          // Calcul de la hauteur "utile" du document
+          let hauteur = document.documentElement.scrollHeight - window.innerHeight;
+
+          // Récupération de la position verticale
+          let position = window.scrollY;
+
+          // Récupération de la largeur de la fenêtre
+          let largeur = document.documentElement.clientWidth;
+
+          // Calcul de la largeur de la barre
+          let barre = position / hauteur * largeur;
+
+          // Modification du CSS de la barre
+          document.getElementById("barre-progression").style.width = barre+"px";
+        })
+      }
+    </script>
+  </body>
+</html>

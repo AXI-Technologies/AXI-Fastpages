@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <base target="_blank">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Chapitre 6 : La programmation orientée objet | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Chapitre 6 : La programmation orientée objet" />
+<meta name="author" content="AXI Academy" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Python : Chapitre 6- Lesson 1" />
+<meta property="og:description" content="Python : Chapitre 6- Lesson 1" />
+<link rel="canonical" href="https://axi-technologies.github.io/AXI-Fastpages/python-intro-gen/chapter/6/lesson/2/" />
+<meta property="og:url" content="https://axi-technologies.github.io/AXI-Fastpages/python-intro-gen/chapter/6/lesson/2/" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-01-02T00:00:00-06:00" />
+<script type="application/ld+json">
+{"url":"https://axi-technologies.github.io/AXI-Fastpages/python-intro-gen/chapter/6/lesson/2/","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://axi-technologies.github.io/AXI-Fastpages/python-intro-gen/chapter/6/lesson/2/"},"headline":"Chapitre 6 : La programmation orientée objet","dateModified":"2022-01-02T00:00:00-06:00","datePublished":"2022-01-02T00:00:00-06:00","author":{"@type":"Person","name":"AXI Academy"},"description":"Python : Chapitre 6- Lesson 1","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/AXI-Fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://axi-technologies.github.io/AXI-Fastpages/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/AXI-Fastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body>
+    <div id="barre-progression" 
+      style="
+        background: #00b0f0;
+        height: 5px;
+        width: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+      "
+    ></div>
+    <YOUR HEADER IMG HERE>
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Chapitre 6 : La programmation orientée objet</h1><p class="page-description">Python : Chapitre 6- Lesson 1</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-01-02T00:00:00-06:00" itemprop="datePublished">
+        Jan 2, 2022
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">AXI Academy</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      2 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          
+          
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/AXI-Technologies/AXI-Fastpages/blob/master/_notebooks/2022-01-02-python-intro-gen-6-2-poo.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/AXI-Fastpages/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-01-02-python-intro-gen-6-2-poo.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Comme vous l'avez vu dans les premiers exemples de code de ce cours, il n'est pas obligatoire d'organiser votre code en classes lorsque vous programmez en Python. Vous pouvez utiliser les fonctions par elles-mêmes, dans ce qu'on appelle une approche de programmation procédurale. Cependant, alors qu'un style procédural peut suffire pour écrire des programmes courts et simples, une approche de programmation orientée objet (POO) devient plus précieuse à mesure que votre programme augmente en taille et en complexité.</p>
+<p>Plus votre code contient de données et de fonctions, plus il est important de les organiser en sous-groupes logiques, en veillant à ce que les données et fonctions liées soient regroupées et que les données et fonctions non liées n'interfèrent pas les unes avec les autres. Le code modulaire est plus facile à comprendre et à modifier, et se prête davantage à la réutilisation et la réutilisation du code est précieuse car elle réduit le temps de développement.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Principes-de-base-de-la-POO">Principes de base de la POO<a class="anchor-link" href="#Principes-de-base-de-la-POO"> </a></h2><h3 id="L'encapsulation">L'encapsulation<a class="anchor-link" href="#L'encapsulation"> </a></h3><p>Le principe le plus important de l'orientation objet est l'encapsulation : l'idée que les données à l'intérieur de l'objet ne doivent être accessibles que via une interface publique, c'est-à-dire les méthodes de l'objet.</p>
+<p>La fonction <code>age</code> que nous avons vue dans le chapitre précédent est un bon exemple de cette philosophie. Si nous voulons utiliser les données stockées dans un objet pour effectuer une action ou calculer une valeur dérivée, nous définissons une méthode associée à l'objet qui le fait. Ensuite, chaque fois que nous voulons effectuer cette action, nous appelons la méthode sur l'objet. Nous considérons comme une mauvaise pratique de récupérer les informations à l'intérieur de l'objet et d'écrire un code séparé pour effectuer l'action à l'extérieur de l'objet.</p>
+<p>L'encapsulation est une bonne chose pour plusieurs raisons :</p>
+<ul>
+<li>La fonctionnalité est définie à un seul endroit et non à plusieurs endroits.</li>
+<li>Cette dernière est défini dans un endroit logique, l'endroit où les données sont conservées.</li>
+<li>Les données à l'intérieur de notre objet ne sont pas modifiées de manière inattendue par un code externe dans une partie complètement différente de notre programme.</li>
+<li>Lorsque nous utilisons une méthode, nous avons seulement besoin de savoir quel résultat la méthode produira, nous n'avons pas besoin de connaître les détails sur les éléments internes de l'objet pour l'utiliser. Nous pourrions passer à l'utilisation d'un autre objet qui est complètement différent à l'intérieur, et ne pas avoir à changer de code car les deux objets ont la même interface.</li>
+</ul>
+<p>On peut dire que l'objet « sait comment » faire des choses avec ses propres données, et c'est une mauvaise idée pour nous d'accéder à ses données internes et de faire nous-mêmes des choses avec.</p>
+<p>En Python, l'encapsulation n'est pas imposée par le langage, mais il existe une convention que nous pouvons utiliser pour indiquer qu'une propriété est destinée à être privée et ne fait pas partie de l'interface publique de l'objet : nous commençons son nom par un trait de soulignement :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Student</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="c1"># Name must be considered as a private property</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="La-Composition">La Composition<a class="anchor-link" href="#La-Composition"> </a></h1>
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/AXI-Fastpages/python-intro-gen/chapter/6/lesson/2/" hidden></a>
+</article>
+      </div>
+    </main>
+    <script> 
+      window.onload = () => {
+        // Ecouteur d'évènement sur scroll
+        window.addEventListener("scroll", () => {
+          // Calcul de la hauteur "utile" du document
+          let hauteur = document.documentElement.scrollHeight - window.innerHeight;
+
+          // Récupération de la position verticale
+          let position = window.scrollY;
+
+          // Récupération de la largeur de la fenêtre
+          let largeur = document.documentElement.clientWidth;
+
+          // Calcul de la largeur de la barre
+          let barre = position / hauteur * largeur;
+
+          // Modification du CSS de la barre
+          document.getElementById("barre-progression").style.width = barre+"px";
+        })
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <base target="_blank">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Chapitre 5 : Les fonctions | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Chapitre 5 : Les fonctions" />
+<meta name="author" content="AXI Academy" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Python : Chapitre 5 - Lesson 1" />
+<meta property="og:description" content="Python : Chapitre 5 - Lesson 1" />
+<link rel="canonical" href="https://axi-technologies.github.io/AXI-Fastpages/python-intro-gen/chapter/5/lesson/1/" />
+<meta property="og:url" content="https://axi-technologies.github.io/AXI-Fastpages/python-intro-gen/chapter/5/lesson/1/" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-01-02T00:00:00-06:00" />
+<script type="application/ld+json">
+{"url":"https://axi-technologies.github.io/AXI-Fastpages/python-intro-gen/chapter/5/lesson/1/","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://axi-technologies.github.io/AXI-Fastpages/python-intro-gen/chapter/5/lesson/1/"},"headline":"Chapitre 5 : Les fonctions","dateModified":"2022-01-02T00:00:00-06:00","datePublished":"2022-01-02T00:00:00-06:00","author":{"@type":"Person","name":"AXI Academy"},"description":"Python : Chapitre 5 - Lesson 1","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/AXI-Fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://axi-technologies.github.io/AXI-Fastpages/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/AXI-Fastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body>
+    <div id="barre-progression" 
+      style="
+        background: #00b0f0;
+        height: 5px;
+        width: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+      "
+    ></div>
+    <YOUR HEADER IMG HERE>
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Chapitre 5 : Les fonctions</h1><p class="page-description">Python : Chapitre 5 - Lesson 1</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-01-02T00:00:00-06:00" itemprop="datePublished">
+        Jan 2, 2022
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">AXI Academy</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      26 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          
+          
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/AXI-Technologies/AXI-Fastpages/blob/master/_notebooks/2022-01-02-python-intro-gen-5-1-fonctions.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/AXI-Fastpages/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-01-02-python-intro-gen-5-1-fonctions.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="1.-Introduction-aux-fonctions-(def)">1. Introduction aux fonctions (<code>def</code>)<a class="anchor-link" href="#1.-Introduction-aux-fonctions-(def)"> </a></h2><p>Une fonction est une séquence d'instructions qui effectue une tâche. Nous utilisons des fonctions pour éliminer la duplication de code : au lieu d'écrire toutes les instructions à chaque endroit de notre code où nous voulons effectuer la même tâche, nous les définissons en un seul endroit et nous y référons par le nom de la fonction. Si nous voulons changer la façon dont cette tâche est effectuée, nous n'aurons plus besoin que de changer le code à un seul endroit.</p>
+<p>Voici une définition d'une fonction simple qui ne prend aucun paramètre et ne renvoie aucune valeur :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_a_message</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, world!&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Nous utilisons l'instruction <code>def</code> pour indiquer le début d'une définition de fonction. La partie suivante de la définition est le nom de la fonction, dans ce cas : <code>print_a_message</code>, suivi de parenthèses (les définitions de tous les paramètres pris par la fonction seront placées entre elles) et de deux points. Par la suite, tout ce qui est indenté d'un niveau est le corps de la fonction.</p>
+<p>Les fonctions font toutes sortes de choses, vous devez donc toujours choisir un nom de fonction qui explique aussi simplement que possible ce que fait la fonction. Ce sera généralement un verbe ou une phrase contenant un verbe. Si vous modifiez tellement une fonction que le nom ne reflète plus exactement ce qu'elle fait, vous devriez envisager de mettre à jour le nom, bien que cela puisse parfois être gênant.</p>
+<p>Cette fonction particulière fait toujours exactement la même chose : elle affiche le message "Hello, world!".</p>
+<p>Définir une fonction ne la fait pas s'exécuter, lorsque le flux de contrôle atteint la définition de la fonction et l'exécute, Python apprend simplement la fonction et ce qu'elle fera lorsque nous l'exécuterons. Pour exécuter une fonction, nous devons l'appeler. Pour appeler la fonction, nous utilisons son nom suivi de parenthèses (avec tous les paramètres que la fonction prend entre eux):</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">print_a_message</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Nous avons déjà utilisé de nombreuses fonctions intégrées de Python, telles que <code>print</code> et <code>len</code> ​​:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>
+<span class="nb">len</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>De nombreux objets en Python sont appelables (<code>callable</code>), ce qui signifie que vous pouvez les appeler comme des fonctions : un objet <code>callable</code> a une méthode spéciale définie qui est exécutée lorsque l'objet est appelé. Par exemple, des types tels que <code>str</code>, <code>int</code> ou <code>list</code> peuvent être utilisés comme fonctions, pour créer de nouveaux objets de ce type (parfois en convertissant un objet existant) :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">num_str</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s2">&quot;3&quot;</span><span class="p">)</span>
+
+<span class="n">people</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span> <span class="c1"># make a new (empty) list</span>
+<span class="n">people</span> <span class="o">=</span> <span class="nb">list</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span> <span class="c1"># convert a tuple to a new list</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Les fonctions sont des objets en Python, nous pouvons les traiter comme n'importe quel autre objet : nous pouvons affecter une fonction comme valeur d'une variable. Pour faire référence à une fonction sans l'appeler, nous utilisons simplement le nom de la fonction sans parenthèses :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_function</span> <span class="o">=</span> <span class="n">print_a_message</span>
+
+<span class="c1"># later we can call the function using the variable name</span>
+<span class="n">my_function</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>La définition d'une fonction ne provoque pas son exécution, nous pouvons utiliser un objet à l'intérieur d'une fonction même s'il n'a pas encore été définie. Tant qu'il est défini au moment où nous exécutons la fonction. Par exemple, si nous définissons plusieurs fonctions qui s'appellent toutes, l'ordre dans lequel nous les définissons n'a pas d'importance tant qu'elles sont toutes définies avant de commencer à les utiliser :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">my_function</span><span class="p">():</span>
+    <span class="n">my_other_function</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">my_other_function</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">)</span>
+
+<span class="c1"># this is fine, because my_other_function is now defined</span>
+<span class="n">my_function</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Si nous devions déplacer cet appel de fonction, nous obtiendrions une erreur :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">my_function</span><span class="p">():</span>
+    <span class="n">my_other_function</span><span class="p">()</span>
+
+<span class="c1"># this is not fine, because my_other_function is not defined yet!</span>
+<span class="n">my_function</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">my_other_function</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2.-Les-param&#232;tres-d'entr&#233;e">2. Les param&#232;tres d'entr&#233;e<a class="anchor-link" href="#2.-Les-param&#232;tres-d'entr&#233;e"> </a></h2><p>Il est très rare que la tâche que nous voulons effectuer avec une fonction soit toujours exactement la même. Il y a généralement des différences mineures par rapport à ce que nous devons faire dans différentes circonstances. Nous ne voulons pas écrire une fonction légèrement différente pour chacun de ces cas légèrement différents, cela irait à l'encontre du principe : éviter les répétitions de code. Au lieu de cela, nous voulons transmettre des informations à la fonction et les utiliser à l'intérieur de la fonction pour adapter le comportement de la fonction à nos besoins exacts. Nous exprimons cette information sous la forme d'une série de paramètres d'entrée.</p>
+<p>Par exemple, nous pouvons rendre la fonction que nous avons définie ci-dessus plus utile si nous rendons le message personnalisable :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_a_message</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Nous pouvons aussi passer deux nombres et les additionner. Lorsque nous appelons cette fonction, nous devons passer deux paramètres, ou nous obtiendrons une erreur :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_sum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
+
+<span class="n">print_sum</span><span class="p">()</span> <span class="c1"># this won&#39;t work</span>
+
+<span class="n">print_sum</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="c1"># this is correct</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Dans l'exemple ci-dessus, nous passons 2 et 3 comme paramètres à la fonction lorsque nous l'appelons. Cela signifie que lors de l'exécution de la fonction, la variable <code>a</code> recevra la valeur 2 et la variable <code>b</code> la valeur 3. Vous pourrez alors vous référer à ces valeurs en utilisant les noms de variables <code>a</code> et <code>b</code> à l'intérieur de la fonction.</p>
+<p>Dans les langages à typage statique, nous devons déclarer les types de paramètres lorsque nous définissons la fonction, et nous ne pouvons utiliser des variables de ces types que lorsque nous appelons la fonction. Si nous voulons effectuer une tâche similaire avec des variables de types différents, nous devons définir une fonction distincte qui accepte ces types.</p>
+<p>En Python, les paramètres n'ont pas de types déclarés. Nous pouvons transmettre n'importe quel type de variable à la fonction <code>print_message</code> ci-dessus, pas seulement une <code>string</code>. Nous pouvons utiliser la fonction <code>print_sum</code> pour ajouter deux éléments qui peuvent être ajoutés : deux entiers, deux flottants, un entier et un flottant, ou même deux chaînes. Nous pouvons également passer un entier et une chaîne, mais bien que ceux-ci soient autorisés en tant que paramètres, ils ne peuvent pas être additionnés, nous obtiendrons donc une erreur lorsque nous essaierons de les ajouter à l'intérieur de la fonction.</p>
+<p>L'avantage de ceci est que nous n'avons pas à écrire beaucoup de fonctions <code>print_sum</code> différentes, une pour chaque paire de types différente, alors qu'elles seraient toutes identiques autrement. L'inconvénient est que puisque Python ne vérifie pas les types de paramètres par rapport à la définition de la fonction lorsqu'une fonction est appelée, nous pouvons ne pas remarquer immédiatement si le mauvais type de paramètre est transmis - si, par exemple, une autre personne interagit avec le code que nous avons écrit utilise des types de paramètres que nous n'avions pas anticipés, ou si nous obtenons accidentellement les paramètres dans le désordre.</p>
+<p>C'est pourquoi il est important pour nous de tester notre code à fond (ce que nous verrons dans un chapitre ultérieur). Si nous avons l'intention d'écrire du code robuste, surtout s'il doit également être utilisé par d'autres personnes, c'est aussi souvent une bonne idée de vérifier les paramètres de la fonction au début de la fonction et de donner un retour à l'utilisateur (en levant des exceptions) si le sont incorrects.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercice-2">Exercice 2<a class="anchor-link" href="#Exercice-2"> </a></h2><ul>
+<li>1) Créez une fonction appelée <code>hypotenuse</code>, qui prend deux nombres comme paramètres et imprime la racine carrée de la somme de leurs carrés.</li>
+<li>2) Appelez cette fonction avec deux flottants.</li>
+<li>3) Appelez cette fonction avec deux entiers.</li>
+<li>4) Appelez cette fonction avec un entier et un flottant.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="3.-Les-valeurs-de-retour-(return)">3. Les valeurs de retour (<code>return</code>)<a class="anchor-link" href="#3.-Les-valeurs-de-retour-(return)"> </a></h2><p>Les exemples de fonctions que nous avons vus ci-dessus ne renvoient aucune valeur, ils affichent simplement un message. Nous voulons souvent utiliser une fonction pour calculer une sorte de valeur, puis nous la renvoyer, afin que nous puissions la stocker dans une variable et l'utiliser plus tard. La sortie renvoyée par une fonction est appelée valeur de retour. Nous pouvons réécrire la fonction <code>print_sum</code> pour renvoyer le résultat de son addition au lieu de l'afficher :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Nous utilisons le mot-clé <code>return</code> pour définir une valeur de retour. Pour accéder à cette valeur lorsque nous appelons la fonction, nous devons affecter le résultat de la fonction à une variable :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">23</span><span class="p">,</span> <span class="mi">13</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ici, la valeur de retour de la fonction sera affectée à <code>c</code> lorsque la fonction est exécutée.</p>
+<p>Une fonction ne peut avoir qu'une seule valeur de retour, mais cette valeur peut être une liste ou un tuple, donc en pratique, vous pouvez retourner autant de valeurs différentes d'une fonction que vous le souhaitez. Il n'est généralement logique de renvoyer plusieurs valeurs que si elles sont liées les unes aux autres d'une manière ou d'une autre. Si vous placez plusieurs valeurs après l'instruction <code>return</code>, séparées par des virgules, elles seront automatiquement converties en un <code>tuple</code>. Inversement, vous pouvez affecter un <code>tuple</code> à plusieurs variables séparées par des virgules en même temps, vous pouvez donc décompresser un tuple renvoyé par une fonction en plusieurs variables</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">divide</span><span class="p">(</span><span class="n">dividend</span><span class="p">,</span> <span class="n">divisor</span><span class="p">):</span>
+    <span class="n">quotient</span> <span class="o">=</span> <span class="n">dividend</span> <span class="o">//</span> <span class="n">divisor</span>
+    <span class="n">remainder</span> <span class="o">=</span> <span class="n">dividend</span> <span class="o">%</span> <span class="n">divisor</span>
+    <span class="k">return</span> <span class="n">quotient</span><span class="p">,</span> <span class="n">remainder</span>
+
+<span class="c1"># you can do this</span>
+<span class="n">q</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="n">divide</span><span class="p">(</span><span class="mi">35</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+
+<span class="c1"># but you can also do this</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">divide</span><span class="p">(</span><span class="mi">67</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+<span class="n">q1</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">q2</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># by the way, you can also do this</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="c1"># or this</span>
+<span class="n">c</span><span class="p">,</span> <span class="n">d</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Que se passe-t-il si vous essayez d'affecter l'un de nos premiers exemples, qui n'ont pas de valeur de retour, à une variable ?</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mystery_output</span> <span class="o">=</span> <span class="n">print_a_message</span><span class="p">(</span><span class="s2">&quot;Boo!&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mystery_output</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Toutes les fonctions renvoient en fait quelque chose, même si nous ne définissons pas de valeur de retour : la valeur de retour par défaut est <code>None</code>, ce qui correspond à la valeur de notre sortie mystère.</p>
+<p>Lorsqu'une instruction <code>return</code> est atteinte, le flux de contrôle quitte immédiatement la fonction : toute autre instruction dans le corps de la fonction sera ignorée. Nous pouvons parfois utiliser cela à notre avantage pour réduire le nombre d'instructions conditionnelles que nous devons utiliser dans une fonction :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">divide</span><span class="p">(</span><span class="n">dividend</span><span class="p">,</span> <span class="n">divisor</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">divisor</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span> <span class="c1"># instead of dividing by zero</span>
+
+    <span class="n">quotient</span> <span class="o">=</span> <span class="n">dividend</span> <span class="o">//</span> <span class="n">divisor</span>
+    <span class="n">remainder</span> <span class="o">=</span> <span class="n">dividend</span> <span class="o">%</span> <span class="n">divisor</span>
+    <span class="k">return</span> <span class="n">quotient</span><span class="p">,</span> <span class="n">remainder</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Si la clause <code>if</code> est exécutée, le premier retour entraînera la sortie de la fonction. Donc tout ce qui vient après la clause <code>if</code> n'a pas besoin d'être à l'intérieur d'un <code>else</code>. Les instructions restantes peuvent simplement être dans le corps principal de la fonction, car elles ne peuvent être atteintes que si la clause if n'est pas exécutée.</p>
+<p>Cette technique peut être utile chaque fois que nous voulons vérifier les paramètres au début d'une fonction - cela signifie que nous n'avons pas à indenter la partie principale de la fonction à l'intérieur d'un bloc <code>else</code>. Parfois, il est plus approprié de lever une exception au lieu de renvoyer une valeur comme <code>None</code> s'il y a un problème avec l'un des paramètres :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">divide</span><span class="p">(</span><span class="n">dividend</span><span class="p">,</span> <span class="n">divisor</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">divisor</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The divisor cannot be zero!&quot;</span><span class="p">)</span>
+
+    <span class="n">quotient</span> <span class="o">=</span> <span class="n">dividend</span> <span class="o">//</span> <span class="n">divisor</span>
+    <span class="n">remainder</span> <span class="o">=</span> <span class="n">dividend</span> <span class="o">%</span> <span class="n">divisor</span>
+    <span class="k">return</span> <span class="n">quotient</span><span class="p">,</span> <span class="n">remainder</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Le fait d'avoir plusieurs points de sortie dispersés dans votre fonction peut rendre votre code difficile à lire, la plupart des gens s'attendent à un seul retour juste à la fin d'une fonction. Vous devez utiliser cette technique avec parcimonie.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercice-3">Exercice 3<a class="anchor-link" href="#Exercice-3"> </a></h2><ul>
+<li>1) Réécrivez la fonction <code>hypotenuse</code> de l'exercice 2 afin qu'elle renvoie une valeur au lieu de l'àfficher. Ajoutez la gestion des <code>exceptions</code> afin que la fonction renvoie <code>None</code> si elle est appelée avec des paramètres du mauvais type.</li>
+<li>2) Appelez la fonction avec deux nombres et afficher le résultat.</li>
+<li>3) Appelez la fonction avec deux <code>string</code> et afficher le résultat.</li>
+<li>4) Appelez la fonction avec un nombre et une <code>string</code> et afficher le résultat.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="4.-La-pile-(stack)">4. La pile (stack)<a class="anchor-link" href="#4.-La-pile-(stack)"> </a></h2><p>Python stocke des informations sur les fonctions qui ont été appelées dans une pile d'appels. Chaque fois qu'une fonction est appelée, un nouveau cadre de pile est ajouté à la pile, tous les paramètres de la fonction y sont ajoutés, et au fur et à mesure que le corps de la fonction est exécuté, des variables locales y seront créées. Lorsque l'exécution de la fonction est terminée, son cadre de pile est ignoré et le flux de contrôle revient à l'endroit où vous étiez avant d'appeler la fonction, au niveau précédent de la pile.</p>
+<p>Si vous vous souvenez de la section sur la portée des variables du début du cours, cela explique un peu plus sur la façon dont les noms de variables sont résolus. Lorsque vous utilisez un identifiant, Python le recherchera d'abord au niveau actuel de la pile, et s'il ne le trouve pas, il vérifiera le niveau précédent, et ainsi de suite, jusqu'à ce que la variable soit trouvée ou non. Si la variable n'est pas trouvée et vous obtenez une erreur. C'est pourquoi une variable locale aura toujours la priorité sur une variable globale de même nom.</p>
+<p>Python recherche également dans la pile chaque fois qu'il gère une exception : il vérifie d'abord si l'exception peut être gérée dans la fonction actuelle, et s'il ne le peut pas, il termine la fonction et essaie la suivante, jusqu'à ce que l'exception soit gérée à un certain niveau ou le programme lui-même doit se terminer. La stacktrace que vous voyez lorsqu'une exception est affiché montre le chemin emprunté par Python dans la pile.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="5.-La-recursion">5. La recursion<a class="anchor-link" href="#5.-La-recursion"> </a></h2><p>Nous pouvons faire un appel de fonction elle-même. C'est ce qu'on appelle la récursivité. Un exemple courant est une fonction qui calcule des nombres dans la séquence de Fibonacci (0, 1, 1, 2, 3, 5, 8, 13) : le zéro-ième nombre est 0, le premier nombre est 1, et chaque nombre suivant est la somme des deux nombres précédents :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+
+    <span class="k">return</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Chaque fois que nous écrivons une fonction récursive, nous devons inclure une sorte de condition qui lui permettra d'arrêter la récursivité : un cas final dans lequel la fonction ne s'appelle pas elle-même. Dans cet exemple, cela se produit au début de la séquence : les deux premiers nombres ne sont pas calculés à partir des nombres précédents : ce sont des constantes.</p>
+<p>Que se passerait-il si nous omettions cette condition de notre fonction ? Lorsque nous arrivions à <code>n = 2</code>, nous continuions à appeler la fonction, en essayant de calculer <code>fibonacci(0), fibonacci(-1)</code> et ainsi de suite. En théorie, la fonction finirait par se répéter indéfiniment et ne se terminerait jamais, mais en pratique, le programme plantera avec une <code>RuntimeError</code> et un message indiquant que nous avons dépassé la profondeur de récursivité maximale. C'est parce que la pile de Python a une taille finie, si nous continuons à placer des instances de la fonction sur la pile, nous finirons par la remplir et provoquer un débordement de la pile. Python se protège des débordements de pile en fixant une limite au nombre de fois qu'une fonction est autorisée à se répéter.</p>
+<p>Les fonctions récursives peuvent aussi être écrit avec des boucles :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">current</span><span class="p">,</span> <span class="nb">next</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">current</span><span class="p">,</span> <span class="nb">next</span> <span class="o">=</span> <span class="nb">next</span><span class="p">,</span> <span class="n">current</span> <span class="o">+</span> <span class="nb">next</span>
+
+    <span class="k">return</span> <span class="n">current</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercice-4">Exercice 4<a class="anchor-link" href="#Exercice-4"> </a></h2><p>Écrivez une fonction récursive qui calcule la factorielle d'un nombre donné (exemple : <code>4! = 1 × 2 × 3 × 4 = 24</code>). Utilisez la gestion des exceptions pour lever une exception appropriée si le paramètre d'entrée n'est pas un entier positif, mais autorisez l'utilisateur à entrer des nombres flottants tant qu'il s'agit de nombres entiers.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="6.-Param&#232;tres-par-d&#233;faut">6. Param&#232;tres par d&#233;faut<a class="anchor-link" href="#6.-Param&#232;tres-par-d&#233;faut"> </a></h2><p>La combinaison du nom de la fonction et du nombre de paramètres qu'elle prend s'appelle la signature de la fonction. Dans les langages à typage statique, il peut y avoir plusieurs fonctions avec le même nom dans la même portée tant qu'elles ont des nombres ou des types de paramètres différents (dans ces langages, les types de paramètres et les types de retour font également partie de la signature).</p>
+<p>En Python, il ne peut y avoir qu'une seule fonction avec un nom particulier défini dans la portée, si vous définissez une autre fonction avec le même nom, vous écraserez la première fonction. Vous devez appeler cette fonction avec le bon nombre de paramètres, sinon vous obtiendrez une erreur.</p>
+<p>Parfois, il y a une bonne raison de vouloir avoir deux versions de la même fonction avec des jeux de paramètres différents. Vous pouvez obtenir quelque chose de similaire en rendant certains paramètres facultatifs. Pour rendre un paramètre facultatif, nous devons lui fournir une valeur par défaut. Les paramètres facultatifs doivent venir après tous les paramètres requis dans la définition de la fonction :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_greeting</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">surname</span><span class="p">,</span> <span class="n">formal</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">formal</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Hello, </span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">surname</span><span class="si">}</span><span class="s2"> !&quot;</span>
+
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> !&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">make_greeting</span><span class="p">(</span><span class="s2">&quot;Mr&quot;</span><span class="p">,</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="s2">&quot;Smith&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">make_greeting</span><span class="p">(</span><span class="s2">&quot;Mr&quot;</span><span class="p">,</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="s2">&quot;Smith&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Lorsque nous appelons la fonction, nous pouvons laisser le paramètre facultatif de côté. Si nous le faisons, la valeur par défaut sera utilisée. Si nous incluons le paramètre, notre valeur remplacera la valeur par défaut.</p>
+<p>Nous pouvons définir plusieurs paramètres optionnels :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_greeting</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">surname</span><span class="p">,</span> <span class="n">formal</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">formal</span><span class="p">:</span>
+        <span class="n">fullname</span> <span class="o">=</span>  <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">surname</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">fullname</span> <span class="o">=</span> <span class="n">name</span>
+
+    <span class="k">if</span> <span class="n">time</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">greeting</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">greeting</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Good </span><span class="si">{</span><span class="n">time</span><span class="si">}</span><span class="s2">&quot;</span>
+
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">greeting</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">fullname</span><span class="si">}</span><span class="s2">!&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">make_greeting</span><span class="p">(</span><span class="s2">&quot;Mr&quot;</span><span class="p">,</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="s2">&quot;Smith&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">make_greeting</span><span class="p">(</span><span class="s2">&quot;Mr&quot;</span><span class="p">,</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="s2">&quot;Smith&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">make_greeting</span><span class="p">(</span><span class="s2">&quot;Mr&quot;</span><span class="p">,</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="s2">&quot;Smith&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;evening&quot;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Et si on voulait passer le deuxième paramètre optionnel, mais pas le premier ? Jusqu'à présent, nous avons transmis des paramètres de position à toutes ces fonctions, un tuple de valeurs qui sont mises en correspondance avec des paramètres dans la signature de la fonction en fonction de leurs positions. Nous pouvons également, transmettre ces valeurs en tant que paramètres de mot-clé, nous pouvons spécifier explicitement les noms des paramètres avec les valeurs :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">make_greeting</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Mr&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="n">surname</span><span class="o">=</span><span class="s2">&quot;Smith&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">make_greeting</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Mr&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="n">surname</span><span class="o">=</span><span class="s2">&quot;Smith&quot;</span><span class="p">,</span> <span class="n">formal</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="s2">&quot;evening&quot;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Nous pouvons mélanger des paramètres de position et de mot-clé, mais les paramètres de mot-clé doivent venir après tous les paramètres de position :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">make_greeting</span><span class="p">(</span><span class="s2">&quot;Mr&quot;</span><span class="p">,</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="n">surname</span><span class="o">=</span><span class="s2">&quot;Smith&quot;</span><span class="p">))</span>
+<span class="c1"># this will give you an error</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">make_greeting</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Mr&quot;</span><span class="p">,</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="s2">&quot;Smith&quot;</span><span class="p">))</span>
+
+<span class="c1"># we can specify keyword parameters in any order </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">make_greeting</span><span class="p">(</span><span class="n">surname</span><span class="o">=</span><span class="s2">&quot;Smith&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Mr&quot;</span><span class="p">))</span>
+
+<span class="c1"># Pass in the second optional parameter and not the first</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">make_greeting</span><span class="p">(</span><span class="s2">&quot;Mr&quot;</span><span class="p">,</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="s2">&quot;Smith&quot;</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="s2">&quot;evening&quot;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="7.-Types-mutables-et-param&#232;tres-par-d&#233;faut">7. Types mutables et param&#232;tres par d&#233;faut<a class="anchor-link" href="#7.-Types-mutables-et-param&#232;tres-par-d&#233;faut"> </a></h2><p>Nous devons être prudents lorsque nous utilisons des types mutables comme valeurs de paramètre par défaut dans les définitions de fonctions si nous avons l'intention de les modifier sur place :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">add_pet_to_list</span><span class="p">(</span><span class="n">pet</span><span class="p">,</span> <span class="n">pets</span><span class="o">=</span><span class="p">[]):</span>
+    <span class="n">pets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pet</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pets</span>
+
+<span class="n">list_with_cat</span> <span class="o">=</span> <span class="n">add_pet_to_list</span><span class="p">(</span><span class="s2">&quot;cat&quot;</span><span class="p">)</span>
+<span class="n">list_with_dog</span> <span class="o">=</span> <span class="n">add_pet_to_list</span><span class="p">(</span><span class="s2">&quot;dog&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">list_with_cat</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list_with_dog</span><span class="p">)</span> <span class="c1"># oops</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>N'oubliez pas que bien que nous puissions exécuter un corps de fonction plusieurs fois, une définition de fonction n'est exécutée qu'une seule fois - cela signifie que la liste vide qui est créée dans cette définition de fonction sera la même liste pour toutes les instances de la fonction. Ce que nous voulons vraiment faire dans ce cas est de créer une liste vide à l'intérieur du corps de la fonction :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">add_pet_to_list</span><span class="p">(</span><span class="n">pet</span><span class="p">,</span> <span class="n">pets</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">pets</span> <span class="o">=</span> <span class="n">pets</span> <span class="ow">or</span> <span class="p">[]</span>
+    <span class="n">pets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pet</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pets</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercice-5">Exercice 5<a class="anchor-link" href="#Exercice-5"> </a></h2><ul>
+<li><p>1) Écrivez une fonction appelée <code>calculator</code>. Il doit prendre les paramètres suivants : deux nombres, une opération arithmétique (qui peut être une addition, une soustraction, une multiplication ou une division et est une addition par défaut), et un format de sortie (qui peut être un entier ou une virgule flottante, et est une virgule flottante par défaut ). La division doit être une division à virgule flottante.</p>
+
+<pre><code> La fonction doit effectuer l'opération demandée sur les deux nombres d'entrée et renvoyer un résultat dans le format demandé (si le format est un entier, le résultat doit être arrondi et pas seulement tronqué). Levez des exceptions si nécessaire si l'un des paramètres transmis à la fonction n'est pas valide.</code></pre>
+</li>
+<li><p>2) Appelez la fonction avec les ensembles de paramètres suivants et vérifiez que la réponse est celle que vous attendez :</p>
+<ul>
+<li><code>2</code>, <code>3.0</code></li>
+<li><code>2</code>, <code>3.0</code>, le format de sortie est un entier</li>
+<li><code>2</code>, <code>3.0</code>, l'opération est la division</li>
+<li><code>2</code>, <code>3.0</code>, l'opération est la division, le format de sortie est un entier</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="8.-*args-et-**kwargs">8. <code>*args</code> et <code>**kwargs</code><a class="anchor-link" href="#8.-*args-et-**kwargs"> </a></h2><p>Parfois, nous pouvons vouloir passer une liste de longueur variable de paramètres de position ou de mots-clés dans une fonction. Nous pouvons mettre <code>*</code> avant un nom de paramètre pour indiquer qu'il s'agit d'un tuple de longueur variable de paramètres positionnels, et nous pouvons utiliser <code>**</code> pour indiquer qu'un paramètre est un dictionnaire de longueur variable de paramètres de mots-clés. Par convention, le nom de paramètre que nous utilisons pour le tuple est <code>args</code> et le nom que nous utilisons pour le dictionnaire est <code>kwargs</code> :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_args</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">print_kwargs</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>À l'intérieur de la fonction, nous pouvons accéder à <code>args</code> en tant que tuple normal, mais le <code>*</code> signifie que <code>args</code> n'est pas transmis à la fonction en tant que paramètre unique qui est un tuple : à la place, il est transmis comme une série de paramètres individuels. De même, <code>**</code> signifie que <code>kwargs</code> est transmis comme une série de paramètres de mots clés individuels, plutôt qu'un seul paramètre qui est un dictionnaire :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">print_args</span><span class="p">(</span><span class="s2">&quot;one&quot;</span><span class="p">,</span> <span class="s2">&quot;two&quot;</span><span class="p">,</span> <span class="s2">&quot;three&quot;</span><span class="p">)</span>
+<span class="n">print_args</span><span class="p">(</span><span class="s2">&quot;one&quot;</span><span class="p">,</span> <span class="s2">&quot;two&quot;</span><span class="p">,</span> <span class="s2">&quot;three&quot;</span><span class="p">,</span> <span class="s2">&quot;four&quot;</span><span class="p">)</span>
+
+<span class="n">print_kwargs</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Jane&quot;</span><span class="p">,</span> <span class="n">surname</span><span class="o">=</span><span class="s2">&quot;Doe&quot;</span><span class="p">)</span>
+<span class="n">print_kwargs</span><span class="p">(</span><span class="n">age</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Nous pouvons utiliser <code>*</code> ou <code>**</code> lorsque nous appelons une fonction pour décompresser une séquence ou un dictionnaire en une série de paramètres individuels :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;one&quot;</span><span class="p">,</span> <span class="s2">&quot;two&quot;</span><span class="p">,</span> <span class="s2">&quot;three&quot;</span><span class="p">]</span>
+<span class="n">print_args</span><span class="p">(</span><span class="o">*</span><span class="n">my_list</span><span class="p">)</span>
+
+<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Jane&quot;</span><span class="p">,</span> <span class="s2">&quot;surname&quot;</span><span class="p">:</span> <span class="s2">&quot;Doe&quot;</span><span class="p">}</span>
+<span class="n">print_kwargs</span><span class="p">(</span><span class="o">**</span><span class="n">my_dict</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Cela facilite la création de listes de paramètres par programmation. Notez que nous pouvons l'utiliser pour n'importe quelle fonction, pas seulement celle qui utilise <code>*args</code> ou <code>**kwargs</code> :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Mr&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;surname&quot;</span><span class="p">:</span> <span class="s2">&quot;Smith&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;formal&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="s2">&quot;evening&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">make_greeting</span><span class="p">(</span><span class="o">**</span><span class="n">my_dict</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Nous pouvons mélanger des paramètres ordinaires, <code>*args</code> et <code>**kwargs</code> dans la même définition de fonction. <code>*args</code> et <code>**kwargs</code> doivent venir après tous les autres paramètres, et <code>**kwargs</code> doit venir après *args. Vous ne pouvez pas avoir plus d'un paramètre de liste de longueur variable ou plus d'un paramètre de dict variable (rappelez-vous que vous pouvez les appeler comme vous le souhaitez) :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_everything</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="s2">&quot;morning&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Good </span><span class="si">{</span><span class="n">time</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Si nous utilisons une expression <code>*</code> lorsque vous appelez une fonction, elle doit venir après tous les paramètres de position, et si nous utilisons une expression <code>**</code>, elle doit venir juste à la fin :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_everything</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="s2">&quot;morning&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># we can write all the parameters individually</span>
+<span class="n">print_everything</span><span class="p">(</span><span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">,</span> <span class="n">day</span><span class="o">=</span><span class="s2">&quot;Tuesday&quot;</span><span class="p">)</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;day&quot;</span><span class="p">:</span> <span class="s2">&quot;Tuesday&quot;</span><span class="p">}</span>
+
+<span class="c1"># we can unpack a tuple and a dictionary</span>
+<span class="n">print_everything</span><span class="p">(</span><span class="o">*</span><span class="n">t</span><span class="p">,</span> <span class="o">**</span><span class="n">d</span><span class="p">)</span>
+<span class="c1"># or just one of them</span>
+<span class="n">print_everything</span><span class="p">(</span><span class="o">*</span><span class="n">t</span><span class="p">,</span> <span class="n">day</span><span class="o">=</span><span class="s2">&quot;Tuesday&quot;</span><span class="p">)</span>
+<span class="n">print_everything</span><span class="p">(</span><span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">d</span><span class="p">)</span>
+
+<span class="c1"># we can mix * and ** with explicit parameters</span>
+<span class="n">print_everything</span><span class="p">(</span><span class="s2">&quot;Jane&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">t</span><span class="p">,</span> <span class="o">**</span><span class="n">d</span><span class="p">)</span>
+<span class="n">print_everything</span><span class="p">(</span><span class="s2">&quot;Jane&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">t</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="s2">&quot;evening&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">d</span><span class="p">)</span>
+<span class="n">print_everything</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s2">&quot;evening&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">t</span><span class="p">,</span> <span class="o">**</span><span class="n">d</span><span class="p">)</span>
+
+<span class="c1"># none of these are allowed:</span>
+<span class="n">print_everything</span><span class="p">(</span><span class="o">*</span><span class="n">t</span><span class="p">,</span> <span class="s2">&quot;Jane&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">d</span><span class="p">)</span>
+<span class="n">print_everything</span><span class="p">(</span><span class="o">*</span><span class="n">t</span><span class="p">,</span> <span class="o">**</span><span class="n">d</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="s2">&quot;evening&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Si une fonction ne prend que <code>*args</code> et <code>**kwargs</code> comme paramètres, elle peut être appelée avec n'importe quel ensemble de paramètres. Un ou les deux <code>args</code> et <code>kwargs</code> peuvent être vides, de sorte que la fonction accepte toute combinaison de paramètres de position et de mot-clé, y compris aucun paramètre. Cela peut être utile si nous écrivons une fonction très générique, comme <code>print_everything</code> dans l'exemple ci-dessus.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercice-6">Exercice 6<a class="anchor-link" href="#Exercice-6"> </a></h2><p>Réécrivez la fonction calculatrice de l'exercice 4 afin qu'elle prenne un nombre quelconque de paramètres numériques ainsi que les mêmes paramètres de mot-clé facultatifs. La fonction doit appliquer l'opération aux deux premiers nombres, puis l'appliquer à nouveau au résultat et au nombre suivant, et ainsi de suite. Par exemple, si les nombres sont 6, 4, 9 et 1 et que l'opération est une soustraction, la fonction doit renvoyer <code>6 - 4 - 9 - 1</code>. Si un seul nombre est entré, il doit être renvoyé tel quel. Si aucun nombre n'est entré, levez une exception.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="9.-Les-d&#233;corateurs">9. Les d&#233;corateurs<a class="anchor-link" href="#9.-Les-d&#233;corateurs"> </a></h2><p>Parfois, nous pouvons avoir besoin de modifier plusieurs fonctions de la même manière. Par exemple, nous pouvons vouloir effectuer une action particulière avant et après l'exécution de chacune des fonctions, ou transmettre un paramètre supplémentaire, ou convertir la sortie dans un autre format.</p>
+<p>Nous pouvons également avoir de bonnes raisons de ne pas écrire la modification dans toutes les fonctions, peut-être que cela rendrait les définitions de fonction très verbeuses et lourdes, et peut-être que nous aimerions avoir la possibilité d'appliquer la modification rapidement et facilement à n'importe quelle fonction (et la supprimer simplement aussi facilement).</p>
+<p>Pour résoudre ce problème, nous pouvons écrire une fonction qui modifie les fonctions. Nous appelons une fonction comme celle-ci un décorateur. Notre fonction prendra un objet de fonction comme paramètre et renverra un nouvel objet de fonction - nous pouvons alors affecter la nouvelle valeur de fonction au nom de l'ancienne fonction pour remplacer l'ancienne fonction par la nouvelle fonction. Par exemple, voici un décorateur qui enregistre le nom de la fonction et ses arguments dans un fichier journal chaque fois que la fonction est utilisée :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">log</span><span class="p">(</span><span class="n">original_function</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">new_function</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;log.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">logfile</span><span class="p">:</span>
+            <span class="n">logfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Function &#39;</span><span class="si">{</span><span class="n">original_function</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">&#39; called with positional arguments </span><span class="si">{</span><span class="n">args</span><span class="si">}</span><span class="s2"> and keyword arguments </span><span class="si">{</span><span class="n">kwargs</span><span class="si">}</span><span class="s2">.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">original_function</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">new_function</span>
+
+<span class="c1"># here is a function to decorate</span>
+<span class="k">def</span> <span class="nf">my_function</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+
+<span class="c1"># and here is how we decorate it</span>
+<span class="n">my_function</span> <span class="o">=</span> <span class="n">log</span><span class="p">(</span><span class="n">my_function</span><span class="p">)</span>
+
+<span class="c1"># Better decorating directly on its definition</span>
+<span class="nd">@log</span>
+<span class="k">def</span> <span class="nf">my_function</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Nous pouvons passer des paramètres supplémentaires à notre décorateur. Par exemple, nous pouvons souhaiter spécifier un fichier journal personnalisé à utiliser dans notre décorateur de journalisation :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">log</span><span class="p">(</span><span class="n">original_function</span><span class="p">,</span> <span class="n">logfilename</span><span class="o">=</span><span class="s2">&quot;log.txt&quot;</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">new_function</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">logfilename</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">logfile</span><span class="p">:</span>
+            <span class="n">logfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Function &#39;</span><span class="si">%s</span><span class="s2">&#39; called with positional arguments </span><span class="si">%s</span><span class="s2"> and keyword arguments </span><span class="si">%s</span><span class="s2">.</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">original_function</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">original_function</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">new_function</span>
+
+<span class="nd">@log</span><span class="p">(</span><span class="s2">&quot;someotherfilename.txt&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">my_function</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="10.-Les-fonctions-Lambda">10. Les fonctions Lambda<a class="anchor-link" href="#10.-Les-fonctions-Lambda"> </a></h1><p>Nous avons déjà vu que lorsque nous voulons utiliser un nombre ou une chaîne dans notre programme, nous pouvons soit l'écrire sous forme de littéral à l'endroit où nous voulons l'utiliser, soit utiliser une variable que nous avons déjà définie dans notre code. Par exemple, <code>print("Hello!")</code> affiche la chaîne littérale <code>"Hello!"</code>, que nous n'avons stockée nulle part dans une variable, mais <code>print(message)</code> affiche la chaîne stockée dans la variable message.</p>
+<p>Nous avons aussi vu que l'on peut stocker une fonction dans une variable, comme n'importe quel autre objet, en s'y référant par son nom (mais sans l'appeler). Existe-t-il un littéral de fonction ? Peut-on définir une fonction à la volée lorsqu'on veut la passer en paramètre ou l'affecter à une variable, comme on l'a fait avec la chaîne <code>"Bonjour !"</code> ?</p>
+<p>La réponse est oui, mais uniquement pour des fonctions très simples. Nous pouvons utiliser le mot-clé <code>lambda</code> pour définir des fonctions anonymes sur une ligne dans notre code :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="k">lambda</span><span class="p">:</span> <span class="mi">3</span>
+
+<span class="c1"># is the same as</span>
+<span class="k">def</span> <span class="nf">a</span><span class="p">():</span>
+    <span class="k">return</span> <span class="mi">3</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Les <code>lambdas</code> peuvent prendre des paramètres, ils sont écrits entre le mot-clé <code>lambda</code> et les deux points, sans crochets. Une fonction <code>lambda</code> ne peut contenir qu'une seule expression, et le résultat de l'évaluation de cette expression est implicitement renvoyé par la fonction (nous n'utilisons pas le mot-clé <code>return</code>) :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+
+<span class="c1"># is the same as</span>
+<span class="k">def</span> <span class="nf">b</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercice-7">Exercice 7<a class="anchor-link" href="#Exercice-7"> </a></h2><ul>
+<li><p>1) Définissez les fonctions suivantes comme lambdas et affectez-les à des variables :</p>
+
+<pre><code> - Prenez un paramètre, retourner son carré
+ - Prenez deux paramètres, renvoie la racine carrée des sommes de leurs carrés
+ - Prenez n'importe quel nombre de paramètres, retourner leur moyenne
+ - Prenez un paramètre de chaîne, renvoie une chaîne qui contient les lettres uniques dans la chaîne d'entrée (dans n'importe quel ordre)</code></pre>
+</li>
+<li><p>2) Réécrivez toutes ces fonctions en tant que fonctions nommées.</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="11.-G&#233;n&#233;rateur-(yield)">11. G&#233;n&#233;rateur (<code>yield</code>)<a class="anchor-link" href="#11.-G&#233;n&#233;rateur-(yield)"> </a></h2><p>Nous avons déjà rencontré des générateurs, des séquences dans lesquelles de nouveaux éléments sont générés au fur et à mesure qu'ils sont nécessaires, au lieu d'être tous générés à l'avance. Nous pouvons créer nos propres générateurs en écrivant des fonctions qui utilisent l'instruction <code>yield</code>.</p>
+<p>Considérez cette fonction simple qui renvoie une plage de nombres sous forme de liste :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">my_list</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">l</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="k">return</span> <span class="n">l</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Cette fonction construit la liste complète des nombres et la renvoie. On peut transformer cette fonction en fonction générateur tout en conservant une syntaxe très similaire, comme celle-ci :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">my_gen</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">i</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>La première chose importante à savoir sur l'instruction <code>yield</code> est que si nous l'utilisons dans une fonction, cette fonction renverra un générateur. Nous pouvons tester cela en utilisant la fonction <code>type</code> sur la valeur de retour de <code>my_gen</code>. Nous pouvons également essayer de l'utiliser dans une boucle for, comme nous utiliserions n'importe quel autre générateur, pour voir quelle séquence le générateur représente :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">my_gen</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">g</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">g</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercice-8">Exercice 8<a class="anchor-link" href="#Exercice-8"> </a></h2><p>Écrivez une fonction génératrice qui prend un entier <code>n</code> comme paramètre. La fonction doit renvoyer un générateur qui compte à rebours de <code>n</code> à <code>0</code>. Testez votre fonction en utilisant une boucle <code>for</code>.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/AXI-Fastpages/python-intro-gen/chapter/5/lesson/1/" hidden></a>
+</article>
+      </div>
+    </main>
+    <script> 
+      window.onload = () => {
+        // Ecouteur d'évènement sur scroll
+        window.addEventListener("scroll", () => {
+          // Calcul de la hauteur "utile" du document
+          let hauteur = document.documentElement.scrollHeight - window.innerHeight;
+
+          // Récupération de la position verticale
+          let position = window.scrollY;
+
+          // Récupération de la largeur de la fenêtre
+          let largeur = document.documentElement.clientWidth;
+
+          // Calcul de la largeur de la barre
+          let barre = position / hauteur * largeur;
+
+          // Modification du CSS de la barre
+          document.getElementById("barre-progression").style.width = barre+"px";
+        })
+      }
+    </script>
+  </body>
+</html>

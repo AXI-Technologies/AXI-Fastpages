@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <base target="_blank">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Chapitre 6 : Les classes et objets en python | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Chapitre 6 : Les classes et objets en python" />
+<meta name="author" content="AXI Academy" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Python : Chapitre 6- Lesson 1" />
+<meta property="og:description" content="Python : Chapitre 6- Lesson 1" />
+<link rel="canonical" href="https://axi-technologies.github.io/AXI-Fastpages/python-intro-gen/chapter/6/lesson/1/" />
+<meta property="og:url" content="https://axi-technologies.github.io/AXI-Fastpages/python-intro-gen/chapter/6/lesson/1/" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-01-02T00:00:00-06:00" />
+<script type="application/ld+json">
+{"url":"https://axi-technologies.github.io/AXI-Fastpages/python-intro-gen/chapter/6/lesson/1/","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://axi-technologies.github.io/AXI-Fastpages/python-intro-gen/chapter/6/lesson/1/"},"headline":"Chapitre 6 : Les classes et objets en python","dateModified":"2022-01-02T00:00:00-06:00","datePublished":"2022-01-02T00:00:00-06:00","author":{"@type":"Person","name":"AXI Academy"},"description":"Python : Chapitre 6- Lesson 1","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/AXI-Fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://axi-technologies.github.io/AXI-Fastpages/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/AXI-Fastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body>
+    <div id="barre-progression" 
+      style="
+        background: #00b0f0;
+        height: 5px;
+        width: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+      "
+    ></div>
+    <YOUR HEADER IMG HERE>
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Chapitre 6 : Les classes et objets en python</h1><p class="page-description">Python : Chapitre 6- Lesson 1</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-01-02T00:00:00-06:00" itemprop="datePublished">
+        Jan 2, 2022
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">AXI Academy</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      23 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          
+          
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/AXI-Technologies/AXI-Fastpages/blob/master/_notebooks/2022-01-02-python-intro-gen-6-1-classes.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/AXI-Fastpages/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-01-02-python-intro-gen-6-1-classes.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Nous avons déjà vu comment nous pouvons utiliser un dictionnaire pour regrouper des données associées et comment nous pouvons utiliser des fonctions pour créer des raccourcis pour des groupes d'instructions couramment utilisés. Une fonction exécute une action en utilisant un ensemble de paramètres d'entrée. Toutes les fonctions ne sont pas applicables à tous les types de données. Les classes sont un moyen de regrouper des données et des fonctions connexes qui agissent sur ces données.</p>
+<p>Une classe est un type de données, tout comme une <code>string</code>, un entier ou une liste. Lorsque nous créons un objet de ce type de données, nous l'appelons une instance d'une classe.</p>
+<p>Comme nous l'avons déjà mentionné, dans certains autres langages, certaines entités sont des objets et d'autres non. En Python, tout est objet, tout est une instance d'une certaine classe. Les classes et les types sont eux-mêmes des objets, et ils sont de type type. Vous pouvez connaître le type de n'importe quel objet à l'aide de la fonction <code>type</code> :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Les valeurs de données que nous stockons à l'intérieur d'un objet sont appelées attributs et les fonctions associées à l'objet sont appelées méthodes. Nous avons déjà utilisé les méthodes de certains objets intégrés, comme les <code>string</code> et les listes.</p>
+<p>Lorsque nous concevons nos propres objets, nous devons décider comment nous allons regrouper les choses et ce que nos objets vont représenter.</p>
+<p>Parfois, nous écrivons des objets qui correspondent très intuitivement aux choses du monde réel. Par exemple, si nous écrivons du code pour simuler des réactions chimiques, nous pourrions avoir des objets <code>Atom</code> que nous pouvons combiner pour créer un objet <code>Molécule</code>. Cependant, il n'est pas toujours nécessaire, souhaitable ou même possible de rendre tous les objets de code parfaitement analogues à leurs homologues du monde réel.</p>
+<p>Parfois, nous pouvons créer des objets qui n'ont aucun équivalent dans le monde réel, simplement parce qu'il est utile de regrouper certaines fonctions.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="1.-Cr&#233;ation-d'une-classe-(class)">1. Cr&#233;ation d'une classe (<code>class</code>)<a class="anchor-link" href="#1.-Cr&#233;ation-d'une-classe-(class)"> </a></h2><p>Voici un exemple de classe personnalisée simple qui stocke des informations sur une personne :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span> <span class="c1"># we will use this for date objects</span>
+
+<span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">surname</span><span class="p">,</span> <span class="n">birthdate</span><span class="p">,</span> <span class="n">address</span><span class="p">,</span> <span class="n">telephone</span><span class="p">,</span> <span class="n">email</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">surname</span> <span class="o">=</span> <span class="n">surname</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">birthdate</span> <span class="o">=</span> <span class="n">birthdate</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">address</span> <span class="o">=</span> <span class="n">address</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">telephone</span> <span class="o">=</span> <span class="n">telephone</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">email</span> <span class="o">=</span> <span class="n">email</span>
+
+    <span class="k">def</span> <span class="nf">age</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">today</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+        <span class="n">age</span> <span class="o">=</span> <span class="n">today</span><span class="o">.</span><span class="n">year</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">birthdate</span><span class="o">.</span><span class="n">year</span>
+
+        <span class="k">if</span> <span class="n">today</span> <span class="o">&lt;</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="n">today</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">birthdate</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">birthdate</span><span class="o">.</span><span class="n">day</span><span class="p">):</span>
+            <span class="n">age</span> <span class="o">-=</span> <span class="mi">1</span>
+
+        <span class="k">return</span> <span class="n">age</span>
+
+<span class="n">person</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span>
+    <span class="s2">&quot;Jane&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Doe&quot;</span><span class="p">,</span>
+    <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="mi">1992</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">),</span> <span class="c1"># year, month, day</span>
+    <span class="s2">&quot;No. 12 Short Street, Greenville&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;555 456 0987&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;jane.doe@example.com&quot;</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="o">.</span><span class="n">email</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="o">.</span><span class="n">age</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Nous commençons la définition de la classe avec le mot-clé <code>class</code>, suivi du nom de la classe et de deux points. Nous énumérerions toutes les classes parentes entre parenthèses avant les deux points, mais cette classe n'en a pas, nous pouvons donc les laisser de côté.</p>
+<p>À l'intérieur du corps de la classe, nous définissons deux fonctions : ce sont les méthodes de notre objet. La première s'appelle <code>__init__</code>, qui est une méthode spéciale. Lorsque nous appelons l'objet de classe, une nouvelle instance de la classe est créée et la méthode <code>__init__</code> sur ce nouvel objet est immédiatement exécutée avec tous les paramètres que nous avons passés à l'objet de classe. Le but de cette méthode est donc de mettre en place un nouvel objet à partir des données que nous vous avons fournies.</p>
+<p>La deuxième méthode est une méthode personnalisée qui calcule l'âge de notre personne en utilisant la date de naissance et la date du jour.</p>
+<h2 id="2.-Le-param&#232;tre-self">2. Le param&#232;tre <code>self</code><a class="anchor-link" href="#2.-Le-param&#232;tre-self"> </a></h2><p>Vous avez peut-être remarqué que ces deux définitions de méthode ont <code>self</code> comme premier paramètre, et nous utilisons cette variable à l'intérieur des corps des méthodes mais nous ne semblons pas passer ce paramètre. C'est parce que chaque fois que nous appelons une méthode sur un objet, l'objet lui-même est automatiquement transmis comme premier paramètre. Cela nous donne un moyen d'accéder aux propriétés de l'objet depuis l'intérieur des méthodes de l'objet.</p>
+<p>Vous devriez maintenant pouvoir voir que notre fonction <code>__init__</code> crée des attributs sur l'objet et les définit sur les valeurs que nous avons transmises en tant que paramètres. Nous utilisons les mêmes noms pour les attributs et les paramètres, mais ce n'est pas obligatoire.</p>
+<p>La fonction <code>age</code> ne prend aucun paramètre à l'exception de <code>self</code>, elle utilise uniquement les informations stockées dans les attributs de l'objet et la date actuelle (qu'elle récupère à l'aide du module <code>datetime</code>).</p>
+<p>Notez que l'attribut de date de naissance est lui-même un objet. La classe <code>date</code> est définie dans le module <code>datetime</code>, et nous créons une nouvelle instance de cette classe à utiliser comme paramètre de date de naissance lorsque nous créons une instance de la classe <code>Person</code>. Nous n'avons pas à l'affecter à une variable intermédiaire avant de l'utiliser comme paramètre de <code>Person</code>. Nous pouvons simplement le créer lorsque nous appelons <code>Person</code>, tout comme nous créons des <code>string</code> pour les autres paramètres.</p>
+<p>N'oubliez pas que la définition d'une fonction ne la fait pas s'exécuter. Définir une classe ne fait pas non plus fonctionner quoi que ce soit, cela indique simplement à Python la classe. La classe ne sera pas définie tant que Python n'aura pas exécuté l'intégralité de la définition, vous pouvez donc être sûr de pouvoir référencer n'importe quelle méthode à partir de n'importe quelle autre méthode sur la même classe, ou même référencer la classe à l'intérieur d'une méthode de la classe. Au moment où vous appelez cette méthode, la classe entière sera définitivement définie.</p>
+<h2 id="Exercice-1">Exercice 1<a class="anchor-link" href="#Exercice-1"> </a></h2><p>Expliquez à quoi se réfèrent les variables suivantes et leur scope :</p>
+<ul>
+<li>1) <code>Person</code></li>
+<li>2) <code>person</code></li>
+<li>3) <code>surname</code></li>
+<li>4) <code>self</code></li>
+<li>5) <code>age</code> (le nom de la fonction)</li>
+<li>6) <code>age</code> (la variable utilisée dans la fonction)</li>
+<li>7) <code>self.email</code></li>
+<li>8) <code>person.email</code></li>
+</ul>
+<h2 id="3.-Les-attributs-d'une-instance">3. Les attributs d'une instance<a class="anchor-link" href="#3.-Les-attributs-d'une-instance"> </a></h2><p>Il est important de noter que les attributs définis sur l'objet dans la fonction <code>__init__</code> ne forment pas une liste exhaustive de tous les attributs que notre objet est autorisé à avoir.</p>
+<p>Dans certains langages, vous devez fournir une liste des attributs de l'objet dans la définition de classe, des espaces réservés sont créés pour ces attributs autorisés lors de la création de l'objet et vous ne pouvez pas ajouter de nouveaux attributs à l'objet ultérieurement. En Python, vous pouvez ajouter de nouveaux attributs, et même de nouvelles méthodes, à un objet à la volée. En fait, il n'y a rien de spécial à propos de la fonction <code>__init__</code> lorsqu'il s'agit de définir des attributs. Nous pourrions stocker une valeur d'âge en cache sur l'objet à l'intérieur de la fonction d'âge :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">age</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;_age&quot;</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_age</span>
+
+    <span class="n">today</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+
+    <span class="n">age</span> <span class="o">=</span> <span class="n">today</span><span class="o">.</span><span class="n">year</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">birthdate</span><span class="o">.</span><span class="n">year</span>
+
+    <span class="k">if</span> <span class="n">today</span> <span class="o">&lt;</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="n">today</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">birthdate</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">birthdate</span><span class="o">.</span><span class="n">day</span><span class="p">):</span>
+        <span class="n">age</span> <span class="o">-=</span> <span class="mi">1</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">_age</span> <span class="o">=</span> <span class="n">age</span>
+    <span class="k">return</span> <span class="n">age</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Nous pourrions même ajouter un attribut complètement indépendant de l'extérieur de l'objet :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">person</span><span class="o">.</span><span class="n">pets</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Il est très courant que les méthodes d'un objet mettent à jour les valeurs des attributs de l'objet, mais il est considéré comme une mauvaise pratique de créer de nouveaux attributs dans une méthode sans les initialiser dans la méthode <code>__init__</code>. Définir des propriétés arbitraires depuis l'extérieur de l'objet est encore plus mal vu, car cela brise le paradigme orienté objet (dont nous parlerons dans le chapitre suivant).</p>
+<p>La méthode <code>__init__</code> sera certainement exécutée avant toute autre chose lorsque nous créons l'objet, c'est donc un bon endroit pour faire toute notre initialisation des données de l'objet. Si nous créons un nouvel attribut en dehors de la méthode <code>__init__</code>, nous courons le risque d'essayer de l'utiliser avant qu'il ne soit initialisé.</p>
+<p>Dans l'exemple age ci-dessus, nous devons vérifier si un attribut <code>_age</code> existe sur l'objet avant d'essayer de l'utiliser, car si nous n'avons pas exécuté la méthode age auparavant, elle n'aura pas encore été créée. Ce serait beaucoup plus propre si nous appelions cette méthode au moins une fois depuis <code>__init__</code>, pour s'assurer que <code>_age</code> est créé dès que nous créons l'objet.</p>
+<p>L'initialisation de tous nos attributs dans <code>__init__</code>, même si nous les définissons simplement sur des valeurs vides, rend notre code moins sujet aux erreurs. Cela facilite également la lecture et la compréhension – nous pouvons voir en un coup d'œil quels sont les attributs de notre objet.</p>
+<p>Une méthode <code>__init__</code> n'a pas à prendre de paramètres (sauf self) et elle peut être complètement absente.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="4.-Les-fonctions-getattr,-setattr-et-hasattr">4. Les fonctions <code>getattr</code>, <code>setattr</code> et <code>hasattr</code><a class="anchor-link" href="#4.-Les-fonctions-getattr,-setattr-et-hasattr"> </a></h2><p>Que se passe-t-il si nous voulons obtenir ou définir la valeur d'un attribut d'un objet sans coder en dur son nom ? Nous pouvons parfois vouloir boucler plusieurs noms d'attributs et effectuer la même opération sur chacun d'eux. Pour faire cela nous utiliserons les fonctions : <code>getattr</code>, <code>setattr</code> et <code>hasattr</code></p>
+<h3 id="La-fonction-hastattr">La fonction <code>hastattr</code><a class="anchor-link" href="#La-fonction-hastattr"> </a></h3><p>Cet fonction permet de savoir si un objet possède un attribut ou non :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">hasattr</span><span class="p">(</span><span class="n">person</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">))</span>
+
+<span class="n">person</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">hasattr</span><span class="p">(</span><span class="n">person</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="La-fonction-getattr">La fonction <code>getattr</code><a class="anchor-link" href="#La-fonction-getattr"> </a></h3><p>Cet fonction permet de récupérer la valeur d'un attribut de l'objet :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">person</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">person</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;hello&quot;</span>
+<span class="n">person</span><span class="o">.</span><span class="n">c</span> <span class="o">=</span> <span class="o">.</span><span class="mi">002</span>
+
+<span class="c1"># Get person.a, person.b, etc.</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">person</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
+
+<span class="c1"># Is equivalent to :</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="o">.</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="o">.</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="o">.</span><span class="n">c</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="o">.</span><span class="n">d</span><span class="p">)</span> <span class="c1"># Oups this fails</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="La-fonction-setattr">La fonction <code>setattr</code><a class="anchor-link" href="#La-fonction-setattr"> </a></h3><p>Cet fonction permet de définir la valeur d'un attribut d'un objet. Par exemple, nous copions des données d'un dictionnaire vers un objet :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mydict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;d&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">:</span> <span class="mi">321</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">:</span> <span class="s1">&#39;World&#39;</span><span class="p">}</span>
+
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">mydict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">setattr</span><span class="p">(</span><span class="n">person</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">mydict</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+
+<span class="c1"># Is equivalent to :</span>
+<span class="n">person</span><span class="o">.</span><span class="n">d</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">person</span><span class="o">.</span><span class="n">e</span> <span class="o">=</span> <span class="mi">321</span>
+<span class="n">person</span><span class="o">.</span><span class="n">f</span> <span class="o">=</span> <span class="s1">&#39;World&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercice-2">Exercice 2<a class="anchor-link" href="#Exercice-2"> </a></h2><p>Réécrivez la classe <code>Person</code> afin que l'âge d'une personne soit calculé pour la première fois lorsqu'une nouvelle instance de personne est créée, et recalculé (lorsqu'il est demandé) si le jour a changé depuis la dernière fois qu'il a été calculé.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="5.-Les-attributs-de-classe">5. Les attributs de classe<a class="anchor-link" href="#5.-Les-attributs-de-classe"> </a></h2><p>Tous les attributs définis sur une instance <code>Person</code> sont des attributs d'instance, ils sont ajoutés à l'instance lorsque la méthode <code>__init__</code> est exécutée. Cependant, nous pouvons également définir des attributs qui sont définis sur la classe. Ces attributs seront partagés par toutes les instances de cette classe. À bien des égards, ils se comportent comme des attributs d'instance, mais vous devez être conscient de certaines mises en garde.</p>
+<p>Nous définissons les attributs de classe dans son corps, au même niveau d'indentation que les définitions de méthode (un niveau au-dessus de l'intérieur des méthodes) :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+
+    <span class="n">TITLES</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Dr&#39;</span><span class="p">,</span> <span class="s1">&#39;Mr&#39;</span><span class="p">,</span> <span class="s1">&#39;Mrs&#39;</span><span class="p">,</span> <span class="s1">&#39;Ms&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">surname</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">title</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">TITLES</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> is not a valid title.&quot;</span> <span class="o">%</span> <span class="n">title</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">surname</span> <span class="o">=</span> <span class="n">surname</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Comme vous pouvez le voir, nous accédons à l'attribut de classe <code>TITLES</code> comme nous accéderions à un attribut d'instance, il est rendu disponible en tant que propriété sur l'objet d'instance, auquel nous accédons à l'intérieur de la méthode via la variable self.</p>
+<p>Tous les objets Person que nous créons partageront le même attribut de classe <code>TITLES</code>.</p>
+<p>Les attributs de classe sont souvent utilisés pour définir des constantes qui sont étroitement associées à une classe particulière. Bien que nous puissions utiliser des attributs de classe à partir d'instances de classe, nous pouvons également les utiliser à partir d'objets de classe, sans créer d'instance :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">person</span><span class="o">.</span><span class="n">TITLES</span>
+
+<span class="c1"># but we can also access it from the class</span>
+<span class="n">Person</span><span class="o">.</span><span class="n">TITLES</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>L'objet de classe n'a accès à aucun attribut d'instance, ceux-ci ne sont créés que lorsqu'une instance est créée :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Person</span><span class="o">.</span><span class="n">name</span>
+<span class="n">Person</span><span class="o">.</span><span class="n">surname</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Les attributs de classe peuvent également parfois être utilisés pour fournir des valeurs d'attribut par défaut.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="n">deceased</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="nf">mark_as_deceased</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">deceased</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Lorsque nous définissons un attribut sur une instance qui a le même nom qu'un attribut de classe, nous remplaçons l'attribut de classe par un attribut d'instance, qui aura la priorité sur lui. Si nous créons deux objets <code>Person</code> et appelons la méthode <code>mark_as_deceased</code> sur l'un d'eux, nous n'affecterons pas l'autre. Nous devons cependant être prudents lorsqu'un attribut de classe est de type mutable : car si nous le modifions sur place, nous affecterons tous les objets de cette classe en même temps. N'oubliez pas que toutes les instances partagent les mêmes attributs de classe :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="n">pets</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">add_pet</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pet</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pet</span><span class="p">)</span>
+
+<span class="n">jane</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
+<span class="n">bob</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
+
+<span class="n">jane</span><span class="o">.</span><span class="n">add_pet</span><span class="p">(</span><span class="s2">&quot;cat&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">jane</span><span class="o">.</span><span class="n">pets</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bob</span><span class="o">.</span><span class="n">pets</span><span class="p">)</span> <span class="c1"># oops!</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ce que nous devrions faire dans des cas comme celui-ci, c'est initialiser l'attribut mutable en tant qu'attribut d'instance, à l'intérieur de <code>__init__</code>. Ensuite, chaque instance aura sa propre copie distincte :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pets</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">add_pet</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pet</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pet</span><span class="p">)</span>
+
+<span class="n">jane</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
+<span class="n">bob</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
+
+<span class="n">jane</span><span class="o">.</span><span class="n">add_pet</span><span class="p">(</span><span class="s2">&quot;cat&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">jane</span><span class="o">.</span><span class="n">pets</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bob</span><span class="o">.</span><span class="n">pets</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Notez que les définitions de méthode sont dans le même scope que les définitions d'attribut de classe, nous pouvons donc utiliser les noms d'attribut de classe comme variables dans les définitions de méthode (sans <code>self</code>, qui n'est défini qu'à l'intérieur des méthodes) :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="n">TITLES</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Dr&#39;</span><span class="p">,</span> <span class="s1">&#39;Mr&#39;</span><span class="p">,</span> <span class="s1">&#39;Mrs&#39;</span><span class="p">,</span> <span class="s1">&#39;Ms&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">surname</span><span class="p">,</span> <span class="n">allowed_titles</span><span class="o">=</span><span class="n">TITLES</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">title</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">allowed_titles</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s2"> is not a valid title.&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">surname</span> <span class="o">=</span> <span class="n">surname</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercice-3">Exercice 3<a class="anchor-link" href="#Exercice-3"> </a></h2><p>Expliquez les différences entre les attributs <code>name</code>, <code>surname</code> et <code>profession</code>, et quelles valeurs ils peuvent avoir dans différentes instances de cette classe :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Smith</span><span class="p">:</span>
+    <span class="n">surname</span> <span class="o">=</span> <span class="s2">&quot;Smith&quot;</span>
+    <span class="n">profession</span> <span class="o">=</span> <span class="s2">&quot;smith&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">profession</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="k">if</span> <span class="n">profession</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">profession</span> <span class="o">=</span> <span class="n">profession</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="6.-Les-decorateurs-de-classe">6. Les decorateurs de classe<a class="anchor-link" href="#6.-Les-decorateurs-de-classe"> </a></h2><h3 id="@classmethod"><code>@classmethod</code><a class="anchor-link" href="#@classmethod"> </a></h3><p>Tout comme nous pouvons définir des attributs de classe, qui sont partagés entre toutes les instances d'une classe, nous pouvons définir des méthodes de classe. Pour ce faire, nous utilisons le décorateur <code>@classmethod</code> pour décorer une méthode ordinaire.</p>
+<p>Une méthode de classe a toujours son objet appelant comme premier paramètre, mais par convention nous renommerons ce paramètre de <code>self</code> en <code>cls</code>. Si nous appelons la méthode de classe depuis une instance, ce paramètre contiendra l'objet instance, mais si nous l'appelons depuis la classe, il contiendra l'objet classe. En appelant le paramètre <code>cls</code>, nous nous rappelons qu'il n'est pas garanti d'avoir des attributs d'instance.</p>
+<p>A quoi servent les méthodes de classe ? Parfois, il existe des tâches associées à une classe que nous pouvons effectuer à l'aide de constantes et d'autres attributs de classe, sans avoir besoin de créer d'instances de classe. Si nous devions utiliser des méthodes d'instance pour ces tâches, nous aurions besoin de créer une instance sans raison, ce qui serait un gaspillage. Parfois, nous écrivons des classes uniquement pour regrouper des constantes liées avec des fonctions qui agissent sur elles, nous pouvons ne jamais instancier ces classes du tout.</p>
+<p>Parfois, il est utile d'écrire une méthode de classe qui crée une instance de la classe après avoir traité l'entrée afin qu'elle soit dans le bon format pour être transmise au constructeur de classe. Cela permet au constructeur d'être simple et de ne pas avoir à implémenter de code d'analyse ou de nettoyage compliqué :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">surname</span><span class="p">,</span> <span class="n">birthdate</span><span class="p">,</span> <span class="n">address</span><span class="p">,</span> <span class="n">telephone</span><span class="p">,</span> <span class="n">email</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="c1"># (...)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_text_file</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+        <span class="c1"># extract all the parameters from the text file</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="o">*</span><span class="n">params</span><span class="p">)</span> <span class="c1"># this is the same as calling Person(*params)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="@staticmethod"><code>@staticmethod</code><a class="anchor-link" href="#@staticmethod"> </a></h3><p>L'objet appelant n'est pas transmis à une méthode statique comme premier paramètre. Cela signifie qu'il n'a pas du tout accès au reste de la classe ou de l'instance. Nous pouvons les appeler à partir d'une instance ou d'un objet de classe, mais ils sont le plus souvent appelés à partir d'objets de classe, comme les méthodes de classe.</p>
+<p>Si nous utilisons une classe pour regrouper des méthodes liées qui n'ont pas besoin d'accéder les unes aux autres ou à d'autres données sur la classe, nous pouvons utiliser cette technique. L'avantage d'utiliser des méthodes statiques est que nous éliminons les paramètres <code>cls</code> ou <code>self</code> inutiles de nos définitions de méthodes. L'inconvénient est que si nous voulons occasionnellement faire référence à une autre méthode de classe ou à un autre attribut dans une méthode statique, nous devons écrire le nom de la classe en entier, ce qui peut être beaucoup plus détaillé que d'utiliser la variable <code>cls</code> qui nous est disponible dans un méthode de classe.</p>
+<p>Voici un exemple comparant les trois types de méthodes :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="n">TITLES</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Dr&#39;</span><span class="p">,</span> <span class="s1">&#39;Mr&#39;</span><span class="p">,</span> <span class="s1">&#39;Mrs&#39;</span><span class="p">,</span> <span class="s1">&#39;Ms&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">surname</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">surname</span> <span class="o">=</span> <span class="n">surname</span>
+
+    <span class="k">def</span> <span class="nf">fullname</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c1"># instance method</span>
+        <span class="c1"># instance object accessible through self</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">surname</span><span class="si">}</span><span class="s2">&quot;</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">allowed_titles_starting_with</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">startswith</span><span class="p">):</span> <span class="c1"># class method</span>
+        <span class="c1"># class or instance object accessible through cls</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">t</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="bp">cls</span><span class="o">.</span><span class="n">TITLES</span> <span class="k">if</span> <span class="n">t</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">startswith</span><span class="p">)]</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">allowed_titles_ending_with</span><span class="p">(</span><span class="n">endswith</span><span class="p">):</span> <span class="c1"># static method</span>
+        <span class="c1"># no parameter for class or instance object</span>
+        <span class="c1"># we have to use Person directly</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">t</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">Person</span><span class="o">.</span><span class="n">TITLES</span> <span class="k">if</span> <span class="n">t</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="n">endswith</span><span class="p">)]</span>
+
+
+<span class="n">jane</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">&quot;Jane&quot;</span><span class="p">,</span> <span class="s2">&quot;Smith&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">jane</span><span class="o">.</span><span class="n">fullname</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">jane</span><span class="o">.</span><span class="n">allowed_titles_starting_with</span><span class="p">(</span><span class="s2">&quot;M&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Person</span><span class="o">.</span><span class="n">allowed_titles_starting_with</span><span class="p">(</span><span class="s2">&quot;M&quot;</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">jane</span><span class="o">.</span><span class="n">allowed_titles_ending_with</span><span class="p">(</span><span class="s2">&quot;s&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Person</span><span class="o">.</span><span class="n">allowed_titles_ending_with</span><span class="p">(</span><span class="s2">&quot;s&quot;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="@property"><code>@property</code><a class="anchor-link" href="#@property"> </a></h3><p>Parfois, nous utilisons une méthode pour générer dynamiquement une propriété d'un objet, en la calculant à partir des autres propriétés de l'objet. Parfois, vous pouvez simplement utiliser une méthode pour accéder à un seul attribut et le retourner. Vous pouvez également utiliser une méthode différente pour mettre à jour la valeur de l'attribut au lieu d'y accéder directement. De telles méthodes sont appelées getters et setters, car elles « obtiennent » et « définissent » respectivement les valeurs des attributs.</p>
+<p>Dans certains langages, vous êtes encouragé à utiliser des getters et des setters pour tous les attributs, et à ne jamais accéder directement à leurs valeurs et il existe des fonctionnalités de langage qui peuvent rendre les attributs inaccessibles, sauf via les setters et les getters. En Python, accéder directement à des attributs simples est parfaitement acceptable, et écrire des getters et setters pour chacun d'eux est considéré comme inutilement verbeux. Les setters peuvent être gênants car ils ne permettent pas l'utilisation d'opérateurs d'affectation composés :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
+
+    <span class="k">def</span> <span class="nf">get_height</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span>
+
+    <span class="k">def</span> <span class="nf">set_height</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
+
+<span class="n">jane</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="mi">153</span><span class="p">)</span> <span class="c1"># Jane is 153cm tall</span>
+
+<span class="n">jane</span><span class="o">.</span><span class="n">height</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># Jane grows by a centimetre</span>
+<span class="n">jane</span><span class="o">.</span><span class="n">set_height</span><span class="p">(</span><span class="n">jane</span><span class="o">.</span><span class="n">height</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># Jane grows again</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Comme nous pouvons le voir, incrémenter l'attribut <code>height</code> via un setter est beaucoup plus détaillé. Bien sûr, nous pourrions écrire un deuxième setter qui incrémente l'attribut par le paramètre donné, mais nous devrions faire quelque chose de similaire pour chaque attribut et chaque type de modification que nous voulons effectuer. Nous aurions un problème similaire avec les modifications sur place, comme l'ajout de valeurs aux listes.</p>
+<p>Quelque chose qui est souvent considéré comme un avantage des setters et des getters est que nous pouvons changer la façon dont un attribut est généré à l'intérieur de l'objet sans affecter le code qui utilise l'objet. Par exemple, supposons que nous ayons initialement créé une classe <code>Person</code> qui a un attribut de nom complet, mais que nous voulions plus tard changer la classe pour avoir des attributs de nom et de famille séparés que nous combinons pour créer un nom complet. Si nous accédons toujours à l'attribut <code>fullname</code> via un setter, nous pouvons simplement réécrire le setter, aucun code qui appelle le setter ne devra être modifié.</p>
+<p>Mais que se passe-t-il si notre code accède directement à l'attribut <code>fullname</code> ? Nous pouvons écrire une méthode de nom complet qui renvoie la bonne valeur, mais une méthode doit être appelée. Heureusement, le décorateur @property nous permet de faire en sorte qu'une méthode se comporte comme un attribut :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">surname</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">surname</span> <span class="o">=</span> <span class="n">surname</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">fullname</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">surname</span><span class="p">)</span>
+
+<span class="n">jane</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">&quot;Jane&quot;</span><span class="p">,</span> <span class="s2">&quot;Smith&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">jane</span><span class="o">.</span><span class="n">fullname</span><span class="p">)</span> <span class="c1"># no brackets!</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Il existe également des décorateurs que nous pouvons utiliser pour définir un setter et un deleter pour notre attribut (un deleter supprimera l'attribut de notre objet). Les méthodes getter, setter et deleter doivent toutes avoir le même nom :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">surname</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">surname</span> <span class="o">=</span> <span class="n">surname</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">fullname</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">surname</span><span class="p">)</span>
+
+    <span class="nd">@fullname</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">fullname</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="c1"># this is much more complicated in real life</span>
+        <span class="n">name</span><span class="p">,</span> <span class="n">surname</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">surname</span> <span class="o">=</span> <span class="n">surname</span>
+
+    <span class="nd">@fullname</span><span class="o">.</span><span class="n">deleter</span>
+    <span class="k">def</span> <span class="nf">fullname</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+        <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">surname</span>
+
+<span class="n">jane</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">&quot;Jane&quot;</span><span class="p">,</span> <span class="s2">&quot;Smith&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">jane</span><span class="o">.</span><span class="n">fullname</span><span class="p">)</span>
+
+<span class="n">jane</span><span class="o">.</span><span class="n">fullname</span> <span class="o">=</span> <span class="s2">&quot;Jane Doe&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">jane</span><span class="o">.</span><span class="n">fullname</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">jane</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">jane</span><span class="o">.</span><span class="n">surname</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercice-4">Exercice 4<a class="anchor-link" href="#Exercice-4"> </a></h2><p>Créez une classe appelée <code>Numbers</code>, qui a un seul attribut de classe appelé <code>MULTIPLIER</code>, et un constructeur qui prend les paramètres <code>x</code> et <code>y</code> (ceux-ci doivent tous être des nombres).</p>
+<ul>
+<li>1) Écrivez une méthode appelée <code>add</code> qui renvoie la somme des attributs <code>x</code> et <code>y</code>.</li>
+<li>2) Écrivez une méthode de classe appelée <code>multiply</code>, qui prend un seul paramètre numérique <code>a</code> et renvoie le produit de <code>a</code> et de <code>MULTIPLIER</code>.</li>
+<li>3) Écrivez une méthode statique appelée <code>subtract</code>, qui prend deux paramètres numériques : <code>b</code> et <code>c</code>, et renvoie <code>b - c</code>.</li>
+<li>4) Écrivez une méthode appelée <code>value</code> qui renvoie un tuple contenant les valeurs de <code>x</code> et <code>y</code>. Transformez cette méthode en propriété et écrivez un setter et un deleter pour manipuler les valeurs de <code>x</code> et <code>y</code>.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="7.-Inspecter-un-objet">7. Inspecter un objet<a class="anchor-link" href="#7.-Inspecter-un-objet"> </a></h2><p>Nous pouvons vérifier quelles propriétés sont définies sur un objet en utilisant la fonction <code>dir</code> :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">surname</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">surname</span> <span class="o">=</span> <span class="n">surname</span>
+
+    <span class="k">def</span> <span class="nf">fullname</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">surname</span><span class="p">)</span>
+
+<span class="n">jane</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">&quot;Jane&quot;</span><span class="p">,</span> <span class="s2">&quot;Smith&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">jane</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Maintenant, nous pouvons voir nos attributs et notre méthode. Mais qu'est-ce que c'est que tous ces autres trucs ? Nous discuterons de l'héritage dans le chapitre suivant, mais pour l'instant tout ce que vous devez savoir est que toute classe que vous définissez a un objet comme classe parent même si vous ne le dites pas explicitement, votre classe aura donc beaucoup d'attributs par défaut et les méthodes de tout objet Python.</p>
+<p>C'est pourquoi vous pouvez simplement omettre la méthode <code>__init__</code> de votre classe si vous n'avez aucune initialisation à faire, la valeur par défaut que vous avez héritée de object (qui ne fait rien) sera utilisée à la place. Si vous écrivez votre propre méthode <code>__init__</code>, elle remplacera (<code>override</code>) la méthode par défaut.</p>
+<p>De nombreuses méthodes et attributs par défaut que l'on trouve dans les objets Python de base ont des noms qui commencent et se terminent par des traits de soulignement doubles, comme <code>__init__</code> ou <code>__str__</code>. Ces noms indiquent que ces propriétés ont une signification particulière, vous ne devez pas créer vos propres méthodes ou attributs avec les mêmes noms, à moins que vous ne vouliez les surcharger. Ces propriétés sont généralement des méthodes, et elles sont parfois appelées méthodes magiques.</p>
+<p>Nous pouvons utiliser <code>dir</code> sur n'importe quel objet. Vous pouvez essayer de l'utiliser sur toutes sortes d'objets que nous avons déjà vus auparavant, comme des nombres, des listes, des chaînes et des fonctions, pour voir quelles propriétés intégrées ces objets ont en commun.</p>
+<p>Voici quelques exemples de propriétés d'objets spéciaux :</p>
+<ul>
+<li><code>__init__</code> : la méthode d'initialisation d'un objet, qui est appelée lors de la création de l'objet.</li>
+<li><code>__str__</code> : la méthode de représentation sous forme de chaîne d'un objet, qui est appelée lorsque vous utilisez la fonction <code>str</code> pour convertir cet objet en une chaîne.</li>
+<li><code>__class__</code> : un attribut qui stocke la classe (ou le type) d'un objet, c'est ce qui est renvoyé lorsque vous utilisez la fonction <code>type</code> sur l'objet.</li>
+<li><code>__eq__</code> : une méthode qui détermine si cet objet est égal à un autre. Il existe également d'autres méthodes pour déterminer si ce n'est pas égal, inférieur à, etc. Ces méthodes sont utilisées dans les comparaisons d'objets, par exemple lorsque nous utilisons l'opérateur d'égalité == pour vérifier si deux objets sont égaux.</li>
+<li><code>__add__</code> est une méthode qui permet d'ajouter cet objet à un autre objet. Il existe des méthodes équivalentes pour tous les autres opérateurs arithmétiques. Tous les objets ne prennent pas en charge toutes les opérations arithmétiques, les nombres ont toutes ces méthodes définies, mais d'autres objets peuvent n'avoir qu'un sous-ensemble.</li>
+<li><code>__iter__</code> : une méthode qui renvoie un itérateur sur l'objet, nous le trouverons sur des chaînes, des listes et d'autres itérables. Il est exécuté lorsque nous utilisons la fonction iter sur l'objet.</li>
+<li><code>__len__</code> : une méthode qui calcule la longueur d'un objet, on la retrouvera sur des séquences. Il est exécuté lorsque nous utilisons la fonction <code>len</code> d'un objet.</li>
+<li><code>__dict__</code> : un dictionnaire qui contient tous les attributs d'instance d'un objet, avec leurs noms comme clés. Cela peut être utile si nous voulons itérer sur tous les attributs d'un objet. <code>__dict__</code> n'inclut aucune méthode, attribut de classe ou attribut par défaut spécial comme <code>__class__</code>.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercice-5">Exercice 5<a class="anchor-link" href="#Exercice-5"> </a></h2><p>Créez une instance de la classe <code>Person</code> de l'exemple 2. Utilisez la fonction <code>dir</code> sur l'instance. Ensuite, utilisez la fonction <code>dir</code> sur la classe.</p>
+<ul>
+<li>1) Que se passe-t-il si vous appelez la méthode <code>__str__</code> sur l'instance ? Vérifiez que vous obtenez le même résultat si vous appelez la fonction <code>str</code> avec l'instance comme paramètre.</li>
+<li>2) Quel est le type de l'instance ?</li>
+<li>3) Quel est le type de classe ?</li>
+<li>4) Écrivez une fonction qui affiche les noms et les valeurs de tous les attributs personnalisés de tout objet transmis en tant que paramètre.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Remplacer-les-m&#233;thodes-magiques">Remplacer les m&#233;thodes magiques<a class="anchor-link" href="#Remplacer-les-m&#233;thodes-magiques"> </a></h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">surname</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">surname</span> <span class="o">=</span> <span class="n">surname</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">surname</span><span class="si">}</span><span class="s2">&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span> <span class="c1"># does self == other?</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">name</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">surname</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">surname</span>
+
+    <span class="k">def</span> <span class="fm">__gt__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span> <span class="c1"># is self &gt; other?</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">surname</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">surname</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">&gt;</span> <span class="n">other</span><span class="o">.</span><span class="n">name</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">surname</span> <span class="o">&gt;</span> <span class="n">other</span><span class="o">.</span><span class="n">surname</span>
+
+    <span class="c1"># now we can define all the other methods in terms of the first two</span>
+
+    <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span> <span class="c1"># does self != other?</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span> <span class="c1"># this calls self.__eq__(other)</span>
+
+    <span class="k">def</span> <span class="fm">__le__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span> <span class="c1"># is self &lt;= other?</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">&gt;</span> <span class="n">other</span> <span class="c1"># this calls self.__gt__(other)</span>
+
+    <span class="k">def</span> <span class="fm">__lt__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span> <span class="c1"># is self &lt; other?</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="p">(</span><span class="bp">self</span> <span class="o">&gt;</span> <span class="n">other</span> <span class="ow">or</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__ge__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span> <span class="c1"># is self &gt;= other?</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">&lt;</span> <span class="n">other</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/AXI-Fastpages/python-intro-gen/chapter/6/lesson/1/" hidden></a>
+</article>
+      </div>
+    </main>
+    <script> 
+      window.onload = () => {
+        // Ecouteur d'évènement sur scroll
+        window.addEventListener("scroll", () => {
+          // Calcul de la hauteur "utile" du document
+          let hauteur = document.documentElement.scrollHeight - window.innerHeight;
+
+          // Récupération de la position verticale
+          let position = window.scrollY;
+
+          // Récupération de la largeur de la fenêtre
+          let largeur = document.documentElement.clientWidth;
+
+          // Calcul de la largeur de la barre
+          let barre = position / hauteur * largeur;
+
+          // Modification du CSS de la barre
+          document.getElementById("barre-progression").style.width = barre+"px";
+        })
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <base target="_blank">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Chapitre 3 : Les collections | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Chapitre 3 : Les collections" />
+<meta name="author" content="AXI Academy" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Python : Chapitre 3 - Lesson 1" />
+<meta property="og:description" content="Python : Chapitre 3 - Lesson 1" />
+<link rel="canonical" href="https://axi-technologies.github.io/AXI-Fastpages/python-intro-gen/chapter/3/lesson/1/" />
+<meta property="og:url" content="https://axi-technologies.github.io/AXI-Fastpages/python-intro-gen/chapter/3/lesson/1/" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-01-02T00:00:00-06:00" />
+<script type="application/ld+json">
+{"url":"https://axi-technologies.github.io/AXI-Fastpages/python-intro-gen/chapter/3/lesson/1/","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://axi-technologies.github.io/AXI-Fastpages/python-intro-gen/chapter/3/lesson/1/"},"headline":"Chapitre 3 : Les collections","dateModified":"2022-01-02T00:00:00-06:00","datePublished":"2022-01-02T00:00:00-06:00","author":{"@type":"Person","name":"AXI Academy"},"description":"Python : Chapitre 3 - Lesson 1","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/AXI-Fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://axi-technologies.github.io/AXI-Fastpages/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/AXI-Fastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body>
+    <div id="barre-progression" 
+      style="
+        background: #00b0f0;
+        height: 5px;
+        width: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+      "
+    ></div>
+    <YOUR HEADER IMG HERE>
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Chapitre 3 : Les collections</h1><p class="page-description">Python : Chapitre 3 - Lesson 1</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-01-02T00:00:00-06:00" itemprop="datePublished">
+        Jan 2, 2022
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">AXI Academy</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      21 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          
+          
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/AXI-Technologies/AXI-Fastpages/blob/master/_notebooks/2022-01-02-python-intro-gen-3-1-collections.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/AXI-Fastpages/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-01-02-python-intro-gen-3-1-collections.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Nous avons déjà rencontré quelques types Python simples comme les nombres (<code>int</code>, <code>float</code>), les string (<code>str</code>)et les booléens (<code>bool</code>). Nous allons maintenant voir comment regrouper plusieurs valeurs dans une collection, comme une liste de nombres ou un dictionnaire que nous pouvons utiliser pour stocker et récupérer des paires clé-valeur. De nombreuses collections utiles sont des types intégrés dans Python, et nous les rencontrerons assez souvent.</p>
+<h2 id="1.-Les-listes-(list)">1. Les listes (<code>list</code>)<a class="anchor-link" href="#1.-Les-listes-(list)"> </a></h2><p>Le type de liste en Python est appelé <code>list</code>. Nous pouvons l'utiliser pour stocker plusieurs valeurs et y accéder séquentiellement ou par leur position (leur index). Les listes sont définis avec un ensemble de valeurs séparées par des virgules entre crochets (<code>[</code> et <code>]</code>) :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">animals</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;fish&#39;</span><span class="p">,</span> <span class="s1">&#39;bison&#39;</span><span class="p">]</span>
+
+<span class="c1"># a list of integers</span>
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
+
+<span class="c1"># an empty list</span>
+<span class="n">my_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># a list of variables we defined somewhere else</span>
+<span class="n">things</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">one_variable</span><span class="p">,</span>
+    <span class="n">another_variable</span><span class="p">,</span>
+    <span class="n">third_variable</span><span class="p">,</span> <span class="c1"># this trailing comma is legal in Python</span>
+<span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Comme vous pouvez le voir, nous avons utilisé des noms au pluriel pour nommer la plupart de nos variables de liste. Il s'agit d'une convention courante et il est utile de la suivre dans la plupart des cas.</p>
+<p>Pour accéder à un élément de la liste, nous utilisons l'identifiant de la liste suivi de l'index entre crochets. Les index sont des entiers qui commencent à zéro :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">animals</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1"># cat</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># 7</span>
+
+<span class="c1"># This will give us an error, because the list only has four elements</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">animals</span><span class="p">[</span><span class="mi">6</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>On peut aussi retrouver des éléments en partant de la fin :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">animals</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># the last element -- bison</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span> <span class="c1"># the second-last element -- 20</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Nous pouvons aussi extraire un sous-ensemble d'une liste (qui sera elle-même une liste) à l'aide d'un <code>slice</code>. Cela utilise presque la même syntaxe que pour accéder à un seul élément, mais au lieu de spécifier un seul index entre les crochets, nous devons spécifier une limite supérieure et inférieure. Notez que notre sous-liste inclura l'élément à la limite inférieure, mais exclura l'élément à la limite supérieure :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">animals</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span> <span class="c1"># [&#39;dog&#39;, &#39;fish&#39;]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">animals</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># [&#39;dog&#39;, &#39;fish&#39;]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Si l'une des limites est l'une des extrémités de la liste, nous pouvons la laisser de côté.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">animals</span><span class="p">[</span><span class="mi">2</span><span class="p">:])</span> <span class="c1"># [&#39;fish&#39;, &#39;bison&#39;]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">animals</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span> <span class="c1"># [&#39;cat&#39;, &#39;dog&#39;]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">animals</span><span class="p">[:])</span> <span class="c1"># a copy of the whole list</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Nous pouvons même inclure un troisième paramètre pour spécifier la taille du pas :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">animals</span><span class="p">[::</span><span class="mi">2</span><span class="p">])</span> <span class="c1"># [&#39;cat&#39;, &#39;fish&#39;]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Les listes sont mutables, nous pouvons modifier des éléments, en ajouter ou en supprimer. Une liste changera de taille automatiquement lorsque nous ajoutons ou supprimons des éléments :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">animals</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;hamster&quot;</span>
+
+<span class="c1"># add a new element to the end of the list</span>
+<span class="n">animals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;squirrel&quot;</span><span class="p">)</span>
+
+<span class="c1"># remove an element by its index</span>
+<span class="k">del</span> <span class="n">animals</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Comme les <code>list</code> sont mutables, nous pouvons modifier une variable d'une <code>list</code> sans lui affecter une valeur complètement nouvelle. N'oubliez pas que si nous attribuons la même valeur de <code>list</code> à deux variables, toute modification faite à l'une des deux variables sera refleté sur l'autre :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">animals</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;goldfish&#39;</span><span class="p">,</span> <span class="s1">&#39;canary&#39;</span><span class="p">]</span>
+<span class="n">pets</span> <span class="o">=</span> <span class="n">animals</span> <span class="c1"># now both variables refer to the same list object</span>
+
+<span class="n">animals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;aardvark&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pets</span><span class="p">)</span> <span class="c1"># pets is still the same list as animals</span>
+
+<span class="n">animals</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;rat&#39;</span><span class="p">,</span> <span class="s1">&#39;gerbil&#39;</span><span class="p">,</span> <span class="s1">&#39;hamster&#39;</span><span class="p">]</span> <span class="c1"># now we assign a new list value to animals</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pets</span><span class="p">)</span> <span class="c1"># pets still refers to the old list</span>
+
+<span class="n">pets</span> <span class="o">=</span> <span class="n">animals</span><span class="p">[:]</span> <span class="c1"># assign a *copy* of animals to pets</span>
+<span class="n">animals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;aardvark&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pets</span><span class="p">)</span> <span class="c1"># pets remains unchanged, because it refers to a copy, not the original list</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>On peut mélanger les types de valeurs que l'on stocke dans une liste :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mf">35.8</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Comment vérifier si une liste contient une valeur particulière ? Nous utilisons les opérateurs <code>in</code> ou <code>not in</code> :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">34</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">29</span><span class="p">]</span>
+<span class="n">my_number</span> <span class="o">=</span> <span class="mi">67</span>
+
+<span class="k">if</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2"> is in the list!&quot;</span> <span class="o">%</span> <span class="n">number</span><span class="p">)</span>
+
+<span class="n">my_number</span> <span class="o">=</span> <span class="mi">90</span>
+<span class="k">if</span> <span class="n">number</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2"> is not in the list!&quot;</span> <span class="o">%</span> <span class="n">number</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Les-fonctions-des-listes">Les fonctions des listes<a class="anchor-link" href="#Les-fonctions-des-listes"> </a></h3><p>Il existe des fonctions <code>built-in</code> que nous pouvons utiliser sur les listes et autres séquences :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">animals</span><span class="p">)</span>
+
+<span class="c1"># the sum of a list of numbers</span>
+<span class="nb">sum</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+
+<span class="c1"># are any of these values true?</span>
+<span class="nb">any</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="c1"># are all of these values true?</span>
+<span class="nb">all</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>L'objet <code>list</code> possède lui aussi de nombreuses fonctions utiles :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+
+<span class="c1"># we already saw how to add an element to the end</span>
+<span class="n">numbers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="c1"># count how many times a value appears in the list</span>
+<span class="n">numbers</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="c1"># append several values at once to the end</span>
+<span class="n">numbers</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="mi">56</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">12</span><span class="p">])</span>
+
+<span class="c1"># find the index of a value</span>
+<span class="n">numbers</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="c1"># if the value appears more than once, we will get the index of the first one</span>
+<span class="n">numbers</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1"># if the value is not in the list, we will get a ValueError!</span>
+<span class="n">numbers</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># insert a value at a particular index</span>
+<span class="n">numbers</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span> <span class="c1"># insert 45 at the beginning of the list</span>
+
+<span class="c1"># remove an element by its index and assign it to a variable</span>
+<span class="n">my_number</span> <span class="o">=</span> <span class="n">numbers</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># remove an element by its value</span>
+<span class="n">numbers</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+<span class="c1"># if the value appears more than once, only the first one will be removed</span>
+<span class="n">numbers</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Nous pouvons aussi trier les listes de plusieurs façons :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># these return a modified copy, which we can print</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">numbers</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">reversed</span><span class="p">(</span><span class="n">numbers</span><span class="p">)))</span>
+
+<span class="c1"># the original list is unmodified</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+
+<span class="c1"># now we can modify it in place</span>
+<span class="n">numbers</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="n">numbers</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Les-op&#233;rateurs-arithm&#233;tiques">Les op&#233;rateurs arithm&#233;tiques<a class="anchor-link" href="#Les-op&#233;rateurs-arithm&#233;tiques"> </a></h3><p>Nous pouvons combiner des listes et les étendre grace aux opérateurs arithmétiques <code>+</code> et <code>*</code> :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+
+<span class="c1"># we can concatenate a list with itself by multiplying it by an integer</span>
+<span class="nb">print</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># not all arithmetic operators can be used on lists -- this will give us an error!</span>
+<span class="nb">print</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">-</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercice-1-:">Exercice 1 :<a class="anchor-link" href="#Exercice-1-:"> </a></h2><ul>
+<li>1) Créez une liste <code>a</code> qui contient les trois premiers entiers positifs impairs et une liste <code>b</code> qui contient les trois premiers entiers positifs pairs.</li>
+<li>2) Créez une nouvelle liste <code>c</code> qui combine les nombres des deux listes (l'ordre n'a pas d'importance).</li>
+<li>3) Créez une nouvelle liste <code>d</code> qui est une copie triée de <code>c</code>, en laissant <code>c</code> inchangé.</li>
+<li>4) Inversez <code>d</code>.</li>
+<li>5) Définissez le 4ème élément de <code>c</code> comme étant 42.</li>
+<li>5) Ajoutez 10 à la fin de <code>d</code>.</li>
+<li>6) Ajoutez 7, 8 et 9 à la fin du <code>c</code>.</li>
+<li>7) Affichez les trois premiers éléments de <code>c</code>.</li>
+<li>8) Affichez le dernier élément de <code>d</code> sans utiliser sa longueur.</li>
+<li>9) Affichez la longueur de <code>d</code>.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2.-Les-tuples-(tuple)">2. Les tuples (<code>tuple</code>)<a class="anchor-link" href="#2.-Les-tuples-(tuple)"> </a></h2><p>Python a un autre type de séquence appelé <code>tuple</code>. Les tuples sont similaires aux listes, mais ils sont immuables. Les tuples sont définis avec un ensemble de valeurs séparées par des virgules entre parenthèses (<code>(</code> et <code>)</code>) :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">WEEKDAYS</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Monday&#39;</span><span class="p">,</span> <span class="s1">&#39;Tuesday&#39;</span><span class="p">,</span> <span class="s1">&#39;Wednesday&#39;</span><span class="p">,</span> <span class="s1">&#39;Thursday&#39;</span><span class="p">,</span> <span class="s1">&#39;Friday&#39;</span><span class="p">,</span> <span class="s1">&#39;Saturday&#39;</span><span class="p">,</span> <span class="s1">&#39;Sunday&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Nous pouvons utiliser des tuples de la même manière que nous utilisons des listes, sauf que nous ne pouvons pas les modifier :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">animals</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;fish&#39;</span><span class="p">)</span>
+
+<span class="c1"># an empty tuple</span>
+<span class="n">my_tuple</span> <span class="o">=</span> <span class="p">()</span>
+
+<span class="c1"># we can access a single element</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">animals</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="c1"># we can get a slice</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">animals</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span> <span class="c1"># note that our slice will be a new tuple, not a list</span>
+
+<span class="c1"># we can count values or look up an index</span>
+<span class="n">animals</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;cat&#39;</span><span class="p">)</span>
+<span class="n">animals</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;cat&#39;</span><span class="p">)</span>
+
+<span class="c1"># ... but this is not allowed:</span>
+<span class="n">animals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;canary&#39;</span><span class="p">)</span>
+<span class="n">animal</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;gerbil&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A quoi servent les tuples ? Nous pouvons les utiliser pour créer une séquence de valeurs que nous ne voulons pas modifier.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercice-2">Exercice 2<a class="anchor-link" href="#Exercice-2"> </a></h2><ul>
+<li>1) Créez un tuple a qui contient les quatre premiers entiers positifs et un tuple <code>b</code> qui contient les quatre entiers positifs suivants.</li>
+<li>2) Créez un tuple c qui combine tous les nombres de <code>a</code> et <code>b</code> dans n'importe quel ordre.</li>
+<li>3) Créez un tuple d qui est une copie triée de <code>c</code>.</li>
+<li>4) Affichez le troisième élément de <code>d</code>.</li>
+<li>5) Affichez les trois derniers éléments de <code>d</code> sans utiliser sa longueur.</li>
+<li>6) Affichez la longueur de <code>d</code>.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="3.-Les-sets-(set)">3. Les sets (<code>set</code>)<a class="anchor-link" href="#3.-Les-sets-(set)"> </a></h2><p>Il existe encore un autre type de séquence appelé <code>set</code>. Un <code>set</code> est une collection d'éléments uniques. Si nous ajoutons plusieurs copies du même élément à un <code>set</code>, les doublons seront éliminés et il nous restera un de chaque élément. Les sets sont définis avec un ensemble de valeurs séparées par des virgules entre accolades (<code>{</code> et <code>}</code>) :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">animals</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;goldfish&#39;</span><span class="p">,</span> <span class="s1">&#39;canary&#39;</span><span class="p">,</span> <span class="s1">&#39;cat&#39;</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">animals</span><span class="p">)</span> <span class="c1"># the set will only contain one cat</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Nous pouvons faire plusieurs opérations sur les sets :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">even_numbers</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">}</span>
+<span class="n">big_numbers</span> <span class="o">=</span> <span class="p">{</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">}</span>
+
+<span class="c1"># subtraction: big numbers which are not even</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">big_numbers</span> <span class="o">-</span> <span class="n">even_numbers</span><span class="p">)</span>
+
+<span class="c1"># union: numbers which are big or even</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">big_numbers</span> <span class="o">|</span> <span class="n">even_numbers</span><span class="p">)</span>
+
+<span class="c1"># intersection: numbers which are big and even</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">big_numbers</span> <span class="o">&amp;</span> <span class="n">even_numbers</span><span class="p">)</span>
+
+<span class="c1"># numbers which are big or even but not both</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">big_numbers</span> <span class="o">^</span> <span class="n">even_numbers</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Il est important de noter que contrairement aux listes et aux tuples, les sets ne sont pas ordonnés. Lorsque nous affichons un ensemble, l'ordre des éléments sera aléatoire. Nous pouvons toujours l'ordoner si besoin (cependant la fonction <code>sorted</code> nous renverra une liste):</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">animals</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">animals</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Comment fait-on pour déclarer un <code>set</code> vide ? Nous devons utiliser la fonction <code>set</code>. Les dictionnaires, dont nous parlerons dans la section suivante, utilisaient des accolades avant que les ensembles ne les adoptent, donc un ensemble vide d'accolades est en fait un dictionnaire vide :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1"># this is how we make an empty set</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercice-3-:">Exercice 3 :<a class="anchor-link" href="#Exercice-3-:"> </a></h2><ul>
+<li>1) Créez un ensemble <code>a</code> qui contient les quatre premiers entiers positifs et un ensemble <code>b</code> qui contient les quatre premiers entiers positifs impairs.</li>
+<li>2) Créez un ensemble <code>c</code> qui combine tous les nombres qui sont dans <code>a</code> ou <code>b</code> (ou les deux).</li>
+<li>3) Créez un ensemble <code>d</code> qui contient tous les nombres de <code>a</code> mais pas de <code>b</code>.</li>
+<li>4) Créez un ensemble <code>e</code> qui contient tous les nombres de <code>b</code> mais pas de <code>a</code>.</li>
+<li>5) Créez un ensemble <code>f</code> qui contient tous les nombres qui sont à la fois dans <code>a</code> et dans <code>b</code>.</li>
+<li>6) Créez un ensemble <code>g</code> qui contient tous les nombres qui sont soit dans <code>a</code> soit dans <code>b</code> mais pas dans les deux.</li>
+<li>7) Affichez le nombre d'éléments dans <code>c</code>.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="4.-Les--range">4. Les  <code>range</code><a class="anchor-link" href="#4.-Les--range"> </a></h2><p>Nous pouvons générer une séquence d'entier (appelé <code>range</code>) grace à la fonction <code>built-in</code> : <code>range</code>. Les <code>range</code> sont des générateurs, nous verrons ces derniers en détail dans la prochaine partie. Pour l'instant, nous avons juste besoin de savoir que les nombres de la plage sont générés un à un, et pas tous à la fois.</p>
+<p>Dans les exemples ci-dessous, nous convertissons chaque <code>range</code> en <code>list</code> afin que tous les nombres soient générés et que nous puissions les afficher</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)))</span>
+
+<span class="c1"># print the integers from 1 to 10</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)))</span>
+
+<span class="c1"># print the odd integers from 1 to 10</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Comme vous pouvez le voir, si nous passons un seul paramètre à la fonction range, il est utilisé comme borne supérieure. Si nous utilisons deux paramètres, le premier est la borne inférieure et le second est la borne supérieure. Si nous en utilisons trois, le troisième paramètre est la taille du pas. La limite inférieure par défaut est zéro et la taille de pas par défaut est un. Notez que la plage inclut la limite inférieure et exclut la limite supérieure.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercice-4-:">Exercice 4 :<a class="anchor-link" href="#Exercice-4-:"> </a></h2><ul>
+<li>1) Créez un range <code>a</code> qui commence à partir de 0 et s'étend sur 20 nombres.</li>
+<li>2) Créez un range <code>b</code> qui commence à partir de 3 et se termine à 12.</li>
+<li>3) Créez un range <code>c</code> qui contient un entier sur trois commençant à 2 et se terminant à 50.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="5.-Les-dictionnaires-dict">5. Les dictionnaires <code>dict</code><a class="anchor-link" href="#5.-Les-dictionnaires-dict"> </a></h2><p>Le type de dictionnaire Python est appelé <code>dict</code>. Nous pouvons utiliser un dictionnaire pour stocker des paires clé-valeur. Les <code>dict</code> sont définis avec un ensemble de paires clé-valeur séparées par des virgules entre des accolades (<code>{</code> et <code>}</code>). Nous utilisons deux points pour séparer chaque clé de sa valeur. Nous accédons aux valeurs du dictionnaire de la même manière que les éléments de liste ou de tuple, mais nous utilisons des clés au lieu d'indices :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">marbles</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;red&quot;</span><span class="p">:</span> <span class="mi">34</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="s2">&quot;brown&quot;</span><span class="p">:</span> <span class="mi">31</span><span class="p">,</span> <span class="s2">&quot;yellow&quot;</span><span class="p">:</span> <span class="mi">29</span> <span class="p">}</span>
+
+<span class="n">personal_details</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Jane Doe&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">38</span><span class="p">,</span> <span class="c1"># trailing comma is legal</span>
+<span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">marbles</span><span class="p">[</span><span class="s2">&quot;green&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">personal_details</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+
+<span class="c1"># This will give us an error, because there is no such key in the dictionary</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">marbles</span><span class="p">[</span><span class="s2">&quot;blue&quot;</span><span class="p">])</span>
+
+<span class="c1"># modify a value</span>
+<span class="n">marbles</span><span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">3</span>
+<span class="n">personal_details</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Jane Q. Doe&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Les clés d'un dictionnaire n'ont pas besoin d'être des <code>string</code>, elles peuvent être de n'importe quel type immuable, y compris des nombres et même des tuples. Nous pouvons mélanger différents types de clés et différents types de valeurs dans un dictionnaire. Les clés sont uniques, si nous répétons une clé, nous écraserons l'ancienne valeur avec la nouvelle. Lorsque nous stockons une valeur dans un dictionnaire, la clé n'a pas besoin d'exister - elle sera créée automatiquement :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">battleship_guesses</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">):</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span> <span class="kc">True</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">surnames</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1"># this is an empty dictionary</span>
+<span class="n">surnames</span><span class="p">[</span><span class="s2">&quot;John&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Smith&quot;</span>
+<span class="n">surnames</span><span class="p">[</span><span class="s2">&quot;John&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Doe&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">surnames</span><span class="p">)</span> <span class="c1"># we overwrote the older surname</span>
+
+<span class="n">marbles</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;red&quot;</span><span class="p">:</span> <span class="mi">34</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="s2">&quot;brown&quot;</span><span class="p">:</span> <span class="mi">31</span><span class="p">,</span> <span class="s2">&quot;yellow&quot;</span><span class="p">:</span> <span class="mi">29</span> <span class="p">}</span>
+<span class="n">marbles</span><span class="p">[</span><span class="s2">&quot;blue&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">30</span> <span class="c1"># this will work</span>
+<span class="n">marbles</span><span class="p">[</span><span class="s2">&quot;purple&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">2</span> <span class="c1"># this will fail -- the increment operator needs an existing value to modify!</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Voici quelques fonctions couramment utilisées pour les objets <code>dict</code> :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">marbles</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;red&quot;</span><span class="p">:</span> <span class="mi">34</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="s2">&quot;brown&quot;</span><span class="p">:</span> <span class="mi">31</span><span class="p">,</span> <span class="s2">&quot;yellow&quot;</span><span class="p">:</span> <span class="mi">29</span> <span class="p">}</span>
+
+<span class="c1"># Get a value by its key, or None if it doesn&#39;t exist</span>
+<span class="n">marbles</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;orange&quot;</span><span class="p">)</span>
+<span class="c1"># We can specify a different default</span>
+<span class="n">marbles</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Add several items to the dictionary at once</span>
+<span class="n">marbles</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;orange&quot;</span><span class="p">:</span> <span class="mi">34</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span> <span class="s2">&quot;purple&quot;</span><span class="p">:</span> <span class="mi">36</span><span class="p">})</span>
+
+<span class="c1"># All the keys in the dictionary</span>
+<span class="n">marbles</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+<span class="c1"># All the values in the dictionary</span>
+<span class="n">marbles</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+<span class="c1"># All the items in the dictionary</span>
+<span class="n">marbles</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>On peut vérifier si une clé est dans le dictionnaire en utilisant <code>in</code> et <code>not in</code> :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;purple&quot;</span> <span class="ow">in</span> <span class="n">marbles</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;white&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">marbles</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="mi">31</span> <span class="ow">in</span> <span class="n">marbles</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercice-5-:">Exercice 5 :<a class="anchor-link" href="#Exercice-5-:"> </a></h2><ul>
+<li>1) Créez un <code>dict</code> qui stocke les numéros de téléphone (sous forme de valeurs de chaîne) et remplissez-le avec ces paires clé-valeur :</li>
+</ul>
+<table>
+<thead><tr>
+<th>Name</th>
+<th>Telephone number</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jane Doe</td>
+<td>+27 555 5367</td>
+</tr>
+<tr>
+<td>John Smith</td>
+<td>+27 555 6254</td>
+</tr>
+<tr>
+<td>Bob Stone</td>
+<td>+27 555 5689</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>2) Changez le numéro de Jane en +27 555 1024</li>
+<li>3) Ajouter une nouvelle entrée pour une personne appelée Anna Cooper avec le numéro de téléphone +27 555 3237</li>
+<li>4) Affichez le numéro de Bob.</li>
+<li>5) Affichez le numéro de Bob de manière à ce que Aucun ne soit imprimé si le nom de Bob n'était pas dans le dictionnaire.</li>
+<li>6) Affichez toutes les clés. Le format n'a pas d'importance, tant qu'ils sont tous visibles.</li>
+<li>7) Affichez toutes les valeurs.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="6.-Converstion-des-collections">6. Converstion des collections<a class="anchor-link" href="#6.-Converstion-des-collections"> </a></h2><h3 id="Conversions-implicites">Conversions implicites<a class="anchor-link" href="#Conversions-implicites"> </a></h3><p>Si nous essayons d'itérer sur une collection dans une boucle <code>for</code> (quelque chose dont nous discuterons dans le prochain chapitre), Python essaiera de la convertir en quelque chose que nous pouvons parcourir s'il sait comment le faire. Par exemple, les <code>dict</code> que nous avons vues ci-dessus ne sont pas réellement des itérateurs, mais Python sait comment les transformer en itérateurs, nous pouvons donc les utiliser dans une boucle <code>for</code> sans avoir à les convertir nous-mêmes.</p>
+<p>Parfois, l'itérateur que nous obtenons par défaut peut ne pas être ce à quoi nous nous attendions, si nous parcourons un dictionnaire dans une boucle <code>for</code>, nous parcourrons les clés. Si ce que nous voulons réellement faire est d'itérer sur les valeurs, ou les paires clé et valeur, nous devrons le spécifier nous-mêmes en utilisant les fonctions <code>values</code> et <code>items</code>.</p>
+<h3 id="Conversions-explicites">Conversions explicites<a class="anchor-link" href="#Conversions-explicites"> </a></h3><p>Nous pouvons convertir les différents types de séquences en utilisant les fonctions <code>built-in</code> (correspondant au type) pour convertir les séquences dans les types souhaités :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">animals</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;goldfish&#39;</span><span class="p">,</span> <span class="s1">&#39;canary&#39;</span><span class="p">,</span> <span class="s1">&#39;cat&#39;</span><span class="p">]</span>
+<span class="n">animals_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">animals</span><span class="p">)</span>
+<span class="n">animals_unique_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">animals_set</span><span class="p">)</span>
+<span class="n">animals_unique_tuple</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">animals_unique_list</span><span class="p">)</span>
+
+
+<span class="n">marbles</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;red&quot;</span><span class="p">:</span> <span class="mi">34</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="s2">&quot;brown&quot;</span><span class="p">:</span> <span class="mi">31</span><span class="p">,</span> <span class="s2">&quot;yellow&quot;</span><span class="p">:</span> <span class="mi">29</span> <span class="p">}</span>
+<span class="n">colours</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">marbles</span><span class="p">)</span> <span class="c1"># the keys will be used by default</span>
+<span class="n">counts</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">marbles</span><span class="o">.</span><span class="n">values</span><span class="p">())</span> <span class="c1"># but we can use a view to get the values</span>
+<span class="n">marbles_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">marbles</span><span class="o">.</span><span class="n">items</span><span class="p">())</span> <span class="c1"># or the key-value pairs</span>
+
+
+<span class="c1"># Python doesn&#39;t know how to convert this into a dictionary</span>
+<span class="nb">dict</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+
+<span class="c1"># but this will work</span>
+<span class="nb">dict</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="7.-Les-string-sont-des-s&#233;quences">7. Les <code>string</code> sont des s&#233;quences<a class="anchor-link" href="#7.-Les-string-sont-des-s&#233;quences"> </a></h2><p>Les  <code>string</code> sont également une sorte de type de séquence. Ce sont des séquences de caractères et partagent certaines propriétés avec d'autres séquences. Par exemple, nous pouvons trouver la longueur d'une <code>string</code> ou l'index d'un caractère dans la <code>string</code>, et nous pouvons accéder à des éléments individuels de la <code>string</code> ou des <code>slice</code> :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;abracadabra&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="s1">&#39;abcd&#39;</span><span class="p">)</span> <span class="c1"># True</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ab&#39;</span> <span class="ow">in</span> <span class="s1">&#39;abcd&#39;</span><span class="p">)</span> <span class="c1"># also True</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>N'oubliez pas que les chaînes sont immuables, la modification des caractères sur place n'est pas autorisée :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;b&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Les opérateurs <code>in</code> et <code>not in</code> ont un comportement spécial lorsqu'il est appliqué aux <code>string</code> : nous pouvons l'utiliser pour déterminer si une <code>string</code> contient un seul caractère en tant qu'élément, mais nous pouvons également l'utiliser pour vérifier si une <code>string</code> en contient une autre :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="s1">&#39;abcd&#39;</span><span class="p">)</span> <span class="c1"># True</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ab&#39;</span> <span class="ow">in</span> <span class="s1">&#39;abcd&#39;</span><span class="p">)</span> <span class="c1"># also True</span>
+
+<span class="c1"># this doesn&#39;t work for lists</span>
+<span class="nb">print</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">])</span> <span class="c1"># False</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>On peut convertir une <code>string</code> en <code>list</code> :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">abc_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="s2">&quot;abracadabra&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Et si on voulait convertir une liste de caractères en chaîne ? L'utilisation de la fonction <code>str</code> sur la liste nous donnera simplement une chaîne affichable de la liste, y compris les virgules, les guillemets et les crochets. Pour fusionner des séquence de caractères (ou de <code>string</code>) en une seule <code>string</code>, nous devons utiliser la fonction <code>join</code>.</p>
+<p>Cette fonction, attachée à une <code>string</code> fonction comme tel :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">]</span>
+
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+
+
+<span class="n">animals</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;fish&#39;</span><span class="p">)</span>
+
+<span class="c1"># a space-separated list</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">animals</span><span class="p">))</span>
+
+<span class="c1"># a comma-separated list</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">animals</span><span class="p">))</span>
+
+<span class="c1"># a comma-separated list with spaces</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">animals</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>L'opposé de la fonction <code>join</code> est la fonction <code>split</code>. Nous pouvons diviser une <code>string</code> en une liste de <code>string</code> en utilisant la fonction <code>split</code>. S'il est appelé sans aucun paramètre, split divise une chaîne en mots, en utilisant n'importe quel nombre de caractères blancs consécutifs comme délimiteur. Nous pouvons utiliser des paramètres supplémentaires pour spécifier un délimiteur différent ainsi qu'une limite sur le nombre maximum de fractionnements à effectuer :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cat    dog fish</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cat|dog|fish&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;|&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cat, dog, fish&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cat, dog, fish&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercice-6">Exercice 6<a class="anchor-link" href="#Exercice-6"> </a></h2><ul>
+<li>1) Convertissez une liste qui contient les nombres 1, 1, 2, 3 et 3, et convertissez-la en un tuple <code>a</code>.</li>
+<li>2) Convertir <code>a</code> en liste <code>b</code>. Affichez sa longueur.</li>
+<li>3) Convertir <code>b</code> en <code>set</code> <code>c</code>. Affichez sa longueur.</li>
+<li>4) Convertir <code>c</code> en liste <code>d</code>. Affichez sa longueur.</li>
+<li>5) Créez un <code>range</code> qui commence à 1 et se termine à 10. Convertissez-la en liste <code>e</code>.</li>
+<li>6) Créez le dictionnaire de l'exercice précédent. Créez une liste <code>t</code> qui contient toutes les paires clé-valeur du dictionnaire sous forme de tuples.</li>
+<li>7) Créez une liste <code>v</code> de toutes les valeurs du dictionnaire.</li>
+<li>8) Créez une liste <code>k</code> de toutes les clés du dictionnaire.</li>
+<li>9) Créez une chaîne <code>s</code> contenant le mot « antidisestablishmentarianism ». Utilisez la fonction <code>sorted</code> dessus. Quel est le type de sortie ? Concaténez les lettres de la sortie dans une chaîne <code>s2</code>.</li>
+<li>10) Divisez la chaîne "le renard brun rapide a sauté par-dessus le chien paresseux" en une liste <code>w</code> de mots individuels.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Les-s&#233;quences-&#224;-2-dimensions">Les s&#233;quences &#224; 2 dimensions<a class="anchor-link" href="#Les-s&#233;quences-&#224;-2-dimensions"> </a></h2><p>La plupart des séquences que nous avons vues jusqu'à présent étaient unidimensionnelles : chaque séquence est une ligne d'éléments. Que se passe-t-il si nous voulons utiliser une séquence pour représenter une structure de données bidimensionnelle, qui comporte à la fois des lignes et des colonnes ? La façon la plus simple de le faire est de créer une séquence dans laquelle chaque élément est également une séquence. Par exemple, nous pouvons créer une liste de listes :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_table</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span>
+<span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>La liste extérieure a quatre éléments, et chacun de ces éléments est une liste avec trois éléments (qui sont des nombres). Pour accéder à l'un de ces nombres, nous devons utiliser deux indices - un pour la liste externe et un pour la liste interne :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">my_table</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="c1"># lists are mutable, so we can do this</span>
+<span class="n">my_table</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">42</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>orsque nous utilisons une séquence bidimensionnelle pour représenter des données tabulaires, chaque séquence interne aura la même longueur, car un tableau est rectangulaire, mais rien ne nous empêche de construire des séquences bidimensionnelles qui n'ont pas cette propriété :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_2d_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
+<span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>On peut aussi faire une séquence tridimensionnelle en faisant une liste de listes de listes :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_3d_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]],</span>
+    <span class="p">[[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]],</span>
+<span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">my_3d_list</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Exemple-:-emploi-du-temps">Exemple : emploi du temps<a class="anchor-link" href="#Exemple-:-emploi-du-temps"> </a></h3><p>Si nous voulions faire une liste en deux dimensions pour représenter un emploi du temps hebdomadaire, nous pourrions soit avoir des jours comme liste extérieure et des créneaux horaires comme liste intérieure ou l'inverse - nous devrons nous rappeler quelle plage nous avons choisie pour être la lignes et dont les colonnes.</p>
+<p>Supposons que nous voulions initialiser l'horaire avec une chaîne vide dans chaque plage horaire – disons que nous avons 24 plages horaires d'une heure chaque jour. Cela fait sept listes de 24 éléments chacune :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">day</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">24</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">day</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Mais que se passe-t-il si nous répétons un jour sept fois pour faire une semaine ?</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">timetable</span> <span class="o">=</span>  <span class="p">[</span><span class="n">day</span><span class="p">]</span> <span class="o">*</span> <span class="mi">7</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">timetable</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Voyons ce qui se passe lorsque nous essayons de programmer une réunion pour le lundi après-midi :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">timetable</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">15</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;meeting with Jane&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">timetable</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Chaque jour a la même réunion l'après-midi ! Qu'est ce qui s'est passé ? Lorsque nous avons multiplié notre liste de jours par sept, nous avons rempli notre emploi du temps avec le même objet <code>list</code>, répété sept fois. Tous les éléments de notre emploi du temps sont le même jour, donc peu importe celui que nous modifions, nous les modifions tous en même temps.</p>
+<p>Pourquoi cela n'avait-il pas d'importance lorsque nous avons fait la liste des jours en multipliant la même chaîne vide 24 fois ? Parce que les <code>string</code> sont immuables. Nous ne pouvons modifier les valeurs des <code>string</code> dans la liste des jours qu'en leur attribuant de nouvelles valeurs, nous ne pouvons pas les modifier directement, donc peu importe qu'elles commencent toutes par le même objet de chaîne.</p>
+<p>Ce que nous voulons en fait, ce sont sept copies d'une liste de jours dans notre emploi du temps :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">timetable</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">24</span> <span class="k">for</span> <span class="n">day</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">)]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercice-7">Exercice 7<a class="anchor-link" href="#Exercice-7"> </a></h2><ul>
+<li>1) Créez une liste <code>a</code> qui contient trois tuples. Le premier tuple doit contenir un seul élément, le deuxième deux éléments et le troisième trois éléments.</li>
+<li>2) Afficher le deuxième élément du deuxième élément de <code>a</code>.</li>
+<li>3) Créez une liste <code>b</code> qui contient quatre listes, chacune contenant quatre éléments.</li>
+<li>4) Affichez les deux derniers éléments du premier élément de <code>b</code>.</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/AXI-Fastpages/python-intro-gen/chapter/3/lesson/1/" hidden></a>
+</article>
+      </div>
+    </main>
+    <script> 
+      window.onload = () => {
+        // Ecouteur d'évènement sur scroll
+        window.addEventListener("scroll", () => {
+          // Calcul de la hauteur "utile" du document
+          let hauteur = document.documentElement.scrollHeight - window.innerHeight;
+
+          // Récupération de la position verticale
+          let position = window.scrollY;
+
+          // Récupération de la largeur de la fenêtre
+          let largeur = document.documentElement.clientWidth;
+
+          // Calcul de la largeur de la barre
+          let barre = position / hauteur * largeur;
+
+          // Modification du CSS de la barre
+          document.getElementById("barre-progression").style.width = barre+"px";
+        })
+      }
+    </script>
+  </body>
+</html>
